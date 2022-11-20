@@ -14,7 +14,7 @@ import { useState } from 'react';
             <div className="contact-form">
                 <div className="contact-form__header">
                     <h2>Yhteydenottolomake</h2>
-                    <p>Voit lähettää meille palautetta. Olemme yhteydessä viimeistään seuraavana arkipäivänä.</p>
+                    <p>Täytä yhteydenottolomake, niin otamme sinuun yhteyttä mahdollisimman pian.</p>
                 </div>
                 <div className="contact-form__container">
                 
