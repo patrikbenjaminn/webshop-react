@@ -76,7 +76,7 @@ function NavScrollExample() {
             </NavDropdown> */}
 
             <NavDropdown title="Asiakaspalvelu" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/pages/Contact">Yhteydenottolomake</NavDropdown.Item>
+              <NavDropdown.Item href="/Contact">Yhteydenottolomake</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Palautukset
               </NavDropdown.Item>
