@@ -31,7 +31,7 @@ import { useState } from 'react';
 
                     <label htmlFor="message"> Viesti </label>
                     <textarea type="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)}
-                        placeholder="Kirjoita viestisi tähän..." required />
+                        placeholder="Kirjoita tähän..." required />
 
                     <button type="submit">LÄHETÄ</button>
                 </form>

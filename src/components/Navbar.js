@@ -77,12 +77,10 @@ function NavScrollExample() {
 
             <NavDropdown title="Asiakaspalvelu" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/Contact">Yhteydenottolomake</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Palautukset
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/Returning">Palautukset</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Lahjakortit tms tänne?
+                Mitäs tänne?
               </NavDropdown.Item>
             </NavDropdown>
 

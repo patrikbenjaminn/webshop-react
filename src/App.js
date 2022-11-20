@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Return from './pages/Returning';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
               <Route path='/' element={ <Etusivu />} />
               <Route path='/Contact' element={ <Contact />} />
+              <Route path='/Returning' element={ <Return />} />
 
               <Route path='*' element={ <NotFound />} />
 
