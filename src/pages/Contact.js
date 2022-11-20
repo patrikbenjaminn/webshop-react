@@ -27,11 +27,11 @@ import { useState } from 'react';
 
                     <label htmlFor="email"> Sähköpostiosoite </label>
                     <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}
-                        placeholder="joku@example.com" required />
+                        placeholder="email@example.com" required />
 
                     <label htmlFor="message"> Viesti </label>
                     <textarea type="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)}
-                        placeholder="Voit kirjoittaa palautetta tähän..." required />
+                        placeholder="Kirjoita viestisi tähän..." required />
 
                     <button type="submit">LÄHETÄ</button>
                 </form>
