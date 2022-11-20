@@ -13,7 +13,7 @@ function App() {
         <div className='container'>
           <Routes>
               <Route path='/' element={ <Etusivu />} />
-              <Route path='/Contact' element={ <Contact />} />
+              <Route path='./Contact' element={ <Contact />} />
 
               <Route path='*' element={ <NotFound />} />
 

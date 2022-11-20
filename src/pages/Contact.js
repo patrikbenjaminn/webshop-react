@@ -1,12 +1,12 @@
-import React from 'react'
-import '../Contact.css';
+/* import React from 'react'
+import '../styles/Contact.css';
 import { useState } from 'react';
 
 
  function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState(''); 
 
 
     return (
@@ -41,4 +41,4 @@ import { useState } from 'react';
         </>
     );
 }
-export default Contact;
+export default Contact; */
