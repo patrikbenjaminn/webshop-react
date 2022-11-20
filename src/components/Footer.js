@@ -1,7 +1,13 @@
 import React from 'react'
+import '../styles/Footer.css'
 
 export default function Footer() {
   return (
-    <div>Footer</div>
+    <footer className='footer'>
+        <div className='container'>
+           <span>Lucky 7</span>    
+            
+        </div> 
+    </footer>
   )
 }
