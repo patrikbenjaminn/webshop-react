@@ -1,4 +1,4 @@
-/* import React from 'react'
+import React from 'react'
 import '../styles/Contact.css';
 import { useState } from 'react';
 
@@ -41,4 +41,4 @@ import { useState } from 'react';
         </>
     );
 }
-export default Contact; */
+export default Contact;
