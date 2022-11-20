@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Etusivu from './pages/Etusivu';
 
 function App() {
   return (
-    <div className="App">
-      <h1>moi</h1>
-    </div>
+    <>
+
+       <Etusivu />
+
+
+    </>
   );
 }
 
