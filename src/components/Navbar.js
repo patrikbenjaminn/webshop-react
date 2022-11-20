@@ -19,18 +19,19 @@ function NavScrollExample() {
           >
             <Nav.Link href="/">Etusivu</Nav.Link>
 
-            <NavDropdown title="Lautapelit" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <NavDropdown title="Tuoteryhmät" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">lautapelit</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+               Konsolipelit
               </NavDropdown.Item>
+              <NavDropdown.Item href="#action3">Tietokonepelit</NavDropdown.Item>
+              <NavDropdown.Item href="#action3">Tarvikkeet</NavDropdown.Item>
+              <NavDropdown.Item href="#action3">Uutuudet</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
+            
             </NavDropdown>
 
-            <NavDropdown title="Konsolipelit" id="navbarScrollingDropdown">
+            {/* <NavDropdown title="Konsolipelit" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
@@ -72,9 +73,9 @@ function NavScrollExample() {
               <NavDropdown.Item href="#action5">
                 Something else here
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
 
-            <NavDropdown title="Contact" id="navbarScrollingDropdown">
+            <NavDropdown title="Asiakaspalvelu" id="navbarScrollingDropdown">
               <NavDropdown.Item href="../pages/Contact">Contact</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
