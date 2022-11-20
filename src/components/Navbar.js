@@ -9,7 +9,7 @@ function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">RetroGamersHaven</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -17,8 +17,8 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
+            <Nav.Link href="#action1">Etusivu</Nav.Link>
+            
 
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
@@ -55,6 +55,9 @@ function NavScrollExample() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
+          <Button>
+          <Nav.Link href="#action2">Kirjaudu/Rekisteröidy</Nav.Link>
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
