@@ -1,7 +1,8 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 
 export default function Etusivu() {
   return (
-    <div>Etusivu</div>
+    <Navbar />
   )
 }
