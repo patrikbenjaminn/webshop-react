@@ -101,7 +101,7 @@ function NavScrollExample() {
             <Button variant="outline-success">Search</Button>
           </Form>
           <Button>
-          <Nav.Link href="#action2">Kirjaudu/Rekisteröidy</Nav.Link>
+          <Nav.Link href="src/components/registration.php">Kirjaudu/Rekisteröidy</Nav.Link>
           </Button>
         </Navbar.Collapse>
       </Container>
