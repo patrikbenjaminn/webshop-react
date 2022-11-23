@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
+import Tuoteryhmät from './pages/Tuoteryhmät';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <div className='container'>
           <Routes>
               <Route path='/' element={ <Etusivu />} />
+              <Route path='/Tuoteryhmät' element={ <Tuoteryhmät />} />
               <Route path='/Contact' element={ <Contact />} />
               <Route path='/Returning' element={ <Return />} />
 

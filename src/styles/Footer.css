@@ -13,3 +13,11 @@ footer {
     text-align: center;
     border-top: 2px solid #f5f5f5;
 }
+
+.footer{
+    color:#E28E0F !important;
+    font-size: 17px;
+    font-weight: 800;
+    font-family:Knife Princess;
+    -webkit-text-stroke: 0.02em rgb(237, 11, 192);
+}

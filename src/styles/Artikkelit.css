@@ -1,0 +1,35 @@
+/*-----artikkelit sivu alkaa-------------*/
+
+.artikkelit {
+    background:url(../../public/images/rgh3.jpg);
+    background-size: cover;
+    align-items: top;
+}
+
+.artikkelit a{
+    list-style: none;
+    color: #160647;
+    outline: none;
+    -webkit-text-stroke: 0.8px #E28E0F;
+}
+
+.artikkelit a:hover{
+    color:rgb(255, 0, 238);
+    transition: 0.3s;
+}
+
+.artikkelit p{
+    font-size: 31px;
+    font-family: hobo;
+    -webkit-text-stroke: 0.4px rgb(186, 11, 183);
+
+}
+
+.artikkelit span{
+    color: chartreuse;
+
+}
+
+.artikkelit small{
+    font-size: 15px;
+}
