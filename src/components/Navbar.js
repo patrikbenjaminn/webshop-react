@@ -20,7 +20,7 @@ function NavScrollExample() {
             <Nav.Link href="/">Etusivu</Nav.Link>
 
             <NavDropdown title="Tuoteryhmät" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">lautapelit</NavDropdown.Item>
+              <NavDropdown.Item href="#action3">Lautapelit</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                Konsolipelit
               </NavDropdown.Item>

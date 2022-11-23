@@ -17,7 +17,7 @@ function CarouselFadeExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="..\public\images\chessboard-with-figures-in-progress-2022-10-07-01-50-22-utc-removebg-preview.png"
+          src=".\images\chessboard-with-figures-in-progress-2022-10-07-01-50-22-utc-removebg-preview.png"
           alt="Second slide"
         />
 
@@ -29,7 +29,7 @@ function CarouselFadeExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="..\public\images\chessboard-with-figures-in-progress-2022-10-07-01-50-22-utc-removebg-preview.png"
+          src=".\images\chessboard-with-figures-in-progress-2022-10-07-01-50-22-utc-removebg-preview.png"
           alt="Third slide"
         />
 
