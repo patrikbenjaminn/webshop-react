@@ -127,7 +127,7 @@
     background-color: rgb(21, 222, 68);
 }
 
-.btn { /*Login nappi*/
+.kirjaudu { /*Login nappi*/
     background-color: #ADEFD1FF;
     opacity: 0.8;
     font-size: 20px;
@@ -144,7 +144,7 @@
    
 }
 
-.btn:hover{
+.kirjaudu:hover{
 background-color:#00203FFF;
 color:#ADEFD1FF;
 transition: 0.4s;
