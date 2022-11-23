@@ -1,0 +1,127 @@
+/*--------tarjoussivu1 alkaa-------------*/
+
+.tarjoukset {
+    background:url(../../public/images/rgh3.jpg);
+    min-height: 90vh;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    display: flex;
+    align-items: top;
+}
+
+.tarjoukset img{
+    max-width: 100%;  
+    height: 100%;
+}
+
+.tarjoukset span{  /*tarjoushinta*/
+    position: absolute;
+    bottom: 1;
+    left: 3;
+    color: #00203FFF;
+    font-size: 30px;
+    font-weight: 800;
+    padding-left: 5px;
+    -webkit-text-stroke: 0.5px rgb(228, 15, 129);
+    
+
+}
+
+p{
+    position: absolute; /*vanha hinta*/
+    font-size: 25px;
+    color: rgb(217, 17, 80);
+    bottom: 0;
+    left: 3;
+    
+   
+}
+
+
+
+.card{
+    background: url(../../public/images/rgh3.jpg);
+    min-height: 200px;
+    border-color: #ADEFD1FF;
+    border-width: 7px;
+    background-color: #00203FFF;
+    background-size: cover;
+    position: relative;
+   
+}
+
+.card-img-top {
+    position: absolute;
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    
+}
+
+h1{
+   
+    font-family:Hobo;
+    color: #ADEFD1FF;
+    font-size: 75px;
+    position: relative; 
+    -webkit-text-stroke: 0.8px rgb(9, 9, 9);
+}
+
+h1::before {
+    content: '';
+    position:absolute;
+    background:#ADEFD1FF;
+    top:40%;
+    left:5;
+    width:50%;
+    height:130%;
+
+    transform: perspective(7em) rotateX(60deg)
+    scale(1,0.2);
+    filter: blur(1.5em);
+}
+
+h5{ /*tuotenimi*/
+    position: absolute;
+    bottom: 4;
+    left: 4;
+    font-family:Hobo;
+    color: #00203FFF;
+    font-size: 35px;
+    font-weight: 400;
+    -webkit-text-stroke: 0.5px #ADEFD1FF;
+}
+
+
+
+.tarjoukset input{ /*osta tästä -nappi*/
+    position: absolute;
+    height: 45px;
+    width: 110px;
+    background-color: #00203FFF;
+    color: #ADEFD1FF;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-family:Hobo;
+    top: 40%;
+    left: 30%;
+    opacity:0;
+    border: rgb(224, 25, 174) 0.150em solid;
+    border-radius: 0.35em;
+}
+
+.tarjoukset .card:hover input{
+    opacity: 1;
+    transition: 1s;
+}
+
+.tarjoukset input:hover{
+    background-color: #ADEFD1FF;
+    transition: 0.5s;
+    color: #00203FFF;
+    border: rgb(224, 25, 174) 0.150em solid;
+    border-radius: 0.35em;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Tarjoussivu.css'
 
 function Tarjoussivu() {
   return (
