@@ -9,7 +9,7 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
- /* const url= "http://localhost/Contact.php" ;
+ const url= "http://localhost/Contact.php" ;
 
   let fData = new FormData();
   fData.append('name', name);
@@ -19,7 +19,7 @@ function Contact() {
   axios.post(url, fData)
   .then(response=> alert(response.data))
   .catch(error=>alert(error));
-*/
+
   return (
     <>
       <div className="contact-form">
