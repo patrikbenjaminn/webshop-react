@@ -84,12 +84,12 @@ function NavScrollExample() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#" disabled>
+            <Nav.Link href="/Admin.js" disabled>
               Admin
             </Nav.Link>
           </Nav>
 
-          <Nav.Link href="#action2">Ostoskori</Nav.Link>
+          <Nav.Link href="/Ostoskori.js">Ostoskori</Nav.Link>
 
           <Form className="d-flex">
             <Form.Control
@@ -100,9 +100,9 @@ function NavScrollExample() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <Button>
+          <Button variant='primary' size='lg'>
           <Nav.Link href="src/components/registration.php">Kirjaudu/Rekisteröidy</Nav.Link>
-          </Button>
+          </Button>{ ' ' }
         </Navbar.Collapse>
       </Container>
     </Navbar>
