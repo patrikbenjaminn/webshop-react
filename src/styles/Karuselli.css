@@ -1,0 +1,87 @@
+/*----------karuselli alkaa----------------*/
+
+p1{
+    color:#ADEFD1FF !important;
+    font-size: 80px;
+    font-weight: 1000;
+    font-style: italic;
+    font-family:Hobo;
+    -webkit-text-stroke: 0.02em #00203FFF;
+       
+}
+
+.carousel img{
+    max-width: 100%;  
+    height: 650px;  
+    
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    left: -8%; 
+}
+
+.carousel-caption p{
+    color:#ADEFD1FF;
+    font-size: 55px;
+    font-weight: 600;
+    -webkit-text-stroke: 1px #00203FFF;
+    font-family:Hobo;
+}
+
+.carousel-caption h1{
+    color:#ADEFD1FF;
+    font-size: 50px;
+    font-weight: 400;
+    -webkit-text-stroke: 1.5px #00203FFF;
+    font-family:Hobo;
+    
+}
+
+.btn0{
+    background-color: #ADEFD1FF;
+    opacity: 0.8;
+    font-size: 2rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #00203FFF;
+    border: rgb(224, 25, 174) 0.150em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.35em;
+    font-family:hobo ;
+    position:relative;
+
+    /*
+    background-color:rgb(203, 17, 194);
+    height: 45px;
+    width:150px;
+    color: rgb(208, 221, 31);
+    outline: none;
+    border: none;
+    font-family:Astron Boy Video ;*/
+}
+
+.btn0::before{
+        content: '';
+        position:absolute;
+        background:#ADEFD1FF;
+        top:50%;
+        left:0;
+        width:100%;
+        height:150%;
+    
+        transform: perspective(2em) rotateX(40deg)
+        scale(1,0.3);
+        filter: blur(1.5em);
+    
+    
+}
+
+.btn0:hover{
+    background-color:#00203FFF;
+    color:#ADEFD1FF;
+    transition: 0.4s;
+}
