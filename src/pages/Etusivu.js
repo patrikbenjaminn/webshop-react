@@ -2,10 +2,11 @@ import React from 'react';
 import Karuselli from '../components/Karuselli';
 
 
-export default function Etusivu() {
+function Etusivu() {
   return (
     <>
       <Karuselli />
     </>
   )
 }
+export default Etusivu;
