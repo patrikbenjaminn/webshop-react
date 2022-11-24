@@ -1,3 +1,9 @@
+drop database if EXISTS webshop;
+
+CREATE DATABASE webshop;
+
+USE webshop;
+
 /* ASIAKAS */
 
 CREATE TABLE asiakas (
