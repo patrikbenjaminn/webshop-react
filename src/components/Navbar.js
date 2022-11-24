@@ -9,7 +9,7 @@ function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">RetroGamersHaven</Navbar.Brand>
+        <Navbar.Brand href="/">RetroGamersHaven</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -20,13 +20,13 @@ function NavScrollExample() {
             <Nav.Link href="/">Etusivu</Nav.Link>
 
             <NavDropdown title="Tuoteryhmät" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Lautapelit</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+              <NavDropdown.Item href="/Lautapelit">Lautapelit</NavDropdown.Item>
+              <NavDropdown.Item href="/Konsolipelit">
                Konsolipelit
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action3">Tietokonepelit</NavDropdown.Item>
-              <NavDropdown.Item href="#action3">Tarvikkeet</NavDropdown.Item>
-              <NavDropdown.Item href="#action3">Uutuudet</NavDropdown.Item>
+              <NavDropdown.Item href="/Tietokonepelit">Tietokonepelit</NavDropdown.Item>
+              <NavDropdown.Item href="/Tarvikkeet">Tarvikkeet</NavDropdown.Item>
+              <NavDropdown.Item href="/Uutuudet">Uutuudet</NavDropdown.Item>
               <NavDropdown.Divider />
             
             </NavDropdown>
@@ -79,9 +79,6 @@ function NavScrollExample() {
               <NavDropdown.Item href="/Contact">Yhteydenottolomake</NavDropdown.Item>
               <NavDropdown.Item href="/Returning">Palautukset</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Mitäs tänne?
-              </NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="/Admin.js" disabled>
