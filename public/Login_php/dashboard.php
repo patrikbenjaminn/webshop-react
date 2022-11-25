@@ -3,7 +3,7 @@
     require_once "config.php";
     $userid = $_SESSION["userid"];
     if($userid!=NULL){
-        $getdata = mysqli_query($link,"SELECT * FROM users WHERE id='$userid'");
+        $getdata = mysqli_query($link,"SELECT * FROM asiakas WHERE id='$userid'");
         $userdata = mysqli_fetch_array($getdata);
 ?>
 <html>
@@ -12,11 +12,11 @@
    
     <h2>Dashboard </h2>
     
-    <h3> Welcome <?php echo $userdata['username']; ?> ! </h3>
-    <p> Registred at <?php echo $userdata['created_at']; ?> ! </p>
+    <h3> Tervetuloa <?php echo $userdata['astunnus']; ?> ! </h3>
+    <p> Kirjauduttu <?php echo $userdata['created_at']; ?> ! </p>
     <h6> <a href="logout.php"> Logout </a> </h6>
     </div>
 </html>
 <?php } else {
-    echo "You are not loged in";
+    echo "Kirjaudu sisään";
 } ?>

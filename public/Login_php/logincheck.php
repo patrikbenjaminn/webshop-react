@@ -2,13 +2,13 @@
   session_start();
 require_once "config.php";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $asnimi = $_POST["asnimi"];
+    $salasana = $_POST["salasana"];
     // hashing the password
-    $password = md5($password );
+    $salasana = md5($salasana );
     //checking username already exists
-    if($username!=NULL){
-       $checking =   mysqli_query($link,"SELECT * FROM users WHERE `username`='$username' AND `password`='$password'");
+    if($astunnus!=NULL){
+       $checking =   mysqli_query($link,"SELECT * FROM asiakas WHERE `astunnus`='$astunnus' AND `salasana`='$salasana'");
          // getting user id 
          $userdata = mysqli_fetch_array($checking);
          $userid =  $userdata['id'];
