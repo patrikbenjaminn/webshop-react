@@ -1,4 +1,5 @@
 {
+  "homepage": "http://localhost:webshop/",
   "name": "webshop",
   "version": "0.1.0",
   "private": true,
