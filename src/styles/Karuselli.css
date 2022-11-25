@@ -8,7 +8,10 @@
     font-family:Hobo;
     -webkit-text-stroke: 0.02em #00203FFF;} */
        
-
+.karuselli {
+        width: 100%;
+        size: 50%;
+    }
 
 img{
     max-width: 100%;  
@@ -86,7 +89,4 @@ img{
     transition: 0.4s;
 }
 
-.carousel-inner {
-    width: 100%;
-    size: 550%;
-}
+
