@@ -4,10 +4,11 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import '../styles/Navbar.css';
 
 function NavScrollExample() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className='navbar-dark' bg="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">RetroGamersHaven</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -17,9 +18,9 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/">Etusivu</Nav.Link>
+            <Nav.Link className='etu' href="/">Etusivu</Nav.Link>
 
-            <NavDropdown title="Tuoteryhmät" id="navbarScrollingDropdown">
+            <NavDropdown className='etu' title="Tuoteryhmät" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/Lautapelit">Lautapelit</NavDropdown.Item>
               <NavDropdown.Item href="/Konsolipelit">
                Konsolipelit
@@ -75,7 +76,7 @@ function NavScrollExample() {
               </NavDropdown.Item>
             </NavDropdown> */}
 
-            <NavDropdown title="Asiakaspalvelu" id="navbarScrollingDropdown">
+            <NavDropdown className='etu' title="Asiakaspalvelu" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/Contact">Yhteydenottolomake</NavDropdown.Item>
               <NavDropdown.Item href="/Returning">Palautukset</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -95,9 +96,9 @@ function NavScrollExample() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button className='kirjaudu' variant="outline-success">Search</Button>
           </Form>
-          <Button variant='primary' size='lg'>
+          <Button className='kirjaudu' role="button" variant='primary' size='lg'>
           <Nav.Link href="src/components/registration.php">Kirjaudu/Rekisteröidy</Nav.Link>
           </Button>{ ' ' }
         </Navbar.Collapse>

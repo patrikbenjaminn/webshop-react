@@ -1,7 +1,7 @@
 /*-----artikkelit sivu alkaa-------------*/
 
 .artikkelit {
-    background:url(../../public/images/rgh3.jpg);
+  /*  background:url(../../public/images/rgh3.jpg); */
     background-size: cover;
     align-items: top;
 }

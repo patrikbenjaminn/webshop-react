@@ -85,3 +85,8 @@ img{
     color:#ADEFD1FF;
     transition: 0.4s;
 }
+
+.carousel-inner {
+    width: 100%;
+    size: 550%;
+}

@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Shakadelic;
+    src: url(../public/fonts/Shagadelic\ Bold.ttf);
+  }
+
+  @font-face {
+    font-family: Grooven;
+    src: url(../public/fonts/Grooven-Shine.otf);
+  }
+
+  @font-face {
+    font-family: Hobo;
+    src: url(../public/fonts/HoboStd.otf);
+  }
+
+  @font-face {
+    font-family: Knife princess;
+    src: url(../public/fonts/HoboStd.otf);
+  }

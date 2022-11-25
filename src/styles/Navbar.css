@@ -1,30 +1,30 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 @font-face {
     font-family: Shakadelic;
-    src: url(./fonts/Shagadelic\ Bold.ttf);
+    src: url(../../public/fonts/Shagadelic\ Bold.ttf);
   }
 
   @font-face {
     font-family: Grooven;
-    src: url(./fonts/Grooven-Shine.otf);
+    src: url(../../public/fonts/Grooven-Shine.otf);
   }
 
   @font-face {
     font-family: Hobo;
-    src: url(./fonts/HoboStd.otf);
+    src: url(../../public/fonts/HoboStd.otf);
   }
 
   @font-face {
     font-family: Knife princess;
-    src: url(./fonts/Knife\ Princess.ttf);
+    src: url(../../public/fonts/HoboStd.otf);
   }
-
-.nav.link{ /*navbarin linkkien nimet*/
+.navbar-dark {
+    position: fixed;
+    top: 0;
+    z-index: 1100;
+}
+.etu { /*navbarin linkkien nimet*/
     color:#ADEFD1FF !important;
     font-weight: 500;
     font-size: 20px;
@@ -33,7 +33,7 @@
     position: relative;
 }
 
-.nav.link::before {
+.etu::before {
     content: '';
     position:absolute;
     background:#ADEFD1FF;
@@ -185,3 +185,165 @@ border: rgb(224, 25, 174) 0.150em solid;
 .nav-item {
     list-style: none;
 }
+/*
+.nav-link{ /*navbarin linkkien nimet
+    color:#ADEFD1FF !important;
+    font-weight: 500;
+    font-size: 20px;
+    font-family:Knife princess;
+    -webkit-text-stroke: 1.5px black;
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position:absolute;
+    background:#ADEFD1FF;
+    top:50%;
+    left:3;
+    width:100%;
+    height:100%;
+
+    transform: perspective(4em) rotateX(50deg)
+    scale(0.7,0.3);
+    filter: blur(2em);
+}
+
+.nav-link1{
+    color:#ADEFD1FF !important;
+    font-size: 20px;
+    font-family:Knife princess;
+    -webkit-text-stroke: 1px black;
+    position: relative;
+}
+
+.nav-link1::before {
+    content: '';
+    position:absolute;
+    background:#00203FFF;
+    top:50%;
+    left:3;
+    width:100%;
+    height:100%;
+
+    transform: perspective(4em) rotateX(50deg)
+    scale(0.7,0.3);
+    filter: blur(2em);
+}
+
+
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(23, 206, 63)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-brand {
+    color:#ADEFD1FF !important;
+    font-size: 45px;
+    font-weight: 1200;
+    font-family:Knife princess;
+    -webkit-text-stroke: 0.05em rgb(6, 6, 6);
+    position: relative;
+}
+
+.navbar-brand::before {
+    content: '';
+    position:absolute;
+    background:#ADEFD1FF;
+    top:40%;
+    left:0;
+    width:100%;
+    height:100%;
+
+    transform: perspective(8em) rotateX(70deg)
+    scale(1,0.15);
+    filter: blur(1.5em);
+
+}
+
+.navbar-dark {
+    background: #00203FFF;
+    display: inline-block;
+    border: 3px solid;
+    width:100%;
+    padding: 10px 15px;
+    text-align: center;
+    color: #ADEFD1FF;
+    text-decoration: none;
+   
+
+   
+}
+
+
+.dropdown-item {
+    background-color: #00203FFF;
+    color:#ADEFD1FF !important;
+    font-family:Hobo;
+    font-size: 25px;
+    -webkit-text-stroke: 1px rgb(8, 8, 8);
+    padding: 10px 15 10;
+}
+
+.dropdown-menu {
+    background-color: rgb(21, 222, 68);
+}
+
+.kirjaudu { /*Login nappi
+    background-color: #ADEFD1FF;
+    opacity: 0.8;
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #00203FFF;
+    border: rgb(224, 25, 174) 0.150em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.35em;
+    font-family:Hobo ;
+
+     
+   
+}
+
+.kirjaudu:hover{
+background-color:#00203FFF;
+color:#ADEFD1FF;
+transition: 0.4s;
+border: rgb(224, 25, 174) 0.150em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.35em;
+}
+
+
+.bottom_nav {
+   width: 100%;
+   height: 10px;
+   padding: 0 50px; 
+   
+}
+
+.bottom_nav ul {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom_nav .search_bar input[type="text"] {
+    border:2px solid rgb(237, 11, 192);
+    padding: 5px 10px;
+    outline: none;
+    width:450px;
+
+    padding: 10px;
+    -webkit-box-shadow: 0px 3px 21px -3px rgba(237, 11, 192, 0.989);
+    -moz-box-shadow: 0px 3px 21px -3px rgba(237, 11, 192, 0.989);
+    box-shadow: 0px 3px 21px -3px rgba(237, 11, 192, 0.989);
+}
+
+
+.nav-item {
+    list-style: none;
+} */
