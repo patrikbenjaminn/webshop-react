@@ -8,20 +8,21 @@
     font-family:Hobo;
     -webkit-text-stroke: 0.02em #00203FFF;} */
        
-.karuselli {
+/* .karuselli {
         width: 100%;
         size: 50%;
-    }
+        margin-top: auto;
+    } */
 
 img{
-    max-width: 100%;  
-    height: 650px;  
-    
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .carousel-caption{
     position: absolute;
-    top: 55%;
+    top: 90%;
     transform: translateY(-50%);
     left: -8%; 
 }

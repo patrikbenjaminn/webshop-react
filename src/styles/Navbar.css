@@ -185,8 +185,8 @@ border: rgb(224, 25, 174) 0.150em solid;
 .nav-item {
     list-style: none;
 }
-/*
-.nav-link{ /*navbarin linkkien nimet
+
+.nav-link{ /*navbarin linkkien nimet */
     color:#ADEFD1FF !important;
     font-weight: 500;
     font-size: 20px;
@@ -289,7 +289,7 @@ border: rgb(224, 25, 174) 0.150em solid;
     background-color: rgb(21, 222, 68);
 }
 
-.kirjaudu { /*Login nappi
+.kirjaudu { /*Login nappi */
     background-color: #ADEFD1FF;
     opacity: 0.8;
     font-size: 20px;
@@ -301,6 +301,7 @@ border: rgb(224, 25, 174) 0.150em solid;
     padding: 0.25em 1em;
     border-radius: 0.35em;
     font-family:Hobo ;
+    
 
      
    
@@ -346,4 +347,6 @@ border: rgb(224, 25, 174) 0.150em solid;
 
 .nav-item {
     list-style: none;
-} */
+} 
+   /* Modify the background color */  
+.navbar-custom {            background-color: #00203FFF;        }        /* Modify brand and text color */                 .navbar-custom .navbar-brand,        .navbar-custom .navbar-text {            color: green;        }

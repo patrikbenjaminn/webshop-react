@@ -3,7 +3,7 @@ import '../styles/Karuselli.css';
 
 function CarouselFadeExample() {
   return (
-    <Carousel fade className='karuselli'>
+    <Carousel uncontrolled className='karuselli'>
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -11,7 +11,7 @@ function CarouselFadeExample() {
           alt="First slide"
         />
         <Carousel.Caption>
-          {/* <h3>First slide label</h3> */}
+           <h3>First slide label</h3> 
           
         </Carousel.Caption>
       </Carousel.Item>
@@ -23,7 +23,7 @@ function CarouselFadeExample() {
         />
 
         <Carousel.Caption>
-          {/* <h3>Second slide label</h3> */}
+         {/*  <h3>Second slide label</h3> */}
           
         </Carousel.Caption>
       </Carousel.Item>
@@ -35,7 +35,7 @@ function CarouselFadeExample() {
         />
 
         <Carousel.Caption>
-        {/*   <h3>Third slide label</h3> */}
+          {/* <h3>Third slide label</h3> */}
           
         </Carousel.Caption>
       </Carousel.Item>
