@@ -86,5 +86,6 @@ palauteid INTEGER NOT NULL,
 nimi CHAR(20) NOT NULL,
 email CHAR(50) NOT NULL, 
 timestamp DATE,
+message CHAR (255) NOT NULL,
 CONSTRAINT tilausrivi_pk PRIMARY KEY (palauteid)
 );
