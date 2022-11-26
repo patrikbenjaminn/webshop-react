@@ -11,21 +11,21 @@ function Contact() {
 
  const url= "http://localhost/Contact.php" ;
 
-  let fData = new FormData();
+  /*let fData = new FormData();
   fData.append('name', name);
   fData.append('email', email); 
   fData.append('message', message);
 
   axios.post(url, fData)
   .then(response=> alert(response.data))
-  .catch(error=>alert(error));
+  .catch(error=>alert(error));*/
 
   return (
     <>
       <div className="contact-form">
         <div className="contact-form__header">
           <h2>Yhteydenottolomake</h2>
-          <p>Täytä yhteydenottolomake, niin otamme sinuun yhteyttä mahdollisimman pian.</p>
+          <p5>Täytä yhteydenottolomake, niin otamme sinuun yhteyttä mahdollisimman pian.</p5>       
         </div>
         <div className="contact-form__container">
           <form >
@@ -38,8 +38,9 @@ function Contact() {
             <label htmlFor="message"> Viesti </label>
             <textarea type="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)}
               placeholder="Kirjoita tähän..." required />
-            <button type="submit" value="LÄHETÄ">LÄHETÄ</button>
+            <button type="submit">LÄHETÄ</button>
           </form>
+  
         </div>
       </div>
     </>
