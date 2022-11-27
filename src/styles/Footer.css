@@ -15,6 +15,7 @@ footer {
 }
 
 .footer{
+    border:2px solid #ADEFD1FF;
     color:#ADEFD1FF !important;
     padding: 25px;
     

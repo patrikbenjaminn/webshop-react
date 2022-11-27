@@ -1,0 +1,14 @@
+
+.Appetsi {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: hobo;
+  background: url(../../public/images/rgh3.jpg);
+}
+body {
+  padding: 0;
+  margin: 0;
+}

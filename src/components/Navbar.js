@@ -11,7 +11,7 @@ function NavScrollExample() {
   return (
     <Navbar className='navbar-custom'  expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">RetroGamersHeaven</Navbar.Brand>
+        <Navbar.Brand href="/">RetroGamersHaven</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -83,24 +83,26 @@ function NavScrollExample() {
               <NavDropdown.Divider />
             </NavDropdown>
 
+            <Nav.Link  href= "/Ostoskori.js">Ostoskori</Nav.Link>
+
             <Nav.Link href="/Admin.js" disabled hidden>
               Admin 
             </Nav.Link>
           </Nav>
             
-          <Nav.Link  href=  "/Ostoskori.js">Ostoskori</Nav.Link>
+          
 
-          <Form className="d-flex">
+          {/*<Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Kirjoita hakusana"
               className="me-2"
               aria-label="Search"
-            />
+          />*/}
             <Button className='kirjaudu' variant="outline-success">Etsi</Button>
-          </Form>
+          {/*</Form>*/}
           <Button className='kirjaudu' role="button" variant='primary' size='lg'>
-          <Nav.Link href="src/components/registration.php">Kirjaudu/Rekisteröidy</Nav.Link>
+          <Nav.Link href="src/components/registration.php">Login</Nav.Link>
           </Button>{ ' ' }
         </Navbar.Collapse>
       </Container>

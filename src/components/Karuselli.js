@@ -7,11 +7,11 @@ function CarouselFadeExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src=".\images\lautapelit/Afrikan tähti.png"
+          src=".\images\Konsolipelit/zelda.png"
           alt="First slide"
         />
         <Carousel.Caption>
-           <h3>First slide label</h3> 
+           <h2>First slide label</h2> 
           
         </Carousel.Caption>
       </Carousel.Item>
@@ -23,7 +23,7 @@ function CarouselFadeExample() {
         />
 
         <Carousel.Caption>
-         {/*  <h3>Second slide label</h3> */}
+        <h3>Second slide label</h3>
           
         </Carousel.Caption>
       </Carousel.Item>
@@ -35,8 +35,8 @@ function CarouselFadeExample() {
         />
 
         <Carousel.Caption>
-          {/* <h3>Third slide label</h3> */}
-          
+        <h4>Third slide label</h4>
+
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

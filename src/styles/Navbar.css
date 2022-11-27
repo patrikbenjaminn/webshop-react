@@ -17,12 +17,17 @@
 
   @font-face {
     font-family: Knife princess;
-    src: url(../../public/fonts/HoboStd.otf);
+    src: url(../../public/fonts/Knife\ Princess.ttf);
   }
 .navbar-dark {
     position: fixed;
     top: 0;
     z-index: 1100;
+    
+}
+
+.navbar-custom {
+    border:2px solid #ADEFD1FF;
 }
 .etu { /*navbarin linkkien nimet*/
     color:#ADEFD1FF !important;
@@ -239,7 +244,7 @@ border: rgb(224, 25, 174) 0.150em solid;
 
 .navbar-brand {
     color:#ADEFD1FF !important;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 1200;
     font-family:Knife princess;
     -webkit-text-stroke: 0.05em rgb(6, 6, 6);
@@ -272,7 +277,15 @@ border: rgb(224, 25, 174) 0.150em solid;
     text-decoration: none;
    
 
-   
+}
+
+.button.navbar-toggler {
+    background-color: #ADEFD1FF; 
+}
+
+
+.navbar-toggler-icon {
+   background-color: #ADEFD1FF;
 }
 
 
@@ -349,4 +362,11 @@ border: rgb(224, 25, 174) 0.150em solid;
     list-style: none;
 } 
    /* Modify the background color */  
-.navbar-custom {            background-color: #00203FFF;        }        /* Modify brand and text color */                 .navbar-custom .navbar-brand,        .navbar-custom .navbar-text {            color: green;        }
+.navbar-custom {
+    background-color: #00203FFF;
+}        /* Modify brand and text color */ 
+
+
+.navbar-custom .navbar-brand, .navbar-custom .navbar-text { 
+     color: green;        
+}
