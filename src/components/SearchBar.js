@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import '../styles/SearchBar.css';
+import Search from "react-bootstrap-icons";
+import Xcircle from "react-bootstrap-icons";
+/*
 import SearchIcon from "@material-ui/icons/Search";
 import CloseIcon from "@material-ui/icons/Close";
+*/
 
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
@@ -37,9 +41,9 @@ function SearchBar({ placeholder, data }) {
         />
         <div className="searchIcon">
           {filteredData.length === 0 ? (
-            <SearchIcon />
+            <Search />
           ) : (
-            <CloseIcon id="clearBtn" onClick={clearInput} />
+            <Xcircle id="clearBtn" onClick={clearInput} />
           )}
         </div>
       </div>
