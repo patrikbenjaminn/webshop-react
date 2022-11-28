@@ -83,12 +83,17 @@ function NavScrollExample() {
               <NavDropdown.Divider />
             </NavDropdown>
 
-            <Nav.Link  href= "/Ostoskori.js">Ostoskori</Nav.Link>
+            <Nav.Link  href= "/Ostoskori.js">
+            <i class="bi bi-cart"></i>
+            </Nav.Link>
 
             <Nav.Link href="/Admin.js" disabled hidden>
               Admin 
             </Nav.Link>
+          
           </Nav>
+
+          
             
           
 
@@ -99,11 +104,15 @@ function NavScrollExample() {
               className="me-2"
               aria-label="Search"
           />*/}
-            <Button className='kirjaudu' variant="outline-success">Etsi</Button>
+            <Nav.Link  href= "./SearchBar.js">
+            <i class="bi bi-search"></i>
+            </Nav.Link>
           {/*</Form>*/}
-          <Button className='kirjaudu' role="button" variant='primary' size='lg'>
-          <Nav.Link href="src/components/registration.php">Login</Nav.Link>
-          </Button>{ ' ' }
+
+          <a href="src/components/registration.php" target="_blank">
+          <Button> Login </Button></a>
+
+          { ' ' }
         </Navbar.Collapse>
       </Container>
     </Navbar>
