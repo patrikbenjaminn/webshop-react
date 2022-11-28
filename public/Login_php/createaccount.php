@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $postinro = $_POST["postinro"];
     $postitmp = $_POST["postitmp"];
     $salasana = $_POST["salasana"];
-    print "$astunnus, $etunimi, $sukunimi, $email, $osoite, $postinro, $postitmp $salasana";
+    print "$astunnus, $etunimi, $sukunimi, $email, $osoite, $postinro, $postitmp, $salasana";
 
     // hashing the password
     $salasana = md5($salasana );
