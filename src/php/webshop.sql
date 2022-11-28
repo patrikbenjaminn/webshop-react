@@ -82,8 +82,8 @@ INSERT INTO tilausrivi VALUES (1,1,1,3);
 
 /* Palaute */
 CREATE TABLE palaute(
-palauteid INTEGER NOT NULL,
-nimi CHAR(20) NOT NULL,
+palauteid INTEGER NOT NULL AUTO_INCREMENT,
+name CHAR(20) NOT NULL,
 email CHAR(50) NOT NULL, 
 timestamp DATE,
 message CHAR (255) NOT NULL,
