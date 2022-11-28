@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $postinro = $_POST["postinro"];
     $postitmp = $_POST["postitmp"];
     $salasana = $_POST["salasana"];
-    
+    print "$astunnus, $etunimi, $sukunimi, $email, $osoite, $postinro, $postitmp $salasana";
 
     // hashing the password
     $salasana = md5($salasana );
@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     else
     {
       
-        mysqli_query($link,"INSERT INTO `asiakas` (`astunnus`, `salasana`) VALUES ('$astunnus', '$salasana')");
+        mysqli_query($link,"INSERT INTO `asiakas` (`astunnus`, `etunimi`, `sukunimi`, `email`, `osoite`, `postinro`, `postitmp`, `salasana`) VALUES ('$astunnus', '$etunimi', '$sukunimi', '$email', '$osoite', '$postinro', '$postitmp', '$salasana')");
          // getting user id 
         $userid =  mysqli_insert_id($link);
       
