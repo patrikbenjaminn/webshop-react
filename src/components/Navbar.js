@@ -41,11 +41,16 @@ function NavScrollExample() {
               <NavDropdown.Divider />
             </NavDropdown>
 
+
+      
+
+
             <NavDropdown className='etu' title="Asiakas" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/login">Kirjaudu</NavDropdown.Item>
+              <NavDropdown.Item href="../Login_php/login">Kirjaudu</NavDropdown.Item>
               <NavDropdown.Item href="/signup">Luo tunnus</NavDropdown.Item>
               <NavDropdown.Divider />
             </NavDropdown>
+            
 
             <Nav.Link href="/Admin.js" disabled hidden>
               Admin 

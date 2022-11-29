@@ -139,6 +139,10 @@ i { /*navbarin iconit*/
     color: #ADEFD1FF;
 }
 
+button.navbar-toggler {
+    background-color: #ADEFD1FF;
+}
+
 
 .nav-item {
     list-style: none;
