@@ -2,7 +2,7 @@
   session_start();
 require_once "config.php";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $asnimi = $_POST["asnimi"];
+    $astunnus = $_POST["astunnus"];
     $salasana = $_POST["salasana"];
     // hashing the password
     $salasana = md5($salasana );
@@ -22,6 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         else
         {
             header("location:login.php?error=1");
+            echo "Tunnus väärin, kokeile uudestaan";
         }
         
     }

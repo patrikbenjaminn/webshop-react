@@ -19,35 +19,17 @@
     font-family: Knife princess;
     src: url(../../public/fonts/Knife\ Princess.ttf);
   }
-.navbar-dark {
-    position: fixed;
-    top: 0;
-    z-index: 1100;
-    
-}
+
 
 .navbar-custom {
     border:2px solid #ADEFD1FF;
-}
-.etu { /*navbarin linkkien nimet*/
-    color:#ADEFD1FF !important;
-    font-weight: 500;
-    font-size: 20px;
-    font-family:Hobo;
-    -webkit-text-stroke: 1.5px black;
-    position: relative;
-}
-
-.etu::before {
-    content: '';
-    position:relative;
-    top:50%;
-    left:3;
+    position: fixed;
+    z-index: 1100;
+    top: 0;
     width:100%;
-    height:100%;
-
-  
 }
+
+
 
 .nav.link1{
     color:#ADEFD1FF !important;
@@ -67,11 +49,6 @@
     height:100%;
     }
 
-
-
-.navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(23, 206, 63)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
 
 .navbar-brand {
     color:#ADEFD1FF !important;
@@ -97,21 +74,6 @@
 
 }
 
-.navbar-dark {
-    background: #00203FFF;
-    display: inline-block;
-    border: 3px solid;
-    width:100%;
-    padding: 10px 15px;
-    text-align: center;
-    color: #ADEFD1FF;
-    text-decoration: none;
-   
-
-   
-}
-
-
 .dropdown-item {
     background-color: #00203FFF;
     color:#ADEFD1FF !important;
@@ -125,31 +87,7 @@
     background-color: rgb(21, 222, 68);
 }
 
-.btn-primary { /*Login nappi*/
-    background-color: #ADEFD1FF;
-    opacity: 0.8;
-    font-size: 20px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: #00203FFF;
-    border: rgb(224, 25, 174) 0.150em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.35em;
-    font-family:Hobo ;
 
-     
-   
-}
-
-.btn-primary:hover{
-background-color:#00203FFF;
-color:#ADEFD1FF;
-transition: 0.4s;
-border: rgb(224, 25, 174) 0.150em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.35em;
-}
 
 .nav-item {
     list-style: none;
@@ -175,59 +113,6 @@ border: rgb(224, 25, 174) 0.150em solid;
     }
 
 
-
-
-.navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(23, 206, 63)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-brand {
-    color:#ADEFD1FF !important;
-    font-size: 40px;
-    font-weight: 1200;
-    font-family:Knife princess;
-    -webkit-text-stroke: 0.05em rgb(6, 6, 6);
-    position: relative;
-}
-
-.navbar-brand::before {
-    content: '';
-    position:absolute;
-    background:#ADEFD1FF;
-    top:40%;
-    left:0;
-    width:100%;
-    height:100%;
-
-    transform: perspective(8em) rotateX(70deg)
-    scale(1,0.15);
-    filter: blur(1.5em);
-
-}
-
-.navbar-dark {
-    background: #00203FFF;
-    display: inline-block;
-    border: 3px solid;
-    width:100%;
-    padding: 10px 15px;
-    text-align: center;
-    color: #ADEFD1FF;
-    text-decoration: none;
-   
-
-}
-
-.button.navbar-toggler {
-    background-color: #ADEFD1FF; 
-}
-
-
-.navbar-toggler-icon {
-   background-color: #ADEFD1FF;
-}
-
-
 .dropdown-item {
     background-color: #00203FFF;
     color:#ADEFD1FF !important;
@@ -243,7 +128,7 @@ border: rgb(224, 25, 174) 0.150em solid;
     border-color: #ADEFD1FF;
 }
 
-i {
+i { /*navbarin iconit*/
     margin-left: 0 15px 5px 0;
     width: 10px;
     height: 10px;
@@ -254,34 +139,9 @@ i {
     color: #ADEFD1FF;
 }
 
-.kirjaudu { /*Login nappi */
+button.navbar-toggler {
     background-color: #ADEFD1FF;
-    opacity: 0.8;
-    font-size: 20px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: #00203FFF;
-    border: rgb(224, 25, 174) 0.150em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.35em;
-    font-family:Hobo ;
-    
-
-     
-   
 }
-
-.kirjaudu:hover{
-background-color:#00203FFF;
-color:#ADEFD1FF;
-transition: 0.4s;
-border: rgb(224, 25, 174) 0.150em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.35em;
-}
-
-
 
 
 .nav-item {
@@ -291,5 +151,4 @@ border: rgb(224, 25, 174) 0.150em solid;
 .navbar-custom {
     background-color: #00203FFF;
 }        /* Modify brand and text color */ 
-
 

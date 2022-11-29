@@ -14,10 +14,10 @@ email CHAR(50) NOT NULL,
 osoite CHAR(30),
 postinro CHAR(5), 
 postitmp CHAR(10), 
-Id int(11),
+Id int not null AUTO_INCREMENT,
 salasana VARCHAR(255),
-created_at DATETIME,
-CONSTRAINT asiakas_pk PRIMARY KEY (astunnus)
+created_at TIMESTAMP,
+CONSTRAINT asiakas_pk PRIMARY KEY (Id)
 ) ;
 
 
@@ -60,10 +60,10 @@ INSERT INTO tuote VALUES (17,'Super Nintendo peliohjain', 12.90,15,4,'Uusi ohjai
 
 CREATE TABLE tilaus (
 tilausnro INTEGER NOT NULL,
-astunnus CHAR(6) NOT NULL, 
+Id int not null, 
 CONSTRAINT tilaus_pk PRIMARY KEY (tilausnro),
-CONSTRAINT tilaus_asiakas_fk FOREIGN KEY (astunnus) 
-           REFERENCES asiakas (astunnus)
+CONSTRAINT tilaus_asiakas_fk FOREIGN KEY (Id) 
+           REFERENCES asiakas (Id)
 ) ; 
 
 

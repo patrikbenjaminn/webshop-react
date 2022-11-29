@@ -13,34 +13,25 @@
         size: 50%;
         margin-top: auto;
     } */
-
- /*   .Carousel.Item{
-    width: 100%;
-    max-height: 100% !important;
-    max-width: 100%;
-}
-
-.carousel.item{
-    position: absolute;
-    top: 90%;
-    transform: translateY(-50%);
-    left: -8%; 
-}
 */
-.w-100 {
-    
-    width:400px;
-    height:400px;
-  }
-  
-    
-    .carousel.item{
-        position:absolute ;
-        top: 90%;
-        transform: translateY(-50%);
-        left: -8%; 
-    }
 
+.carousel {
+    position:fixed;
+    width: 100%;
+    size: 50%;
+    top:0;
+   }
+
+body {
+    margin-top: 100px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 200px;
+}
 
 .carousel-caption p{
     color:#ADEFD1FF;

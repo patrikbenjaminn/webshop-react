@@ -39,7 +39,7 @@ function Contact() {
       <div className="contact-form">
         <div className="contact-form__header">
           <h2>Yhteydenottolomake</h2>
-          Täytä Yhteydenottolomake, niin olemme sinuun yhteydessä mahdollisimman pian!
+          Täytä yhteydenottolomake, niin olemme sinuun yhteydessä mahdollisimman pian!
         </div>
         <div className="contact-form__container">
           <form onSubmit={save}>
