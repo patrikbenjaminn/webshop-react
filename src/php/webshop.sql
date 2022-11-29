@@ -19,7 +19,7 @@ salasana VARCHAR(255),
 created_at DATETIME,
 CONSTRAINT asiakas_pk PRIMARY KEY (astunnus)
 ) ;
-INSERT INTO asiakas VALUES ('hato00','Tomi','Hänninne','hannisentomi@gmail.com','jokukatu 39','90000','Oulu') ;
+
 
 /* TUOTERYHMÄ */
 CREATE TABLE tuoteryhma (
