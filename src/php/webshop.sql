@@ -85,7 +85,7 @@ CREATE TABLE palaute(
 palauteid INTEGER NOT NULL AUTO_INCREMENT,
 name CHAR(20) NOT NULL,
 email CHAR(50) NOT NULL, 
-timestamp DATE,
+timestamp TIMESTAMP,
 message CHAR (255) NOT NULL,
 CONSTRAINT tilausrivi_pk PRIMARY KEY (palauteid)
 );
