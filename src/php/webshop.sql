@@ -14,9 +14,12 @@ email CHAR(50) NOT NULL,
 osoite CHAR(30),
 postinro CHAR(5), 
 postitmp CHAR(10), 
+Id int(11),
+salasana VARCHAR(255),
+created_at DATETIME,
 CONSTRAINT asiakas_pk PRIMARY KEY (astunnus)
 ) ;
-INSERT INTO asiakas VALUES ('hato00','Tomi','Hänninne','hannisentomi@gmail.com','jokukatu 39','90000','Oulu') ;
+
 
 /* TUOTERYHMÄ */
 CREATE TABLE tuoteryhma (
@@ -63,7 +66,7 @@ CONSTRAINT tilaus_asiakas_fk FOREIGN KEY (astunnus)
            REFERENCES asiakas (astunnus)
 ) ; 
 
-INSERT INTO tilaus VALUES (1,'hato00');
+
 
 /* TILAUSRIVI */
 
