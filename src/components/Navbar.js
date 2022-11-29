@@ -46,7 +46,7 @@ function NavScrollExample() {
 
 
             <NavDropdown className='etu' title="Asiakas" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="../Login_php/login">Kirjaudu</NavDropdown.Item>
+              <NavDropdown.Item href="./Login_php/login">Kirjaudu</NavDropdown.Item>
               <NavDropdown.Item href="/signup">Luo tunnus</NavDropdown.Item>
               <NavDropdown.Divider />
             </NavDropdown>
