@@ -10,11 +10,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <div class="container">
    
-    <h2>Dashboard </h2>
+    <h2>Retrogamershaven odottaa!</h2>
     
     <h3> Tervetuloa <?php echo $userdata['astunnus']; ?> ! </h3>
-    <p> Kirjauduttu <?php echo $userdata['created_at']; ?> ! </p>
-    <h6> <a href="logout.php"> Logout </a> </h6>
+    <p> Olet kirjautunut sisään <?php echo $userdata['created_at']; ?> ! </p>
+    <h6> <a href="logout.php"> Kirjaudu ulos. </a> </h6>
+    <h6> <a href="http://localhost:3000/"> Siirry etusivulle. </a> </h6>
     </div>
 </html>
 <?php } else {
