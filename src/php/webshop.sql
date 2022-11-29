@@ -66,7 +66,7 @@ CONSTRAINT tilaus_asiakas_fk FOREIGN KEY (astunnus)
            REFERENCES asiakas (astunnus)
 ) ; 
 
-INSERT INTO tilaus VALUES (1,'hato00');
+
 
 /* TILAUSRIVI */
 
