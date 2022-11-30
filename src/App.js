@@ -13,14 +13,24 @@ import Tietokonepelit from './pages/Tietokonepelit';
 import Tarvikkeet from './pages/Tarvikkeet';
 import Uutuudet from './pages/Uutuudet';
 import Admin from './pages/Admin';
+import Header from './header/Header';
+import Products from './Products';
 
 
-function App() {
+function App(props) {
+  const [cart, setCart] = useState([]);
+
+  function addToCart(product) {
+    const newCart = [...cart,product];
+    setCart(newCart);
+    localStorage.setItem('cart',JSON.stringify(newCart));
+  }
   return (
     <>
       <Navbar />
         <div className='container'>
           <Routes>
+              <Products prod="bearspray" addToCart={addToCart}>Add BEAR SPRAY to cart</Products>
               <Route path='/' element={ <Etusivu />} />
               <Route path='/Tuoteryhmät' element={ <Tuoteryhmät />} />
               <Route path='/Lautapelit' element={ <Lautapelit />} />
@@ -39,5 +49,7 @@ function App() {
     </>
   );
 }
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
 
 export default App;
