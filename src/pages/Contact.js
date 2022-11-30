@@ -39,7 +39,8 @@ function Contact() {
       <div className="contact-form">
         <div className="contact-form__header">
           <h2>Yhteydenottolomake</h2>
-          Täytä yhteydenottolomake, niin olemme sinuun yhteydessä mahdollisimman pian!
+          Kehitämme toimintaamme jatkuvasti, olemme kiitollisia palautteesta, voit antaa sitä tästä.
+          Otamme yhteyttä mahdollisimman pian!
         </div>
         <div className="contact-form__container">
           <form onSubmit={save}>
