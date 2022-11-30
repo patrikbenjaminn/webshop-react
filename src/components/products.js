@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-export default function Products({prod, addToCart}) {
-    console.log(prod);
+export default function Products({url, addToCart}) {
+    console.log(url);
     return (
         <div>
-            <h3>Products for {prod}</h3>
-                <button onClick={e => addToCart({prod})}>
-                    Add {prod} to cart
+            <h3>Products for {url}</h3>
+                <button onClick={e => addToCart({url})}>
+                    Add {url} to cart
                 </button>
         </div>
     );

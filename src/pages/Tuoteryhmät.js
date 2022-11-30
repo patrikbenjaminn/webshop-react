@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+/* import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 export default function Tuoteryhmät({url, valittuKategoria, setValittuKategoria}) {
@@ -11,4 +11,4 @@ export default function Tuoteryhmät({url, valittuKategoria, setValittuKategoria
   return (
     <div>Tuoteryhmät</div>
   )
-}
+} */

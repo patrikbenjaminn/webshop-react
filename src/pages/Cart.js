@@ -1,5 +1,5 @@
-import Link from './link/Link';
-import "./index.css";
+import Link from '../link/link';
+
 
 export default function Cart(props) {
     return (
