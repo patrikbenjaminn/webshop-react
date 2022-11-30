@@ -6,7 +6,7 @@
     <form method="post" action="logincheck.php">
         <input type="text" name="astunnus" class="form-control" placeholder="astunnus">        
         <input type="salasana" name="salasana" class="form-control" placeholder="salasana">
-        <input type="submit" value="login">
+        <input type="submit" value="Login">
         
     </form>
     </div>
