@@ -13,14 +13,26 @@ import Tietokonepelit from './pages/Tietokonepelit';
 import Tarvikkeet from './pages/Tarvikkeet';
 import Uutuudet from './pages/Uutuudet';
 import Admin from './pages/Admin';
+import Header from './components/Header';
+import Products from './components/Products';
+import {useState} from "react";
+import ReactDOM from 'react-dom/client'
 
+function App(props) {
+  const [cart, setCart] = useState([]);
 
-function App() {
+  function addToCart(product) {
+    const newCart = [...cart,product];
+    setCart(newCart);
+    localStorage.setItem('cart',JSON.stringify(newCart));
+  }
+
   return (
     <>
       <Navbar />
         <div className='container'>
           <Routes>
+
               <Route path='/' element={ <Etusivu />} />
               <Route path='/Tuoteryhmät' element={ <Tuoteryhmät />} />
               <Route path='/Lautapelit' element={ <Lautapelit />} />
@@ -32,12 +44,17 @@ function App() {
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Admin' element={ <Admin />} />
               <Route path='*' element={ <NotFound />} />
+              <Route path='/products/:categoryId' element={ <Products url={URL} addToCart={addToCart} />} />
+
 
           </Routes>
+          
         </div>
       <Footer />
     </>
   );
 }
+
+
 
 export default App;
