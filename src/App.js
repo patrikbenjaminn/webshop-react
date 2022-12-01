@@ -7,11 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
 import Tuoteryhmät from './pages/Tuoteryhmät';
-/* import Lautapelit from './pages/tuoteryhmasivut/Lautapelit';
-import Konsolipelit from './pages/tuoteryhmasivut/Konsolipelit';
-import Tietokonepelit from './pages/tuoteryhmasivut/Tietokonepelit';
-import Tarvikkeet from './pages/tuoteryhmasivut/Tarvikkeet';
-import Uutuudet from './pages/tuoteryhmasivut/Uutuudet'; */
+import Tuotteet from './pages/Tuotteet';
 import Admin from './pages/admin/Admin';
 import Header from './components/Header';
 import Products from './components/Products';
@@ -37,6 +33,7 @@ function App(props) {
 
               <Route path='/' element={ <Etusivu />} />
               <Route path='/Tuoteryhmät' element={ <Tuoteryhmät />} />
+              <Route path="/Tuotteet/:tuoteid" element={<Tuotteet url={URL}/>}/>
               {/* <Route path='/Lautapelit' element={ <Lautapelit />} />
               <Route path='/Konsolipelit' element={ <Konsolipelit />} />
               <Route path='/Tietokonepelit' element={ <Tietokonepelit />} />

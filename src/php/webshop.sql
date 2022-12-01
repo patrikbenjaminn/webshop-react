@@ -42,6 +42,7 @@ hinta DECIMAL(5,2),
 saldo SMALLINT(5),
 trnro SMALLINT NOT NULL,
 tuotekuvaus TEXT,
+INDEX tuoteid(trnro),
 CONSTRAINT tuote_pk PRIMARY KEY (tuoteid),
 CONSTRAINT tuotenimi_un UNIQUE (tuotenimi),
 CONSTRAINT tuote_ryhma_fk FOREIGN KEY (trnro) 
