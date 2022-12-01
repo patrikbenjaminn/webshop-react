@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect} from 'react';
-import Button from 'react-bootstrap/Button';
+/* import Button from 'react-bootstrap/Button'; */
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+/* import Form from 'react-bootstrap/Form'; */
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -19,7 +19,7 @@ function NavScrollExample({url}) {
       .then((response) => {
         const json = response.data;
         setTuoteryhma(json);
-        console.log(json)
+        console.log(json.tuote)
       }).catch (error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
@@ -67,10 +67,7 @@ function NavScrollExample({url}) {
             </Nav.Link>
           
           </Nav>
-
-          
-            
-          
+               
 
           {/*<Form className="d-flex">
             <Form.Control

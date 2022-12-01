@@ -6,14 +6,14 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
-import Tuoteryhmät from './pages/Tuoteryhmät';
+/* import Tuoteryhmät from './pages/Tuoteryhmät'; */
 import Tuotteet from './pages/Tuotteet';
 import Admin from './pages/admin/Admin';
-import Header from './components/Header';
+/* import Header from './components/Header'; */
 import Products from './components/Products';
 import {useState} from "react";
-import ReactDOM from 'react-dom/client'
-
+/* import ReactDOM from 'react-dom/client'
+ */
 const URL = 'http://localhost:3005/src/php/';
 
 function App(props) {
@@ -32,7 +32,7 @@ function App(props) {
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
-              <Route path='/Tuoteryhmät' element={ <Tuoteryhmät />} />
+              {/* <Route path='/Tuoteryhmät' element={ <Tuoteryhmät />} /> */}
               <Route path="/Tuotteet/:tuoteid" element={<Tuotteet url={URL}/>}/>
               {/* <Route path='/Lautapelit' element={ <Lautapelit />} />
               <Route path='/Konsolipelit' element={ <Konsolipelit />} />
