@@ -7,16 +7,18 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
 import Tuoteryhmät from './pages/Tuoteryhmät';
-import Lautapelit from './pages/Lautapelit';
-import Konsolipelit from './pages/Konsolipelit';
-import Tietokonepelit from './pages/Tietokonepelit';
-import Tarvikkeet from './pages/Tarvikkeet';
-import Uutuudet from './pages/Uutuudet';
-import Admin from './pages/Admin';
+/* import Lautapelit from './pages/tuoteryhmasivut/Lautapelit';
+import Konsolipelit from './pages/tuoteryhmasivut/Konsolipelit';
+import Tietokonepelit from './pages/tuoteryhmasivut/Tietokonepelit';
+import Tarvikkeet from './pages/tuoteryhmasivut/Tarvikkeet';
+import Uutuudet from './pages/tuoteryhmasivut/Uutuudet'; */
+import Admin from './pages/admin/Admin';
 import Header from './components/Header';
 import Products from './components/Products';
 import {useState} from "react";
 import ReactDOM from 'react-dom/client'
+
+const URL = 'http://localhost:3005/src/php/';
 
 function App(props) {
   const [cart, setCart] = useState([]);
@@ -29,17 +31,17 @@ function App(props) {
 
   return (
     <>
-      <Navbar />
+      <Navbar url={URL} />
         <div className='container'>
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
               <Route path='/Tuoteryhmät' element={ <Tuoteryhmät />} />
-              <Route path='/Lautapelit' element={ <Lautapelit />} />
+              {/* <Route path='/Lautapelit' element={ <Lautapelit />} />
               <Route path='/Konsolipelit' element={ <Konsolipelit />} />
               <Route path='/Tietokonepelit' element={ <Tietokonepelit />} />
               <Route path='/Tarvikkeet' element={ <Tarvikkeet />} />
-              <Route path='/Uutuudet' element={ <Uutuudet />} />
+              <Route path='/Uutuudet' element={ <Uutuudet />} /> */}
               <Route path='/Contact' element={ <Contact />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Admin' element={ <Admin />} />

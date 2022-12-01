@@ -1,3 +1,5 @@
+import axios from 'axios';
+import React, { useState, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -7,7 +9,22 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../styles/Navbar.css';
 
 
-function NavScrollExample() {
+function NavScrollExample({url}) {
+
+  const [tuoteryhma, setTuoteryhma] = useState([]);
+
+  useEffect(() => {
+    console.log(url);
+    axios.get(url + 'gettuoteryhma.php')
+      .then((response) => {
+        const json = response.data;
+        setTuoteryhma(json);
+        console.log(json)
+      }).catch (error => {
+        alert(error.response === undefined ? error : error.response.data.error);
+      })
+  }, [])
+
   return (
     <Navbar className='navbar-custom'  expand="lg">
       <Container fluid>
@@ -22,13 +39,10 @@ function NavScrollExample() {
             <Nav.Link className='etu' href="/">Etusivu</Nav.Link>
 
             <NavDropdown className='etu' title="Tuoteryhmät" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/Lautapelit">Lautapelit</NavDropdown.Item>
-              <NavDropdown.Item href="/Konsolipelit">
-               Konsolipelit
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/Tietokonepelit">Tietokonepelit</NavDropdown.Item>
-              <NavDropdown.Item href="/Tarvikkeet">Tarvikkeet</NavDropdown.Item>
-              <NavDropdown.Item href="/Uutuudet">Uutuudet</NavDropdown.Item>
+              {tuoteryhma.map(tuoteryhma => (
+                <NavDropdown.Item href={"/tuoteryhma/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
+              ))}
+                          
               <NavDropdown.Divider />
             
             </NavDropdown>
@@ -40,11 +54,7 @@ function NavScrollExample() {
               <NavDropdown.Item href="/Returning">Palautukset</NavDropdown.Item>
               <NavDropdown.Divider />
             </NavDropdown>
-
-
-      
-
-
+            
             <NavDropdown className='etu' title="Asiakas" id="navbarScrollingDropdown">
               <NavDropdown.Item href="./Login_php/login">Kirjaudu</NavDropdown.Item>
               <NavDropdown.Item href="/signup">Luo tunnus</NavDropdown.Item>
