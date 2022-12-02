@@ -11,9 +11,11 @@ import Tuotteet from './pages/Tuotteet';
 import Admin from './pages/admin/Admin';
 /* import Header from './components/Header'; */
 import Products from './components/Products';
+import Products2 from './pages/Products2';
 import {useState} from "react";
 /* import ReactDOM from 'react-dom/client'
  */
+
 const URL = 'http://localhost:3005/src/php/';
 
 function App(props) {
@@ -32,18 +34,14 @@ function App(props) {
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
-              {/* <Route path='/Tuoteryhmät' element={ <Tuoteryhmät />} /> */}
-              <Route path="/Tuotteet/:tuoteid" element={<Tuotteet url={URL}/>}/>
-              {/* <Route path='/Lautapelit' element={ <Lautapelit />} />
-              <Route path='/Konsolipelit' element={ <Konsolipelit />} />
-              <Route path='/Tietokonepelit' element={ <Tietokonepelit />} />
-              <Route path='/Tarvikkeet' element={ <Tarvikkeet />} />
-              <Route path='/Uutuudet' element={ <Uutuudet />} /> */}
+              <Route path="/Products2/:trnro" element={<Products2 url={URL} />} />
+              <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL}/>}/>
+
               <Route path='/Contact' element={ <Contact />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Admin' element={ <Admin />} />
               <Route path='*' element={ <NotFound />} />
-              <Route path='/products/:categoryId' element={ <Products url={URL} addToCart={addToCart} />} />
+              <Route path='/Products/:categoryId' element={ <Products url={URL} addToCart={addToCart} />} />
 
 
           </Routes>

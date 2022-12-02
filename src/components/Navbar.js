@@ -1,25 +1,23 @@
 import axios from 'axios';
 import React, { useState, useEffect} from 'react';
-/* import Button from 'react-bootstrap/Button'; */
 import Container from 'react-bootstrap/Container';
-/* import Form from 'react-bootstrap/Form'; */
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../styles/Navbar.css';
 
 
-function NavScrollExample({url}) {
+function NavBar({url}) {
 
   const [tuoteryhma, setTuoteryhma] = useState([]);
 
   useEffect(() => {
-    console.log(url);
-    axios.get(url + 'gettuoteryhma.php')
+  
+    axios.get(url + 'products/gettuoteryhma.php')
       .then((response) => {
         const json = response.data;
         setTuoteryhma(json);
-        console.log(json.tuote)
+       
       }).catch (error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
@@ -40,7 +38,7 @@ function NavScrollExample({url}) {
 
             <NavDropdown className='etu' title="Tuoteryhmät" id="navbarScrollingDropdown">
               {tuoteryhma.map(tuoteryhma => (
-                <NavDropdown.Item href={"/tuoteryhma/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
+                <NavDropdown.Item  href={"/Products2/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
               ))}
                           
               <NavDropdown.Divider />
@@ -94,4 +92,4 @@ function NavScrollExample({url}) {
   );
 }
 
-export default NavScrollExample;
+export default NavBar;
