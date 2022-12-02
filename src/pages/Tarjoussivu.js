@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Tarjoussivu.css'
-
+import '../products/Products'
 function Tarjoussivu() {
   return (
     
@@ -11,7 +11,7 @@ function Tarjoussivu() {
           <div class="col-lg-3">
             <div class="card h-100">
               <img src="../images/Video Game Console.H03.2k.png" class="img-fluid mb-3" alt=""/>
-              <input type="button" onClick={() => console.log("Viinaa")} value="OSTA TÄSTÄ"/>   
+              <input type="button" onClick={()=>window.location.href='./Products/xbox'}  value="OSTA TÄSTÄ"/>   
               <h5>Tuotenimi</h5>
               <p><small><del>80€</del><span>60€</span></small></p>
             </div>
