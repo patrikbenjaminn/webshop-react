@@ -11,7 +11,6 @@ import Tuotteet from './pages/Tuotteet';
 import Admin from './pages/admin/Admin';
 /* import Header from './components/Header'; */
 import Products from './components/Products';
-import Products2 from './pages/Products2';
 import {useState} from "react";
 /* import ReactDOM from 'react-dom/client'
  */
@@ -34,9 +33,7 @@ function App(props) {
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
-              <Route path="/Products2/:trnro" element={<Products2 url={URL} />} />
               <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL}/>}/>
-
               <Route path='/Contact' element={ <Contact />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Admin' element={ <Admin />} />

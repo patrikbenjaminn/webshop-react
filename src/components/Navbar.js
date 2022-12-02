@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+/* import Tuotteet from '../pages/Tuotteet' */
 import '../styles/Navbar.css';
 
 
@@ -38,7 +39,7 @@ function NavBar({url}) {
 
             <NavDropdown className='etu' title="Tuoteryhmät" id="navbarScrollingDropdown">
               {tuoteryhma.map(tuoteryhma => (
-                <NavDropdown.Item  href={"/Products2/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
+                <NavDropdown.Item  href={"/Tuotteet/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
               ))}
                           
               <NavDropdown.Divider />
