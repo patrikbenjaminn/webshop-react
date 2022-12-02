@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        $checking =   mysqli_query($link,"SELECT * FROM asiakas WHERE `astunnus`='$astunnus' AND `salasana`='$salasana'");
          // getting user id 
          $userdata = mysqli_fetch_array($checking);
-         $userid =  $userdata['id'];
+         $userid =  $userdata['Id'];
          if($userid!=NULL)
         {
              //creating session 
@@ -21,8 +21,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         else
         {
-            header("location:login.php?error=1");
+           /* header("location:login.php?error=1");
+            print_r($userdata);
+            print"<br>";
+            print $userid;*/
             echo "Tunnus väärin, kokeile uudestaan";
+            
         }
         
     }

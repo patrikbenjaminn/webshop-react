@@ -1,13 +1,29 @@
-import Button from 'react-bootstrap/Button';
+import axios from 'axios';
+import React, { useState, useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+/* import Tuotteet from '../pages/Tuotteet' */
 import '../styles/Navbar.css';
 
 
-function NavScrollExample() {
+function NavBar({url}) {
+
+  const [tuoteryhma, setTuoteryhma] = useState([]);
+
+  useEffect(() => {
+  
+    axios.get(url + 'products/gettuoteryhma.php')
+      .then((response) => {
+        const json = response.data;
+        setTuoteryhma(json);
+       
+      }).catch (error => {
+        alert(error.response === undefined ? error : error.response.data.error);
+      })
+  }, [])
+
   return (
     <Navbar className='navbar-custom'  expand="lg">
       <Container fluid>
@@ -22,13 +38,10 @@ function NavScrollExample() {
             <Nav.Link className='etu' href="/">Etusivu</Nav.Link>
 
             <NavDropdown className='etu' title="Tuoteryhmät" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/Lautapelit">Lautapelit</NavDropdown.Item>
-              <NavDropdown.Item href="/Konsolipelit">
-               Konsolipelit
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/Tietokonepelit">Tietokonepelit</NavDropdown.Item>
-              <NavDropdown.Item href="/Tarvikkeet">Tarvikkeet</NavDropdown.Item>
-              <NavDropdown.Item href="/Uutuudet">Uutuudet</NavDropdown.Item>
+              {tuoteryhma.map(tuoteryhma => (
+                <NavDropdown.Item  href={"/Tuotteet/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
+              ))}
+                          
               <NavDropdown.Divider />
             
             </NavDropdown>
@@ -40,11 +53,7 @@ function NavScrollExample() {
               <NavDropdown.Item href="/Returning">Palautukset</NavDropdown.Item>
               <NavDropdown.Divider />
             </NavDropdown>
-
-
-      
-
-
+            
             <NavDropdown className='etu' title="Asiakas" id="navbarScrollingDropdown">
               <NavDropdown.Item href="./Login_php/login">Kirjaudu</NavDropdown.Item>
               <NavDropdown.Item href="/signup">Luo tunnus</NavDropdown.Item>
@@ -57,10 +66,7 @@ function NavScrollExample() {
             </Nav.Link>
           
           </Nav>
-
-          
-            
-          
+               
 
           {/*<Form className="d-flex">
             <Form.Control
@@ -87,4 +93,4 @@ function NavScrollExample() {
   );
 }
 
-export default NavScrollExample;
+export default NavBar;
