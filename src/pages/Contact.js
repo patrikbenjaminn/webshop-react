@@ -27,6 +27,7 @@ function Contact() {
         setMessage('')
         alert('Viesti lähetetty onnistuneesti! Kiitos yhteydenotosta!')
       })
+      
       .catch(error => {
         console.log(error.response ? error.response.data.error : error)
         alert("Häiriö järjestelmässä, yritä pian uudelleen!")

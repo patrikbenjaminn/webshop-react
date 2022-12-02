@@ -13,6 +13,15 @@ import Tuotteet from './pages/Tuotteet';
 import Admin from './pages/admin/Admin';
 /* import Header from './components/Header'; */
 import Products from './components/Products';
+import Tuoteryhmät from './pages/Tuoteryhmät';
+import Lautapelit from './pages/Lautapelit';
+import Konsolipelit from './pages/Konsolipelit';
+import Tietokonepelit from './pages/Tietokonepelit';
+import Tarvikkeet from './pages/Tarvikkeet';
+import Uutuudet from './pages/Uutuudet';
+import Admin from './pages/Admin';
+import Header from './components/Header';
+import Products from './products/Products';
 import {useState} from "react";
 /* import ReactDOM from 'react-dom/client'
  */
@@ -27,7 +36,7 @@ function App(props) {
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
-
+  const URL = window.location.href
   return (
     <>
       <Navbar url={URL} />
@@ -42,7 +51,7 @@ function App(props) {
               <Route path='/Loginpage' element={ <Loginpage />} />
               <Route path='/Admin' element={ <Admin />} />
               <Route path='*' element={ <NotFound />} />
-              <Route path='/Products/:categoryId' element={ <Products url={URL} addToCart={addToCart} />} />
+              <Route path='/products/:categoryId' element={ <Products url={URL} addToCart={addToCart} />} />
 
 
           </Routes>
