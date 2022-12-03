@@ -1,4 +1,4 @@
-import '../styles/Contact.css';
+import '../styles/Loginpage.css';
 import axios from 'axios';
 import { useState } from 'react';
 
@@ -48,23 +48,23 @@ function Loginpage() {
 
   return (
     <>
-      <div className="contact-form">
-        <div className="contact-form__header">
-          <h2>Kirjaudu sisään</h2>
+      <div className="regform">
+        <div className="regform__header">
+          <h8>Kirjaudu sisään</h8>
           Pian olet perillä!
         </div>
-        <div className="contact-form__container">
+        <div className="regform__container">
           <form onSubmit={save}>
             <label htmlFor="astunnus">Astunnus </label>
-            <input type="text" value={astunnus}
+            <input type="texti" value={astunnus}
               onChange={(e) => setAstunnus(e.target.value)}
               placeholder="astunnus" required />
           
             <label htmlFor="salasana">Salasana </label>
-            <input type="text" value={salasana}
+            <input type="texti" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
               placeholder="salasana" required />
-              <input type="submit" value="Lähetä" />
+              <input type="submitti" value="Lähetä" />
            
           </form>
 
