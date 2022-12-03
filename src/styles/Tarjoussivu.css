@@ -1,7 +1,7 @@
 /*--------tarjoussivu1 alkaa-------------*/
 
 .tarjoukset {
-   /* background:url(../../public/images/rgh3.jpg);*/
+    /*background:url(../../public/images/rgh3.jpg);*/
     min-height: 90vh;
     background-size: cover;
     background-position: left;

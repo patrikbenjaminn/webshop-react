@@ -37,6 +37,8 @@ function NavBar({url}) {
           >
             <Nav.Link className='etu' href="/">Etusivu</Nav.Link>
 
+            <Nav.Link className='etu' href="../../images/tenor.gif">Paina tästä</Nav.Link>
+
            {/* <NavDropdown className='etu' title="Tuoteryhmät" id="navbarScrollingDropdown">
               {tuoteryhma.map(tuoteryhma => (
                 <NavDropdown.Item  href={"/Tuotteet/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
