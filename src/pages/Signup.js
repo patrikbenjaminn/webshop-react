@@ -4,8 +4,14 @@ import { useState } from 'react';
 
 const URL = 'http://localhost/webshop/src/php';
 
-function Loginpage() {
+function Signup() {
   const [astunnus, setAstunnus] = useState('');
+  const [etunimi, setEtunimi] = useState('');
+  const [sukunimi, setSukunimi] = useState('');
+  const [email, setEmail] = useState('');
+  const [osoite, setOsoite] = useState('');
+  const [postinro, setPostinro] = useState('');
+  const [postitmp, setPostitmp] = useState('');
   const [salasana, setSalasana] = useState('');
   
  
@@ -50,8 +56,8 @@ function Loginpage() {
     <>
       <div className="contact-form">
         <div className="contact-form__header">
-          <h2>Kirjaudu sisään</h2>
-          Pian olet perillä!
+          <h2>Rekisteröitymislomake</h2>
+          Olet jo näin lähellä asiakkuutta!
         </div>
         <div className="contact-form__container">
           <form onSubmit={save}>
@@ -59,7 +65,37 @@ function Loginpage() {
             <input type="text" value={astunnus}
               onChange={(e) => setAstunnus(e.target.value)}
               placeholder="astunnus" required />
-          
+
+            <label htmlFor="etunimi">Etunimi </label>
+            <input type="text" value={etunimi}
+              onChange={(e) => setEtunimi(e.target.value)}
+              placeholder="etunimi" required />
+
+            <label htmlFor="sukunimi">Sukunimi </label>
+            <input type="text" value={sukunimi}
+              onChange={(e) => setSukunimi(e.target.value)}
+              placeholder="sukunimi" required />
+
+            <label htmlFor="email"> Sähköpostiosoite </label>
+            <input type="email" value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="email@example.com" required />
+
+            <label htmlFor="osoite">Osoite </label>
+            <input type="text" value={osoite}
+              onChange={(e) => setOsoite(e.target.value)}
+              placeholder="osoite" required />
+
+            <label htmlFor="postinro">Postinro </label>
+            <input type="text" value={postinro}
+              onChange={(e) => setPostinro(e.target.value)}
+              placeholder="postinro" required />
+
+            <label htmlFor="postitmp">Postitmp </label>
+            <input type="text" value={postitmp}
+              onChange={(e) => setPostitmp(e.target.value)}
+              placeholder="postitmp" required />
+
             <label htmlFor="salasana">Salasana </label>
             <input type="text" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
@@ -74,4 +110,4 @@ function Loginpage() {
     </>
   );
 }
-export default Loginpage;
+export default Signup;
