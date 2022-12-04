@@ -132,12 +132,21 @@ i { /*navbarin iconit*/
     margin-left: 0 15px 5px 0;
     width: 10px;
     height: 10px;
-    padding: 5px 5px;
+    padding: 2px;
     font-size: 40px;
 }
 .bi-cart {
     color: #ADEFD1FF;
 }
+
+.bi-cart:hover, .bi-search:hover{
+    background-color:#00203FFF;
+    color:#ADEFD1FF;
+    transition: 0.2s;
+    border: rgb(224, 25, 174) 0.100em solid;
+        padding: 0.20em 0.15em;
+        border-radius: 0.55em;
+    }
 
 button.navbar-toggler {
     background-color: #ADEFD1FF;

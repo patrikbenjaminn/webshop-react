@@ -58,7 +58,7 @@ function NavBar({url}) {
             
             <NavDropdown className='etu' title="Asiakas" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/Loginpage">Kirjaudu</NavDropdown.Item>
-              <NavDropdown.Item href="/signup">Luo tunnus</NavDropdown.Item>
+              <NavDropdown.Item href="/Signup">Luo tunnus</NavDropdown.Item>
               <NavDropdown.Divider />
             </NavDropdown>
             

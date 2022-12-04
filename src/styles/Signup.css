@@ -1,7 +1,7 @@
 .regform {
-    max-width: 510px;
-    max-height: 900px;
-    margin: auto;
+    width: 500px;
+    height: 1000px;
+    margin:auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,13 +11,23 @@
     align-items: baseline;
     justify-content: center;
     padding: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     box-shadow: rgba(223, 18, 18, 0.35) 0px 5px 15px;
     border-radius: 20px;
     background-color:#ADEFD1FF ;
     border: 1px solid #00203FFF;
     box-shadow: 2px 2px 10px 0 #ADEFD1FF;
+    text-align: center;
+    overflow-y: scroll;
+}
+.regform__header {
+    background:#ADEFD1FF;
+    padding: 2px 35px 31px;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
 }
 
 .regform__header h8 {
@@ -27,6 +37,8 @@
     font-size: 35px;
     font-weight: 200;
     font-family: hobo;
+    text-align: center;
+    
 }
 
 input {
@@ -48,7 +60,6 @@ input {
 
 
 label {
-    font-size: 5px;
     padding: 1px;
     color: #00203FFF;
     font-size: 50px;
@@ -70,7 +81,7 @@ input[type=texti], input[type=emaili] {
     
   }
 
-  input[type=submitti] {
+  input[type=submit] {
     background-color: #00203FFF;
     color: #ADEFD1FF;
     cursor: pointer;
@@ -85,6 +96,15 @@ input[type=texti], input[type=emaili] {
     text-align: center;
 }
 
+input[type=submit]:hover {
+    background-color:#00203FFF;
+    color:#ADEFD1FF;
+    transition: 0.2s;
+    border: rgb(224, 25, 174) 0.100em solid;
+        padding: 0.20em 0.1em;
+        border-radius: 1.5em;
+        border-width: 4px;
+    }
  
 
  

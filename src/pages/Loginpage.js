@@ -48,12 +48,11 @@ function Loginpage() {
 
   return (
     <>
-      <div className="regform">
-        <div className="regform__header">
-          <h8>Kirjaudu sisään</h8>
-          Pian olet perillä!
+      <div className="logform">
+        <div className="logform__header">
+          <h12>Kirjaudu sisään!</h12>
         </div>
-        <div className="regform__container">
+        <div className="logform__container">
           <form onSubmit={save}>
             <label htmlFor="astunnus">Astunnus </label>
             <input type="texti" value={astunnus}
@@ -64,7 +63,7 @@ function Loginpage() {
             <input type="texti" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
               placeholder="salasana" required />
-              <input type="submitti" value="Lähetä" />
+              <input type="submit" value="Lähetä" />
            
           </form>
 
