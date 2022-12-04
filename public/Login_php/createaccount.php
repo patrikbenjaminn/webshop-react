@@ -7,17 +7,17 @@ header("Access-Control-Request-Method: POST");
 require_once "config.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-   /* $astunnus = $_POST["astunnus"];
+    /*$astunnus = $_POST["astunnus"];
     $etunimi = $_POST["etunimi"];
     $sukunimi = $_POST["sukunimi"];
     $email = $_POST["email"];
     $osoite = $_POST["osoite"];
     $postinro = $_POST["postinro"];
     $postitmp = $_POST["postitmp"];
-    $salasana = $_POST["salasana"];
- 
-    print "$astunnus, $etunimi, $sukunimi, $email, $osoite, $postinro, $postitmp, $salasana";*/
+    $salasana = $_POST["salasana"];*/
+
+     
+    /*print "$astunnus, $etunimi, $sukunimi, $email, $osoite, $postinro, $postitmp, $salasana";*/
     $input = json_decode(file_get_contents('php://input'));
     $astunnus = filter_var($input->astunnus,FILTER_SANITIZE_SPECIAL_CHARS);
     $etunimi = filter_var($input->etunimi,FILTER_SANITIZE_SPECIAL_CHARS);
@@ -28,7 +28,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $postitmp = filter_var($input->postitmp,FILTER_SANITIZE_SPECIAL_CHARS);
     $salasana = filter_var($input->salasana,FILTER_SANITIZE_SPECIAL_CHARS);
     
-    
+
+    /*header('HTTP/1.1 200 OK');
+    $data = array('astunnus' => $astunnus, 'etunimi' => $etunimi, 'sukunimi' => $sukunimi, 'email' => $email, 'osoite' => $osoite, 'postinro' => $postinro, 'postitmp' => $postitmp, 'salasana' => $salasana,);
+    */
     // hashing the password
     $salasana = md5($salasana );
     //checking username already exists

@@ -13,19 +13,18 @@ function Signup() {
   const [postinro, setPostinro] = useState('');
   const [postitmp, setPostitmp] = useState('');
   const [salasana, setSalasana] = useState('');
-  
- 
 
   function save(e) {
-   /* e.preventDefault()
+   
+   e.preventDefault()
     const json = JSON.stringify({astunnus: astunnus, etunimi: etunimi, sukunimi: sukunimi, email: email, osoite: osoite, postinro: postinro, postitmp: postitmp, salasana: salasana });
-    axios.post(URL + 'Createaccount.php', json, {
+    axios.post(URL + 'createaccount.php', json, {
       headers: {
-        'Content-Type': 'Application/json'*/
+        'Content-Type': 'Application/json'
       }
-    
+    })
 
-      /*.then((response) => {
+      .then((response) => {
         setAstunnus(astunnus => [...astunnus, response.data])
         setEtunimi(etunimi => [...etunimi, response.data])
         setSukunimi(sukunimi => [...sukunimi, response.data])
@@ -49,7 +48,7 @@ function Signup() {
         console.log(error.response ? error.response.data.error : error)
         alert("Häiriö järjestelmässä, yritä pian uudelleen!")
       })
-  }*/
+  }
 
 
   return (
@@ -99,7 +98,7 @@ function Signup() {
             <input type="texti" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
               placeholder="salasana" required />
-              <input type="submitti" value="Lähetä" />
+              <input type="submit" value="Lähetä" />
            
           </form>
 
