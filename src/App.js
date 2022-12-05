@@ -5,7 +5,7 @@ import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import Signup from './pages/Signup';
 import Loginpage from './pages/Loginpage';
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
 /* import Tuoteryhmät from './pages/Tuoteryhmät'; */
@@ -27,7 +27,7 @@ import Cart from './pages/Cart';
 /* import ReactDOM from 'react-dom/client'
  */
 
-const URL = 'http://localhost:3005/src/php/';
+const URL = 'http://localhost/webshop/php/';
 
 function App(props) {
   // ostoskori
@@ -41,7 +41,7 @@ function App(props) {
   const URL = window.location.href
   return (
     <>
-      <Navbar url={URL} />
+      <NavBar url={URL} />
         <div className='container'>
           <Routes>
 

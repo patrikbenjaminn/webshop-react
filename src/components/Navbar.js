@@ -7,22 +7,31 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Tuotteet from '../pages/Tuotteet';
 import '../styles/Navbar.css';
 
+const URL = 'http://localhost/webshop/php/';
 
-function NavBar({url}) {
+function NavBar() {
 
-  /*const [tuoteryhma, setTuoteryhma] = useState([]);
+  const [tuoteryhma, setTuoteryhma] = useState([]);
 
   useEffect(() => {
   
-    axios.get(url + 'products/gettuoteryhma.php')
+    const json = '{}';
+
+    axios.get(URL + 'products/gettuoteryhma.php', json, {
+      headers: {
+        'Content-Type': 'Application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
       .then((response) => {
         const json = response.data;
         setTuoteryhma(json);
+        console.log(json);
        
       }).catch (error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
-  }, [])*/
+  }, [])
 
   return (
     <Navbar className='navbar-custom'  expand="lg">
@@ -37,16 +46,14 @@ function NavBar({url}) {
           >
             <Nav.Link className='etu' href="/">Etusivu</Nav.Link>
 
-            <Nav.Link className='etu' href="../../images/tenor.gif">Paina tästä</Nav.Link>
-
-           {/* <NavDropdown className='etu' title="Tuoteryhmät" id="navbarScrollingDropdown">
+           <NavDropdown className='etu' title="Tuoteryhmät" id="navbarScrollingDropdown">
               {tuoteryhma.map(tuoteryhma => (
-                <NavDropdown.Item  href={"/Tuotteet/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
+                <NavDropdown.Item key='tuoteryhma.trnro' href={"/Tuotteet/" + tuoteryhma.trnro}>{tuoteryhma.trnimi} </NavDropdown.Item>
               ))}
                           
               <NavDropdown.Divider />
             
-            </NavDropdown>*/}
+            </NavDropdown>
 
             
 

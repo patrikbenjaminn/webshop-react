@@ -2,7 +2,7 @@ import '../styles/Loginpage.css';
 /*import axios from 'axios';*/
 import { useState } from 'react';
 
-/*const URL = 'http://localhost/webshop/src/php';*/
+/*const URL = 'http://localhost/webshop/php';*/
 
 function Loginpage() {
   const [astunnus, setAstunnus] = useState('');
