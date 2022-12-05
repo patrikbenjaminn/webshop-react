@@ -23,6 +23,7 @@ import Uutuudet from './pages/Uutuudet';
 import Header from './components/Header';
 import Products from './products/Products';*/
 import {useState} from "react";
+import Cart from './pages/Cart';
 /* import ReactDOM from 'react-dom/client'
  */
 
@@ -52,7 +53,7 @@ function App(props) {
               <Route path='/Admin' element={ <Admin />} />
               <Route path='*' element={ <NotFound />} />
 
-               {/*<Route path='/products/:categoryId' element={ <Products url={URL} addToCart={addToCart} />} /> */}
+              <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
 
 
           </Routes>

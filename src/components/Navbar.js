@@ -77,7 +77,7 @@ function NavBar({url}) {
               className="me-2"
               aria-label="Search"
           />*/}
-            <Nav.Link  href= "/Ostoskori.js">
+            <Nav.Link  href= "./Cart">
             <i class="bi bi-cart"></i>
             </Nav.Link>
 
