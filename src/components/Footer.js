@@ -10,6 +10,7 @@ export default function Footer() {
            <span>We are Aino, Henrik, Marko, Minna, Patrik, Sauli ja Tomi</span> 
         </div>
          
+    
     </footer>
   )
 }
