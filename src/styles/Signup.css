@@ -1,9 +1,9 @@
 .regform {
     width: 500px;
-    height: 1000px;
+    min-height: 100%;
     margin:auto;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -106,5 +106,6 @@ input[type=submit]:hover {
         border-width: 4px;
     }
  
+   
 
  

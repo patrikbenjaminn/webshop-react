@@ -2,7 +2,7 @@ import '../styles/Signup.css';
 import axios from 'axios';
 import { useState } from 'react';
 
-const URL = 'http://localhost/webshop/src/php';
+/*const URL = 'http://localhost/webshop/public/Login_php';*/
 
 function Signup() {
   const [astunnus, setAstunnus] = useState('');
