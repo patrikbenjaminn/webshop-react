@@ -1,8 +1,9 @@
 import '../styles/Loginpage.css';
 /*import axios from 'axios';*/
 import { useState } from 'react';
+import axios from 'axios';
 
-/*const URL = 'http://localhost/webshop/php';*/
+const URL = 'http://localhost/webshop/php/';
 
 function Loginpage() {
   const [astunnus, setAstunnus] = useState('');
@@ -11,12 +12,17 @@ function Loginpage() {
  
 
   function save(e) {
-   /* e.preventDefault()
-    const json = JSON.stringify({astunnus: astunnus, etunimi: etunimi, sukunimi: sukunimi, email: email, osoite: osoite, postinro: postinro, postitmp: postitmp, salasana: salasana });
-    axios.post(URL + 'Createaccount.php', json, {
+    e.preventDefault()
+    const json = JSON.stringify({astunnus: astunnus, salasana: salasana });
+    axios.post(URL + 'logincheck.php', json, {
       headers: {
-        'Content-Type': 'Application/json'*/
-      }
+        'Content-Type': 'Application/json',
+
+      }})
+      .then((response) => {
+        console.log(response);
+      })
+  }
     
 
       /*.then((response) => {
