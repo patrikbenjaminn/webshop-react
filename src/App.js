@@ -30,6 +30,7 @@ import Cart from './pages/Cart';
 const URL = 'http://localhost:3005/src/php/';
 
 function App(props) {
+  // ostoskori
   const [cart, setCart] = useState([]);
 
   function addToCart(product) {
