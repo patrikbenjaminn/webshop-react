@@ -30,6 +30,16 @@ import Cart from './pages/Cart';
 const URL = 'http://localhost/webshop/php/';
 
 function App(props) {
+
+  /*
+  Jos herjaa CORS-virheistä, niin avaa XAMPPin Apache config ja sieltä httpd.conf
+  Lisää sinne seuraavat kolme riviä heti "Listen 80" rivin alle
+
+  Header set Access-Control-Allow-Origin "*"
+  Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+  Header set Access-Control-Allow-Headers "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
+  */
+
   // ostoskori
   const [cart, setCart] = useState([]);
 
