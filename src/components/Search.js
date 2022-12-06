@@ -2,9 +2,7 @@ import axios from 'axios';
 import {useState, useEffect} from 'react';
 import { Navigate, useParams} from 'react-router-dom';
 import '../styles/Contact.css';
-
-
-
+import '../App.css';
 
 
 function Search({url}) {
@@ -20,9 +18,9 @@ function Search({url}) {
         let address ='';
 
        if (params.searchPhrase === undefined){
-            address = url + '/products/gettuotteet.php/' + params.trnro;
+            address = url + '../products/gettuotteet.php/' + params.trnro;
         } else {
-            address = url + 'products/search.php/' + params.searchPhrase;
+            address = url + '../products/search.php/' + params.searchPhrase;
         }
 
      axios.get(address)
@@ -49,7 +47,7 @@ function Search({url}) {
     }
 return (
     <div className='contact-form'>
-      <h3>Etsi tuotteita</h3>
+      <h2>Etsi tuotteita</h2>
       { <form className="form-inline my-2 my-lg-0">
 <input
 value={search}

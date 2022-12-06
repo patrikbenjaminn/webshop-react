@@ -8,18 +8,11 @@ import Loginpage from './pages/Loginpage';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
-/* import Tuoteryhmät from './pages/Tuoteryhmät'; */
 import Tuotteet from './pages/Tuotteet';
 import Admin from './pages/admin/Admin';
 import Header from './components/Header';
 /*import Products from './components/Products';
 import Tuoteryhmät from './pages/Tuoteryhmät';
-import Lautapelit from './pages/Lautapelit';
-import Konsolipelit from './pages/Konsolipelit';
-import Tietokonepelit from './pages/Tietokonepelit';
-import Tarvikkeet from './pages/Tarvikkeet';
-import Uutuudet from './pages/Uutuudet';
-/*import Admin from './pages/Admin';
 import Header from './components/Header';
 import Products from './products/Products';*/
 import {useState} from "react";
@@ -28,7 +21,7 @@ import { Search } from 'react-bootstrap-icons';
 /* import ReactDOM from 'react-dom/client'
  */
 
-const URL = 'http://localhost/webshop/php/';
+const URI = 'http://localhost/webshop/php/';
 
 function App(props) {
 
@@ -66,6 +59,8 @@ function App(props) {
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Search url={URL}/>}/>
               <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
+              <Route path='/Search/searchPhrase' element={<Search url={URL}/>}/>
+              <Route path='/Tuotteet/tuoteid' element={<Tuotteet url={URL}/>}/>
 
 
           </Routes>
