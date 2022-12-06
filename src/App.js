@@ -20,6 +20,7 @@ import Products from './products/Products';*/
 import {useState} from "react";
 import Cart from './pages/Cart';
 import AdminDashboard from './pages/admin/AdminDashboard';
+import { Search } from 'react-bootstrap-icons';
 /* import ReactDOM from 'react-dom/client'
  */
 
@@ -59,7 +60,7 @@ function App(props) {
               <Route path='/Loginpage' element={ <Loginpage />} />
               <Route path='/AdminDashboard' element={ <AdminDashboard />} />
               <Route path='*' element={ <NotFound />} />
-
+              <Route path="/Search" element={<Search url={URL}/>}/>
               <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
 
 
