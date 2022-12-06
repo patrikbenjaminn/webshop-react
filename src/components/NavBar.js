@@ -36,7 +36,7 @@ function NavBar() {
   return (
     <Navbar className='navbar-custom'  expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">RetroGamersHaven</Navbar.Brand>
+        <Navbar.Brand href="/">RGH</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

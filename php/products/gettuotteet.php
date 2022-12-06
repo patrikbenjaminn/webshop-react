@@ -4,7 +4,7 @@ require_once '../inc/headers.php';
 
 $uri = parse_url(filter_input(INPUT_SERVER,'PATH_INFO'),PHP_URL_PATH);
 $parameters = explode('/',$uri);
-$trnro = $parameters[1];
+$trnro = $parameters[0];
 
 try {
     $db = openDb();

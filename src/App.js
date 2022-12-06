@@ -14,16 +14,12 @@ import Admin from './pages/admin/Admin';
 import Header from './components/Header';
 /*import Products from './components/Products';
 import Tuoteryhmät from './pages/Tuoteryhmät';
-import Lautapelit from './pages/Lautapelit';
-import Konsolipelit from './pages/Konsolipelit';
-import Tietokonepelit from './pages/Tietokonepelit';
-import Tarvikkeet from './pages/Tarvikkeet';
-import Uutuudet from './pages/Uutuudet';
 /*import Admin from './pages/Admin';
 import Header from './components/Header';
 import Products from './products/Products';*/
 import {useState} from "react";
 import Cart from './pages/Cart';
+import AdminDashboard from './pages/admin/AdminDashboard';
 /* import ReactDOM from 'react-dom/client'
  */
 
@@ -56,12 +52,12 @@ function App(props) {
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
-              <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL}/>}/>
+              <Route path="/Tuotteet/:trnro" element={<Tuotteet /*url={URL} */ />}/>
               <Route path='/Contact' element={ <Contact />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
-              <Route path='/Admin' element={ <Admin />} />
+              <Route path='/AdminDashboard' element={ <AdminDashboard />} />
               <Route path='*' element={ <NotFound />} />
 
               <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
