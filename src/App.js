@@ -26,7 +26,7 @@ import { Search } from 'react-bootstrap-icons';
 
 const URL = 'http://localhost/webshop/php/';
 
-function App(props) {
+function App() {
 
   /*
   Jos herjaa CORS-virheistä, niin avaa XAMPPin Apache config ja sieltä httpd.conf
@@ -45,7 +45,7 @@ function App(props) {
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
-  const URL = window.location.href
+  //const URL = window.location.href
   return (
     <>
       <NavBar url={URL} />
@@ -53,7 +53,7 @@ function App(props) {
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
-              <Route path="/Tuotteet/:trnro" element={<Tuotteet /*url={URL} */ />}/>
+              <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL}  />}/>
               <Route path='/Contact' element={ <Contact />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />

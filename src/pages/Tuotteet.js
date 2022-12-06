@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
 
+
 function Tuotteet(url) {
     const [category, setCategory] = useState('');
     const [products, setProducts] = useState([]);

@@ -88,7 +88,7 @@ function NavBar() {
             <i class="bi bi-cart"></i>
             </Nav.Link>
 
-            <Nav.Link  href= "./Search">
+            <Nav.Link  href= "./SearchBar.js">
             <i class="bi bi-search"></i>
             </Nav.Link>
           {/*</Form>*/}
