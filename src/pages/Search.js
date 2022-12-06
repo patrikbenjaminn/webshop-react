@@ -9,15 +9,19 @@ const url = 'http://localhost/webshop/php/';
 
 
 export default function Searchproducts() {
-    const [value, setValue] = useState("");
+
+
+    const [name, setName] = useState('');
+    const [products, setProducts] = useState([]);
+    const [search, setSearch] = useState("");
 
     const handleChange = e => {
-        setValue(e.target.value);
+        setSearch(e.target.value);
     };
 
     const handleSubmit = e => {
         e.preventDefault();
-        alert("you have searched for - " + value);
+        alert("you have searched for - " + search);
         // or you can send data to backend
     };
 
@@ -27,10 +31,6 @@ export default function Searchproducts() {
             handleSubmit();
         }
     };
-
-    const [name, setName] = useState('');
-    const [products, setProducts] = useState([]);
-
 
     let params = useParams();
 
@@ -49,10 +49,12 @@ export default function Searchproducts() {
                 const json = response.data;
                 if (params.searchPhrase === undefined) {
                     setName(json.tuoteryhma)
-                    setProducts(json.tuotteet);
+                    setProducts(json.tuote);
+
                 } else {
                     setName(params.searchPhrase);
                     setProducts(json);
+
                 }
 
             }).catch(error => {
@@ -62,11 +64,9 @@ export default function Searchproducts() {
 
     return (
         <>
-
-
             <form className="form-inline my-2 my-lg-0">
                 <input
-                    value={value}
+                    value={search}
                     onChange={handleChange}
                     onKeyPress={handleKeypress}
                     className="form-control mr-sm-2"
@@ -75,25 +75,18 @@ export default function Searchproducts() {
                     aria-label='Search'
                 />
                 <button onClick={handleSubmit} type="submit">
-                    Submit
+                    Lähetä
                 </button>
-
                 <div>
-                    <h2>Löydetyt tuotteet: </h2>
-                    <ol>
-                        {/* {products?.map(tuote => (
-                    <li key={tuote.tuoteid}>{tuote.tuotenimi}{tuote.hinta}</li>
-                ))
-                }
-                {name?.map(tuote => (
-                    <li key={tuote.tuoteid}>{tuote.tuotenimi}{tuote.hinta}</li>
-                ))
-                } */}
-                    </ol>
+                    <h3> {name} </h3>
 
+                    {products?.map(tuote => (
+                        <li key={tuote.tuoteid}>{tuote.tuotenimi}{tuote.hinta}</li>
+                    ))
+                    }
                 </div>
             </form>
-
+            
         </>
     );
 }
