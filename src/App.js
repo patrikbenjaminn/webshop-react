@@ -23,7 +23,7 @@ import { Search } from 'react-bootstrap-icons';
 /* import ReactDOM from 'react-dom/client'
  */
 
-const URI = 'http://localhost/webshop/php/';
+const URL = 'http://localhost/webshop/php/';
 
 function App(props) {
 
