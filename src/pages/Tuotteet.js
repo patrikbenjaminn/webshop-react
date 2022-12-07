@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/Tuotteet.css'
 
+const URL = 'http://localhost/webshop/php/';
 
 function Tuotteet(url) {
     const [category, setCategory] = useState('');
@@ -11,7 +12,7 @@ function Tuotteet(url) {
     let params = useParams();
 
     useEffect(() => {      
-     axios.get('http://localhost/webshop/php/products/gettuotteet.php/' + params.trnro)
+     axios.get( URL + 'products/gettuotteet.php/' + params.trnro)
         .then((response) => {
             const json = response.data;
             setCategory(json.tuoteryhma)
@@ -27,9 +28,10 @@ function Tuotteet(url) {
       <h3 class ="tuotteetotsikko"> {category} </h3>
       {products.map(tuote => (
         <div class="tuotteetinfo" key={tuote.tuoteid}>
-          {tuote.tuotenimi}            
+          {tuote.tuotenimi}  
+          <img src={"../../images/" } className="img-fluid" alt=""/>          
           {tuote.hinta}
-          {tuote.tuotekuvaus}
+          {tuote.tuotekuvaus}                                
         </div>  
       ))}
     </div>
