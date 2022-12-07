@@ -5,12 +5,32 @@ import '../styles/Contact.css';
 import '../App.css';
 
 
-const URL = 'http://localhost/webshop/php/';
+const url = 'http://localhost/webshop/php/';
 
-function Search({ URL }) {
-    const [name,setName] = useState('');
+
+export default function Searchproducts() {
+
+
+    const [name, setName] = useState('');
     const [products, setProducts] = useState([]);
+    const [search, setSearch] = useState("");
 
+    const handleChange = e => {
+        setSearch(e.target.value);
+    };
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        alert("you have searched for - " + search);
+        // or you can send data to backend
+    };
+
+    const handleKeypress = e => {
+        //it triggers by pressing the enter key
+        if (e.keyCode === 13) {
+            handleSubmit();
+        }
+    };
 
     let params = useParams();
 
@@ -19,20 +39,22 @@ function Search({ URL }) {
         let address = '';
 
         if (params.searchPhrase === undefined) {
-            address = URL + 'products/gettuotteet.php/' + params.trnro;
+            address = url + 'products/gettuotteet.php/' + params.trnro;
         } else {
-            address = URL + 'products/search.php/' + params.searchPhrase;
+            address = url + 'products/search.php/' + params.searchPhrase;
         }
 
         axios.get(address)
             .then((response) => {
                 const json = response.data;
                 if (params.searchPhrase === undefined) {
-                    setName(json.trnro)
-                    setProducts(json.tuotteet);
+                    setName(json.tuoteryhma)
+                    setProducts(json.tuote);
+
                 } else {
                     setName(params.searchPhrase);
                     setProducts(json);
+
                 }
 
             }).catch(error => {
@@ -40,22 +62,32 @@ function Search({ URL }) {
             })
     }, [params])
 
-
     return (
-        <div>
-         
-            <ol>
-                {products?.map(tuote => (
-                    <li key={tuote.tuoteid}>{tuote.tuotenimi}{tuote.hinta}</li>
-                ))
-                }
+        <>
+            <form className="form-inline my-2 my-lg-0">
+                <input
+                    value={search}
+                    onChange={handleChange}
+                    onKeyPress={handleKeypress}
+                    className="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Etsi tuotteita"
+                    aria-label='Search'
+                />
+                <button onClick={handleSubmit} type="submit">
+                    Lähetä
+                </button>
+                <div>
+                    <h3> {name} </h3>
 
-            </ol>
-
-        </div>
+                    {products?.map(tuote => (
+                        <li key={tuote.tuoteid}>{tuote.tuotenimi}{tuote.hinta}</li>
+                    ))
+                    }
+                </div>
+            </form>
+            
+        </>
     );
-
 }
 
-
-export default Search;
