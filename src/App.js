@@ -57,7 +57,7 @@ function App() {
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
-              <Route path='/AdminDashboard' element={ <AdminDashboard />} />
+              <Route path='admin/AdminDashboard' element={ <AdminDashboard />} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Search url={URL}/>}/>
               <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
