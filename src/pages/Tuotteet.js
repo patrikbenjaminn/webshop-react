@@ -24,10 +24,10 @@ function Tuotteet(url) {
     
 
   return (
-    <div class = "tuotteet">
-      <h3 class ="tuotteetotsikko"> {category} </h3>
+    <div className = "tuotteet">
+      <h3 className ="tuotteetotsikko"> {category} </h3>
       {products.map(tuote => (
-        <div class="tuotteetinfo" key={tuote.tuoteid}>
+        <div className="tuotteetinfo" key={tuote.tuoteid}>
           {tuote.tuotenimi}  
           <img src={"../../images/" + tuote.img} className="img-fluid" alt=""/>          
           {tuote.hinta}

@@ -21,6 +21,7 @@ import Cart from './pages/Cart';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import { Search } from 'react-bootstrap-icons';
 import Order from './pages/Order';
+import uuid from 'react-uuid';
 
 /* import ReactDOM from 'react-dom/client'
  */
