@@ -29,7 +29,7 @@ function Tuotteet(url) {
       {products.map(tuote => (
         <div class="tuotteetinfo" key={tuote.tuoteid}>
           {tuote.tuotenimi}  
-          <img src={"../../images/" } className="img-fluid" alt=""/>          
+          <img src={"../../images/" + tuote.img} className="img-fluid" alt=""/>          
           {tuote.hinta}
           {tuote.tuotekuvaus}                                
         </div>  
