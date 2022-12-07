@@ -46,11 +46,8 @@ function App() {
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
-<<<<<<< HEAD
- const URL = window.location.href
-=======
+
   const URL1 = window.location.href
->>>>>>> 0306403c8439fc9150998ffe20f6d4d16073c32d
   return (
     <>
       <NavBar url={URL} />
