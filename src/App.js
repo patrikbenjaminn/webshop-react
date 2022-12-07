@@ -9,8 +9,8 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
 import Tuotteet from './pages/Tuotteet';
-import Admin from './pages/admin/Admin';
-import Header from './components/Header';
+/* import Admin from './pages/admin/Admin';
+import Header from './components/Header'; */
 /*import Products from './components/Products';
 import Tuoteryhmät from './pages/Tuoteryhmät';
 /*import Admin from './pages/Admin';
@@ -46,7 +46,11 @@ function App() {
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
+<<<<<<< HEAD
+ const URL = window.location.href
+=======
   const URL1 = window.location.href
+>>>>>>> 0306403c8439fc9150998ffe20f6d4d16073c32d
   return (
     <>
       <NavBar url={URL} />
