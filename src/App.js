@@ -20,6 +20,8 @@ import {useState} from "react";
 import Cart from './pages/Cart';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import { Search } from 'react-bootstrap-icons';
+import Order from './pages/Order';
+
 /* import ReactDOM from 'react-dom/client'
  */
 
@@ -44,7 +46,11 @@ function App() {
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
+<<<<<<< HEAD
+ const URL = window.location.href
+=======
   const URL1 = window.location.href
+>>>>>>> 0306403c8439fc9150998ffe20f6d4d16073c32d
   return (
     <>
       <NavBar url={URL} />
@@ -61,6 +67,7 @@ function App() {
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Search url={URL}/>}/>
               <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
+              <Route path='/order' element={<Order cart={cart}/>}/>
               <Route path='/Search/searchPhrase' element={<Search url={URL}/>}/>
               <Route path='/Tuotteet/tuoteid' element={<Tuotteet url={URL}/>}/>
 
