@@ -4,14 +4,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Tuotteet from '../pages/Tuotteet';
+//import Tuotteet from '../pages/Tuotteet';
 import '../styles/Navbar.css';
 //import { Navigate } from 'react-router-dom';
 
 const URL = 'http://localhost/webshop/php/';
 
 
-function NavBar() {
+function NavBar(props) {
 
   const [tuoteryhma, setTuoteryhma] = useState([]);
 
