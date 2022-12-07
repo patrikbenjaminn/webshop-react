@@ -79,7 +79,7 @@ function NavBar(props) {
               <NavDropdown.Divider />
             </NavDropdown>
 
-            <Nav.Link href="/admin/Admin" disabled hidden>
+            <Nav.Link href="../admin/AdminDashboard/" >
               Admin
             </Nav.Link>
           </Nav>
