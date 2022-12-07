@@ -64,10 +64,10 @@ INSERT INTO tuote VALUES (13, 'Prince of Persia 2',10.90,100,3,'Prince of Persia
 INSERT INTO tuote VALUES (14, 'Lemmings',10.90,100,3,'Lemmings-peli tietokoneelle','Tietokonepelit/Lemmings.jpg');
 INSERT INTO tuote VALUES (15, 'Hugo-peikkopeli',10.90,100,3,'Hugo Peikko-peli tietokoneelle','Tietokonepelit/Hugo.png');
 INSERT INTO tuote VALUES (16,'Scart-johto',6.95,100,4,'Uusi scart-johto vanhan tilalle. Sopii kaikiin laitteisiin joissa käytetään tavallista scart-liitintiä.','tarvikkeet/Scart johto.png');
-INSERT INTO tuote VALUES (17,'Super Nintendo peliohjain', 12.90,15,4,'Uusi ohjain super nintendo pelikonsolille.','lautapelit/nintendo ohjain.png');
-INSERT INTO tuote VALUES (18,'NES-Zapper', 4.95,150,4,'Pistooliohjain Nintendo Duck Hunt peliin.','lautapelit/Nes_zapper.jpg');
-INSERT INTO tuote VALUES (19,'MOMO Ratti ja polkimet', 49.95,50,4,'Ratti ja polkimet -ohjain PC:lle.','lautapelit/MOMO Ratti ja polkimet.png');
-INSERT INTO tuote VALUES (20,'Amiga power supply', 10.00,20,4,'Amigan virtalähde.','lautapelit/Amiga power supply.jpg');
+INSERT INTO tuote VALUES (17,'Super Nintendo peliohjain', 12.90,15,4,'Uusi ohjain super nintendo pelikonsolille.','tarvikkeet/nintendo ohjain.png');
+INSERT INTO tuote VALUES (18,'NES-Zapper', 4.95,150,4,'Pistooliohjain Nintendo Duck Hunt peliin.','tarvikkeet/Nes_zapper.jpg');
+INSERT INTO tuote VALUES (19,'MOMO Ratti ja polkimet', 49.95,50,4,'Ratti ja polkimet -ohjain PC:lle.','tarvikkeet/MOMO Ratti ja polkimet.png');
+INSERT INTO tuote VALUES (20,'Amiga power supply', 10.00,20,4,'Amigan virtalähde.','tarvikkeet/Amiga power supply.jpg');
 INSERT INTO tuote VALUES (21,'PlayStation5 pelikonsoli', 509.00,10,5,'Pelikonsoli.','uutuudet/PS5.png');
 INSERT INTO tuote VALUES (22,'X-Box Series X pelikonsoli', 509.00,10,5,'Pelikonsoli.','uutuudet/X-box X.png');
 INSERT INTO tuote VALUES (23,'X-Box Series s pelikonsoli', 249.00,10,5,'Pelikonsoli.','uutuudet/X-box S.jpeg');
