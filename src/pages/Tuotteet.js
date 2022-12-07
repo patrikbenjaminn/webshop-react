@@ -10,7 +10,7 @@ function Tuotteet(url) {
 
     let params = useParams();
 
-    useEffect(() => {      
+    useEffect((url1) => {      
      axios.get(url + 'products/gettuotteet.php/' + params.trnro)
         .then((response) => {
             const json = response.data;
