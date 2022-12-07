@@ -9,8 +9,8 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
 import Tuotteet from './pages/Tuotteet';
-import Admin from './pages/admin/Admin';
-import Header from './components/Header';
+/* import Admin from './pages/admin/Admin';
+import Header from './components/Header'; */
 /*import Products from './components/Products';
 import Tuoteryhmät from './pages/Tuoteryhmät';
 /*import Admin from './pages/Admin';
