@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-
+import '../styles/Tuotteet.css'
 
 
 function Tuotteet(url) {
@@ -11,7 +11,7 @@ function Tuotteet(url) {
     let params = useParams();
 
     useEffect((url1) => {      
-     axios.get(url + 'products/gettuotteet.php/' + params.trnro)
+     axios.get('http://localhost/webshop/php/products/gettuotteet.php/' + params.trnro)
         .then((response) => {
             const json = response.data;
             setCategory(json.tuoteryhma)
@@ -23,11 +23,13 @@ function Tuotteet(url) {
     
 
   return (
-    <div>
-      <h3> {category} </h3>
+    <div class = "tuotteet">
+      <h3 class ="tuotteetotsikko"> {category} </h3>
       {products.map(tuote => (
-        <div key={tuote.tuoteid}>
-          {tuote.tuotenimi}
+        <div class="tuotteetinfo" key={tuote.tuoteid}>
+          {tuote.tuotenimi}            
+          {tuote.hinta}
+          {tuote.tuotekuvaus}
         </div>  
       ))}
     </div>
