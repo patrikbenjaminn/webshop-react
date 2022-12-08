@@ -4,7 +4,7 @@ import '../../styles/AdminDashboard.css';
 
 function AdminDashboard() {
   return (
-    <div>
+    <div className='page-id'>
       <AdminHeader />
     </div>
   )
