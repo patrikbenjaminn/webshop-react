@@ -1,6 +1,6 @@
 import './App.css';
 import Etusivu from './pages/Etusivu';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import Signup from './pages/Signup';
@@ -12,9 +12,9 @@ import Tuotteet from './pages/Tuotteet';
 /* import Admin from './pages/admin/Admin';
 import Header from './components/Header'; */
 /*import Products from './components/Products';
-import Tuoteryhmät from './pages/Tuoteryhmät';
-/*import Admin from './pages/Admin';
-import Header from './components/Header';
+import Tuoteryhmät from './pages/Tuoteryhmät';*/
+import AdminHeader from './pages/admin/AdminHeader';
+/*import Header from './components/Header';
 import Products from './products/Products';*/
 import {useState} from "react";
 import Cart from './pages/Cart';
@@ -32,6 +32,11 @@ import Searchproducts from './pages/Search';
 const URL = 'http://localhost/webshop/php/';
 
 function App() {
+
+  // Navbarin piilotus
+
+  const [showNav, setShowNav] = useState(true);
+
 
   /*
   Jos herjaa CORS-virheistä, niin avaa XAMPPin Apache config ja sieltä httpd.conf
@@ -52,9 +57,13 @@ function App() {
   }
   const URL1 = window.location.href
   return (
-    <>
-      <NavBar url={URL} />
-        <div className='container'>
+    
+    <BrowserRouter className='container'>
+      { showNav &&
+      <nav>
+        <NavBar  url={URL} />
+      </nav>
+      }
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
@@ -63,7 +72,8 @@ function App() {
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
-              <Route path='admin/AdminDashboard' element={ <AdminDashboard />} />
+              <Route path='admin/AdminDashboard' index element={<AdminDashboard funcNav={setShowNav}/>} />
+              props.funcNav(false)
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
@@ -74,9 +84,16 @@ function App() {
 
           </Routes>
           
-        </div>
-      <Footer />
-    </>
+        
+          {showNav &&
+            <footer>
+              <Footer />
+            </footer>
+          } 
+        </BrowserRouter>
+
+          
+    
   );
 }
 
