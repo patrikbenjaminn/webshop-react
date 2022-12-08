@@ -68,7 +68,7 @@ export default function Searchproducts() {
                 <input
                     value={search}
                     onChange={handleChange}
-                    onKeyPress={handleKeypress}
+                    handleKeypress={handleKeypress}
                     className="form-control mr-sm-2"
                     type="search"
                     placeholder="Etsi tuotteita"
