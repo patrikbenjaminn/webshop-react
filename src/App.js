@@ -23,6 +23,9 @@ import { Search } from 'react-bootstrap-icons';
 import Order from './pages/Order';
 import uuid from 'react-uuid';
 
+import Searchproducts from './pages/Search';
+
+
 /* import ReactDOM from 'react-dom/client'
  */
 
@@ -62,10 +65,10 @@ function App() {
               <Route path='/Loginpage' element={ <Loginpage />} />
               <Route path='admin/AdminDashboard' element={ <AdminDashboard />} />
               <Route path='*' element={ <NotFound />} />
-              <Route path="/Search" element={<Search url={URL}/>}/>
+              <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
               <Route path='/order' element={<Order cart={cart}/>}/>
-              <Route path='/Search/searchPhrase' element={<Search url={URL}/>}/>
+              <Route path='/Search/searchPhrase' element={<Searchproducts url={URL}/>}/>
               <Route path='/Tuotteet/tuoteid' element={<Tuotteet url={URL}/>}/>
 
 
