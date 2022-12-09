@@ -60,7 +60,8 @@ export default function Searchproducts() {
         <>
             <form className="form-inline my-2 my-lg-0">
                 <input
-                    value={search}      
+                    value={search}
+      
                     onChange={(e)=>setSearch(e.target.value)}
                     onKeyDown={(e)=>executeSearch(e)}
                     className="form-control mr-sm-2"
@@ -68,14 +69,15 @@ export default function Searchproducts() {
                     placeholder="Etsi tuotteita"
                     aria-label='Search'
                 />           
-            </form>
-            <div>
+                <div>
                     <h3> {name} </h3>
                     {products?.map(tuote => (
                         <li key={tuote.tuoteid}>{tuote.tuotenimi}{tuote.hinta}</li>
                     ))
                     }
                 </div>
+            </form>
+
         </>
     );
 }
