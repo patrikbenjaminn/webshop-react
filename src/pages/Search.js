@@ -72,7 +72,7 @@ export default function Searchproducts() {
              
             </form>
             <div>
-                    <h3> {name} </h3>
+                    <h3>{name} </h3>
                     {products?.map(tuote => (
                         <li key={tuote.tuoteid}>{tuote.tuotenimi}{tuote.hinta}</li>
                     ))
