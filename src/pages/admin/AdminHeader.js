@@ -16,9 +16,11 @@ class AdminHeader extends Component {
         </a>
         <div>
           <ul id='adminnavbar' className= {this.state.clicked ? "#adminnavbar active" : "#adminnavbar" } >
-            <li><a className="active" href='index.html'>home</a></li>
-            <li><a href='index.html'>joku</a></li>
-            <li><a href='index.html'>muu</a></li>
+            <li><a className="active" href='index.html'>Admin dashboard</a></li>
+            <li><a href='index.html'>Add products</a></li>
+            <li><a href='index.html'>Update products</a></li>
+            <li><a href='index.html'>Login</a></li>
+            <li><a href='index.html'>Register</a></li>
           </ul>
         </div>
 
