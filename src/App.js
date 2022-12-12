@@ -1,6 +1,6 @@
 import './App.css';
 import Etusivu from './pages/Etusivu';
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, BrowserRouter, json } from 'react-router-dom'
 import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import Signup from './pages/Signup';
@@ -16,7 +16,7 @@ import Tuoteryhmät from './pages/Tuoteryhmät';*/
 import AdminHeader from './pages/admin/AdminHeader';
 /*import Header from './components/Header';
 import Products from './products/Products';*/
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Cart from './pages/Cart';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import { Search } from 'react-bootstrap-icons';
@@ -50,12 +50,18 @@ function App() {
   // ostoskori
   const [cart, setCart] = useState([]);
 
+  useEffect(() => {
+    if ('cart' in localStorage) {
+      setCart(JSON.parse(localStorage.getItem('cart')))
+    }
+  }, [])
+
   function addToCart(product) {
     const newCart = [...cart,product];
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
-  const URL1 = window.location.href
+  
   return (
     
     <BrowserRouter className='container'>
@@ -76,7 +82,7 @@ function App() {
               props.funcNav(false)
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
-              <Route path='/Cart' element={ <Cart url={URL} addToCart={addToCart} />} /> 
+              <Route path='/products/categoryId' element={ <Cart url={URL} addToCart={addToCart} />} /> 
               <Route path='/order' element={<Order cart={cart}/>}/>
               <Route path='/Search/searchPhrase' element={<Searchproducts url={URL}/>}/>
               <Route path='/Tuotteet/tuoteid' element={<Tuotteet url={URL}/>}/>

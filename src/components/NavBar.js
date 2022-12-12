@@ -7,11 +7,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 //import Tuotteet from '../pages/Tuotteet';
 import '../styles/Navbar.css';
 //import { Navigate } from 'react-router-dom';
-
+import Cart from '../pages/Cart';
 const URL = 'http://localhost/webshop/php/';
 
 
-function NavBar(props) {
+function NavBar({url, Cart}) {
 
   const [tuoteryhma, setTuoteryhma] = useState([]);
 
