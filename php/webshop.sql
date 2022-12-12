@@ -53,7 +53,7 @@ INSERT INTO tuote VALUES (2,'Kimble',14.95,250,1,'Pelaajien lukumäärä: 2 - 4 
 INSERT INTO tuote VALUES (3,'Monopoli',32.90,150,1,'Pelaajien lukumäärä: 2 - 8 pelaajaa, Ikäsuositus: 8 - 99 vuotta, Pelityyppi: Vuoroihin perustuva, Perhepeli, Survival','lautapelit/monopoly.png');
 INSERT INTO tuote VALUES (4, 'Trivial Pursuit',39.95,150,1,'Pelaajien lukumäärä: 2 - 6 pelaajaa, Ikäsuositus: 16 - 99 vuotta, Pelityyppi: Vuoroihin perustuva, Perhepeli, Juhlapelit, Tietokilpailu, Lasten peli','lautapelit/Trivial Pursuit.png');
 INSERT INTO tuote VALUES (5, 'Tammi',17.90,100,1,'Klassinen Tammi peli puisena, taitettavana pelinä. Näppärä koko, n 20x20cm.','lautapelit/tammi.png');
-INSERT INTO tuote VALUES (6, 'Tetris',19.90,50,2,'Tetriksen Game Boy versio. Tämä klassikko on yksi maailman myydyimmistä pelisarjoista','Konsolipelit/Tetris.png');
+INSERT INTO tuote VALUES (6, 'Tetris',19.90,50,2,'Tetriksen Game Boy versio. Tämä klassikko on yksi maailman myydyimmistä pelisarjoista','Konsolipelit/Tetris.jpg');
 INSERT INTO tuote VALUES (7, 'Donkey Kong',19.90,50,2,'Donkey Kong-peli Nintendolle','Konsolipelit/Donkey Kong.jpg');
 INSERT INTO tuote VALUES (8, 'The Legend of Zelda',19.90,50,2,'Zelda-peli Golden Edition Nintendolle','Konsolipelit/Legend of Zelda.png');
 INSERT INTO tuote VALUES (9, 'Super Mario 3',19.90,50,2,'Super Mario 3-peli Nintendo Game Boy Advancelle','Konsolipelit/Super Mario 3.jpg');

@@ -35,7 +35,7 @@ function Tuotteet(url) {
           <div className="card h-100">
             <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt=""/>
              <input type="button" onClick={()=>window.location.href='./Products/xbox'}  value="OSTA TÄSTÄ"/>   
-            <h5>{tuote.tuotenimi}  </h5>
+            <h3 className="text-center">{tuote.tuotenimi}  </h3>
             <p><span className='tuote'> {tuote.hinta}</span></p>
           </div>
         </div>

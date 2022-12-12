@@ -1,9 +1,4 @@
-.tuotteet{
-    color: aliceblue;
-    padding: 25px;
-    margin: 10px;
-    
-}
+
 .tuotteetinfo  {
     border: 3px;
     border-radius: 3px;
@@ -15,4 +10,13 @@
 .tuotteetotsikko {
     font-size: xx-large;
     
+}
+span.tuote{
+    color: aliceblue;
+    
+    margin: 10px !important;
+}
+
+h3.text-center{
+    color: black;
 }
