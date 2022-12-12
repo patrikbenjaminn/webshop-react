@@ -1,8 +1,7 @@
 .tuotteet{
     color: aliceblue;
-    padding: 25px;
-    margin: 10px;
-    
+    padding: 25px !important;
+    margin: 10px !important;
 }
 .tuotteetinfo  {
     border: 3px;
