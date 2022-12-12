@@ -8,10 +8,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../styles/Navbar.css';
 //import { Navigate } from 'react-router-dom';
 import Cart from '../pages/Cart';
+
 const URL = 'http://localhost/webshop/php/';
 
 
-function NavBar({url, Cart}) {
+function NavBar({url, cart}) {
 
   const [tuoteryhma, setTuoteryhma] = useState([]);
 
@@ -92,6 +93,7 @@ function NavBar({url, Cart}) {
             <i class="bi bi-search"></i>
           </Nav.Link>
           <Nav>
+          <Cart cart={cart}/>
 
     
           </Nav>

@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import uuid from 'react-uuid';
+import axios from "axios";
 
-export default function Order({cart}){
+export default function Order({url, cart}){
     let sum = 0;
 
     return(
