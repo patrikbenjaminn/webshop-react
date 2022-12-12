@@ -2,7 +2,7 @@ navii {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: #1b2430;
     padding: 20px 80px;
     box-shadow: 0 5px 15 rgba(0,0,0,0.06)
 }
@@ -14,32 +14,76 @@ navii {
 
 #adminnavbar li {
     list-style: none;
-    padding: 0 120px;
+    padding: 0 20px;
     position: relative;
 
 }
 
 #adminnavbar li a{
     text-decoration: none;
-    font.size: 1.3rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: #000;
+    color: #fff;
     transition: 0.3s ease-in-out;
 }
 
-#adminnavbar li a:hover
+#adminnavbar li a:hover,
 #adminnavbar li a.active {
     color: #17cf97
 }
 
-#adminnavbar li a:hover::after
-#adminnavbar li a.active::after
-{
+#adminnavbar li a:hover::after,
+#adminnavbar li a.active::after {
 content:"";
 width: 30%;
 height: 2px;
 background: #17cf97;
 position: absolute;
 bottom: -4px;
-left: 120px; 
+left: 20px; 
+}
+
+#mobile {
+    display: none;
+}
+
+#mobile i {
+    color: #fff;
+    align-items: center;
+}
+
+@media screen and (max-width: 769px) {
+    #adminnavbar{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 90px;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: #2a3239;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding:  40px 0 0 10px;   
+        transition: 0.3s ease-in-out;     
+    }
+
+    #adminnavbar.active {
+        right: 0px;
+    }
+
+    #adminnavbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    #mobile i{
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
 }
