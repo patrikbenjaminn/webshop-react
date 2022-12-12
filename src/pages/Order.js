@@ -14,7 +14,7 @@ export default function Order({cart}){
                         return(
                             <tr key={uuid()}>
                             <td>{product.name}</td>
-                            <td>{product.price}</td>
+                            <td>{product.price} €</td>
                             <td></td>
                             </tr>
                             
