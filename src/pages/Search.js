@@ -14,7 +14,7 @@ export default function Searchproducts() {
 
     const [name, setName] = useState('');
     const [products, setProducts] = useState([]);
-    const [search, setSearch] = useState([]);
+    const [search, setSearch] = useState('');
 
 
     function executeSearch(e) {
