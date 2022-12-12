@@ -1,13 +1,13 @@
 import React from 'react';
 import AdminHeader from './AdminHeader';
 
-function UpDateProduct() {
+function AdminRegister() {
   return (
     <div>
        <AdminHeader url={URL} />
-      <h1> UpDateProduct</h1>
+    <h1>  AdminRegister </h1>
     </div>
   )
 }
 
-export default UpDateProduct
+export default AdminRegister

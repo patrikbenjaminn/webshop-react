@@ -9,7 +9,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
 import Tuotteet from './pages/Tuotteet';
-/* import Admin from './pages/admin/Admin';
+/* 
 import Header from './components/Header'; */
 /*import Products from './components/Products';
 import Tuoteryhmät from './pages/Tuoteryhmät';*/
@@ -24,18 +24,18 @@ import Order from './pages/Order';
 import uuid from 'react-uuid';
 
 import Searchproducts from './pages/Search';
-
-
-/* import ReactDOM from 'react-dom/client'
- */
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminRegister from './pages/admin/AdminRegister';
+import AddProduct from './pages/admin/AddProduct';
+import UpDateProduct from './pages/admin/UpDateProduct';
+// import ReactDOM from 'react-dom/client'
+ 
 
 const URL = 'http://localhost/webshop/php/';
 
 function App() {
 
-  // Navbarin piilotus
 
-  const [showNav, setShowNav] = useState(true);
 
 
   /*
@@ -64,12 +64,11 @@ function App() {
   
   return (
     
-    <BrowserRouter className='container'>
-      { showNav &&
-      <nav>
-        <NavBar  url={URL} />
-      </nav>
-      }
+    <>
+      <NavBar url={URL} />
+        <div className='container'>
+      
+      
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
@@ -78,8 +77,11 @@ function App() {
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
-              <Route path='admin/AdminDashboard' index element={<AdminDashboard funcNav={setShowNav}/>} />
-              props.funcNav(false)
+              <Route path='admin/AdminDashboard' element={<AdminDashboard />} />
+              <Route path='admin/AdminLogin' element={ <AdminLogin />} />
+              <Route path='admin/AdminRegister' element={ <AdminRegister />} />
+              <Route path='admin/AddProduct' element={ <AddProduct />} />
+              <Route path='admin/UpDateProduct' element={ <UpDateProduct />} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/products/categoryId' element={ <Cart url={URL} addToCart={addToCart} />} /> 
@@ -91,18 +93,10 @@ function App() {
           </Routes>
           
         
-          {showNav &&
-            <footer>
-              <Footer />
-            </footer>
-          } 
-        </BrowserRouter>
-
-          
-    
+          </div>
+      <Footer />
+    </>
   );
 }
-
-
 
 export default App;

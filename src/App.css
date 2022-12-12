@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.ei {
+  text-align: center !important;
+  color: #fff !important;
+  font-size: 80px;
+}
 
 @font-face {
     font-family: Shakadelic;

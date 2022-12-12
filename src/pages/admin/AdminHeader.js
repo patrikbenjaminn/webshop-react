@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import '../../styles/AdminHeader.css';
 
 
@@ -16,11 +17,11 @@ class AdminHeader extends Component {
         </a>
         <div>
           <ul id='adminnavbar' className= {this.state.clicked ? "#adminnavbar active" : "#adminnavbar" } >
-            <li><a className="active" href='index.html'>Admin dashboard</a></li>
-            <li><a href='index.html'>Add products</a></li>
-            <li><a href='index.html'>Update products</a></li>
-            <li><a href='index.html'>Login</a></li>
-            <li><a href='index.html'>Register</a></li>
+            <li><a className="active" href='admin/AdminDashboard'>Admin dashboard</a></li>
+            <li><a href='./AddProduct'>Add products</a></li>
+            <li><a href='UpDateProduct'>Update products</a></li>
+            <li><a href='AdminLogin'>Login</a></li>
+            <li><a href='AdminRegister'>Register</a></li>
           </ul>
         </div>
 
