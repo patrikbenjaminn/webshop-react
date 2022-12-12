@@ -1,5 +1,3 @@
-import Link from '../link/link';
-
 
 export default function Cart({cart}) {
     return (
