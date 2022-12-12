@@ -29,7 +29,7 @@ function Tuotteet(url) {
     <section className="tarjoukset" style={{ textalign: "center" }}>
       <div className="container py-5">
         <h1 className="text-center"> {category}</h1>
-        <div className="row py-5">
+        <div className="row gy-5">
           {products.map(tuote => (
         <div className="col-lg-3">
           <div className="card h-100">
