@@ -29,14 +29,14 @@ function NavBar({url, cart}) {
       .then((response) => {
         const json = response.data;
         setTuoteryhma(json);
-        console.log(json);
+        
 
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
       })
   }, [])
 
-  /* const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState([]);
 
   function executeSearch(e) {
     if (e.charCode === 13) {
@@ -44,7 +44,7 @@ function NavBar({url, cart}) {
       console.log(search)
       Navigate('/Search/' + search);
     }
-  } */
+  }
 
 
   return (
