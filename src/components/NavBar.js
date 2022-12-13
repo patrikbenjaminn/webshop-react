@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 //import Tuotteet from '../pages/Tuotteet';
 import '../styles/Navbar.css';
-import {useNavigate} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import Cart from '../pages/Cart';
 
 const URL = 'http://localhost/webshop/php/';
@@ -42,7 +42,7 @@ function NavBar({url, Cart}) {
     if (e.charCode === 13) {
       e.preventDefault()
       console.log(search)
-      navigate('/Search/' + search);
+      Navigate('/Search/' + search);
     }
   } 
 
