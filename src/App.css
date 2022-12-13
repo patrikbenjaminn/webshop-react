@@ -29,3 +29,8 @@
     font-family: Knife princess;
     src: url(../public/fonts/HoboStd.otf);
   }
+
+  .ostoskori{
+  padding-top: 5%;
+  text-align: center;
+}
