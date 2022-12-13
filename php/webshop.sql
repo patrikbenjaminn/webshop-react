@@ -36,7 +36,7 @@ INSERT INTO tuoteryhma VALUES (5,'Uutuudet');
 /* TUOTE */
 
 CREATE TABLE tuote (
-tuoteid SMALLINT,
+tuoteid SMALLINT AUTO_INCREMENT,
 tuotenimi VARCHAR(40) NOT NULL,
 hinta DECIMAL(5,2),
 saldo SMALLINT(5),
@@ -73,14 +73,6 @@ INSERT INTO tuote VALUES (22,'X-Box Series X pelikonsoli', 509.00,10,5,'Pelikons
 INSERT INTO tuote VALUES (23,'X-Box Series s pelikonsoli', 249.00,10,5,'Pelikonsoli.','uutuudet/X-box S.jpeg');
 INSERT INTO tuote VALUES (24,'Nintendo Switch Oled pelikonsoli', 369.00,10,5,'Pelikonsoli.','uutuudet/Nintendo Switch.png');
 INSERT INTO tuote VALUES (25,'Nintendo Swtich lataustelakka', 47.95,10,5,'Lataustelakka Nintendo Switch Oled-pelikonsolille.','uutuudet/Nintendo Switch lataustelakka.png');
-
-
-
-
-
-
-
-
 
 /* TILAUS */
 

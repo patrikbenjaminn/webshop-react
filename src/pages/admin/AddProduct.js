@@ -17,7 +17,7 @@ function AddProduct() {
   function save(e) {
     e.preventDefault()
     const json = JSON.stringify({ tuotenimi: tuotenimi, hinta: hinta, saldo: saldo,trnro: trnro, tuotekuvaus: tuotekuvaus, img: img});
-    axios.post(URL + 'admin/addproduct.php', json, {
+    axios.post(URL + 'admin/addproducts.php', json, {
       headers: {
         'Content-Type': 'Application/json'
       }
