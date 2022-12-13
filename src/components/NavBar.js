@@ -12,13 +12,8 @@ import Cart from '../pages/Cart';
 const URL = 'http://localhost/webshop/php/';
 
 
-<<<<<<< HEAD
-function NavBar({url, Cart}) {
-  const navigate=useNavigate();
-=======
 function NavBar({url, cart}) {
 
->>>>>>> 753e86e7273dbfbb6f43a91e0b0eb4f247e65731
   const [tuoteryhma, setTuoteryhma] = useState([]);
 
   useEffect(() => {
