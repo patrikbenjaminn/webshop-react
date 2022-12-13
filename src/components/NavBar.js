@@ -6,14 +6,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 //import Tuotteet from '../pages/Tuotteet';
 import '../styles/Navbar.css';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import Cart from '../pages/Cart';
 
 const URL = 'http://localhost/webshop/php/';
 
 
 function NavBar({url, cart}) {
-
+  const Navigate=useNavigate();
   const [tuoteryhma, setTuoteryhma] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function NavBar({url, cart}) {
       })
   }, [])
 
-  /* const [search, setSearch] = useState([]);
+const [search, setSearch] = useState([]);
 
   function executeSearch(e) {
     if (e.charCode === 13) {
@@ -44,7 +44,7 @@ function NavBar({url, cart}) {
       console.log(search)
       Navigate('/Search/' + search);
     }
-  } */
+  } 
 
 
   return (
