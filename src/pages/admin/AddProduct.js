@@ -51,7 +51,7 @@ function AddProduct() {
     <AdminHeader url={URL} />
     {/*  <h1>Add Products</h1> */}
 
-     <div className="contact-form">
+     <div /* className="contact-form" */>
      <form onSubmit={save}>
             <label htmlFor="tuotenimi">tuotenimi </label>
             <input type="text" value={tuotenimi}
