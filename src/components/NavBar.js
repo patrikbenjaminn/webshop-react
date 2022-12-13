@@ -87,10 +87,9 @@ const [search, setSearch] = useState([]);
           </Nav>
           <input
                     value={search}
-
                     onChange={(e)=>setSearch(e.target.value)}
                     onKeyPress={(e)=>executeSearch(e)}
-                    className="form-control"
+                    id="form-control"
                     type="search"
                     placeholder="Etsi tuotteita"
                     aria-label='Search'

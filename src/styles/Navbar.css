@@ -20,7 +20,6 @@
     src: url(../../public/fonts/Knife\ Princess.ttf);
   }
 
-
 .navbar-custom {
     border:2px solid #ADEFD1FF;
     position: fixed;
@@ -28,8 +27,6 @@
     top: 0;
     width:100%;
 }
-
-
 
 .nav.link1{
     color:#ADEFD1FF !important;
@@ -152,7 +149,6 @@ button.navbar-toggler {
     background-color: #ADEFD1FF;
 }
 
-
 .nav-item {
     list-style: none;
 } 
@@ -160,4 +156,14 @@ button.navbar-toggler {
 .navbar-custom {
     background-color: #00203FFF;
 }        /* Modify brand and text color */ 
-
+#form-control{
+    width: 20%;
+    background-color: whitesmoke;
+    margin-right: 50px;
+ }
+#form-control:hover{
+    border: rgb(224, 25, 174) 0.100em solid;
+        padding: 0.20em 0.15em;
+        border-radius: 0.55em;
+}
+ 
