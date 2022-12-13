@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/Search.css';
 import '../App.css';
+import '../styles/Tuotteet.css'
+import '../styles/Tarjoussivu.css'
 
 const url = 'http://localhost/webshop/php/';
 
