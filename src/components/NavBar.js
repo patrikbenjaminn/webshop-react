@@ -86,7 +86,6 @@ function NavBar({url, cart}) {
           </Nav>
 
           <Nav.Link href="./Cart">
-            <i class="bi bi-cart"></i>
             <Cart cart={cart}/>
           </Nav.Link>
 
