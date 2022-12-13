@@ -6,14 +6,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 //import Tuotteet from '../pages/Tuotteet';
 import '../styles/Navbar.css';
-//import { Navigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import Cart from '../pages/Cart';
 
 const URL = 'http://localhost/webshop/php/';
 
 
+<<<<<<< HEAD
+function NavBar({url, Cart}) {
+  const navigate=useNavigate();
+=======
 function NavBar({url, cart}) {
 
+>>>>>>> 753e86e7273dbfbb6f43a91e0b0eb4f247e65731
   const [tuoteryhma, setTuoteryhma] = useState([]);
 
   useEffect(() => {
@@ -36,14 +41,15 @@ function NavBar({url, cart}) {
       })
   }, [])
 
-  /* const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState([]);
 
   function executeSearch(e) {
     if (e.charCode === 13) {
       e.preventDefault()
-      Navigate('/Search/' + search);
+      console.log(search)
+      navigate('/Search/' + search);
     }
-  } */
+  } 
 
 
   return (
@@ -80,6 +86,25 @@ function NavBar({url, cart}) {
               <NavDropdown.Divider />
             </NavDropdown>
 
+            
+           {/*  <i class="bi bi-search"></i> */}
+         
+        
+                <input
+                    value={search}
+      
+                    onChange={(e)=>setSearch(e.target.value)}
+                    onKeyPress={(e)=>executeSearch(e)}
+                    className="form-control"
+                    type="search"
+                    placeholder="Etsi tuotteita"
+                    aria-label='Search'
+                />           
+             
+   
+             
+         
+       
             <Nav.Link href="../admin/AdminDashboard/" >
               Admin
             </Nav.Link>
@@ -89,9 +114,6 @@ function NavBar({url, cart}) {
             <i class="bi bi-cart"></i>
           </Nav.Link>
 
-          <Nav.Link href="/Search">
-            <i class="bi bi-search"></i>
-          </Nav.Link>
           <Nav>
           <Cart cart={cart}/>
 
