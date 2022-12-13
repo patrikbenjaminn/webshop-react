@@ -98,14 +98,8 @@ const [search, setSearch] = useState([]);
           <Nav.Link href="./Cart">
             <Cart cart={cart}/>
           </Nav.Link>
-
-          <Nav.Link href="/Search">
-            <i class="bi bi-search"></i>
-          </Nav.Link>
           <Nav>
-          
-
-    
+           
           </Nav>
 
           {' '}
