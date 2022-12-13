@@ -3,9 +3,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/Search.css';
 import '../App.css';
-import { Navigate } from 'react-router-dom';
-
-
 
 const url = 'http://localhost/webshop/php/';
 
@@ -14,7 +11,6 @@ export default function Searchproducts() {
 
     const [name, setName] = useState('');
     const [products, setProducts] = useState([]);
-
 
     let params = useParams();
 
@@ -42,7 +38,7 @@ export default function Searchproducts() {
             <div>
                 <section className="tarjoukset" style={{ textalign: "center" }}>
                     <div className="container py-5">
-                        <h1 className="text-center"> hakutulos</h1>
+                        <h1 className="text-center"> Hakutulos</h1>
                         <div className="row gy-5">
                             {products.map(tuote => (
                                 <div className="col-lg-3">

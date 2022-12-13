@@ -6,8 +6,8 @@ export default function Order({url, cart}){
     let sum = 0;
 
     return(
-        <div>
-            <h3 className="header">Tuotteet korissa</h3>
+        <div className="ostoskori">
+            <h3 className="header">Ostoskori</h3>
             <table className="table">
                 <tbody>
                     {cart.map(product=>{
