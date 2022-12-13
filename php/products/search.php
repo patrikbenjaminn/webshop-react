@@ -5,7 +5,7 @@ require_once '../inc/headers.php';
 
 $uri = parse_url(filter_input(INPUT_SERVER,'PATH_INFO'), PHP_URL_PATH);
 $parameters = explode('/', $uri);
-$phrase = $parameters[0];
+$phrase = $parameters[1];
 
 
 try {

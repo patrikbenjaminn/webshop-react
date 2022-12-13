@@ -14,16 +14,6 @@ export default function Searchproducts() {
 
     const [name, setName] = useState('');
     const [products, setProducts] = useState([]);
-    const [search, setSearch] = useState('');
-
-
-    function executeSearch(e) {
-        if (e.charCode === 13) {
-            e.preventDefault();
-            Navigate('/Search/' + search);
-       
-        }
-    }
 
 
     let params = useParams();
@@ -32,52 +22,42 @@ export default function Searchproducts() {
 
         let address = '';
 
-        if (params.searchPhrase === undefined) {
-            address = url + 'products/gettuotteet.php/' + params.trnro;
-        } else {
-            address = url + 'products/search.php/' + params.searchPhrase;
-        }
+        address = url + 'products/search.php/' + params.searchPhrase;
+        console.log(address);
 
         axios.get(address)
             .then((response) => {
                 const json = response.data;
-                if (params.searchPhrase === undefined) {
-                    setName(json.tuoteryhma)
-                    setProducts(json.tuote);
 
-                } else {
-                    setName(params.searchPhrase);
-                    setProducts(json);
-
-                }
-
+                setName(params.searchPhrase);
+                setProducts(json);
             }).catch(error => {
                 alert(error.response === undefined ? error : error.response.data.error)
+    
             })
     }, [params])
 
     return (
         <>
-            <form className="form-inline">
-                <input
-                    value={search}
-      
-                    onChange={(e)=>setSearch(e.target.value)}
-                    onKeyDown={(e)=>executeSearch(e)}
-                    className="form-control"
-                    type="search"
-                    placeholder="Etsi tuotteita"
-                    aria-label='Search'
-                />           
-             
-            </form>
             <div>
-                    <h3>{name} </h3>
-                    {products?.map(tuote => (
-                        <li key={tuote.tuoteid}>{tuote.tuotenimi}{tuote.hinta}</li>
-                    ))
-                    }
-                </div>
+                <section className="tarjoukset" style={{ textalign: "center" }}>
+                    <div className="container py-5">
+                        <h1 className="text-center"> hakutulos</h1>
+                        <div className="row gy-5">
+                            {products.map(tuote => (
+                                <div className="col-lg-3">
+                                    <div className="card h-100">
+                                        <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
+                                        <input type="button" onClick={() => window.location.href = './Products/xbox'} value="OSTA TÄSTÄ" />
+                                        <h3 className="text-center">{tuote.tuotenimi}  </h3>
+                                        <p><span className='tuote'> {tuote.hinta}</span></p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </div>
         </>
     );
 }
