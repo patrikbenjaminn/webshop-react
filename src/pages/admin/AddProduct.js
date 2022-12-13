@@ -49,9 +49,9 @@ function AddProduct() {
     <>
     <div>
     <AdminHeader url={URL} />
-     <h1>Add Products</h1>
+    {/*  <h1>Add Products</h1> */}
 
-     <div className="contact-form">
+     <div /* className="contact-form" */>
      <form onSubmit={save}>
             <label htmlFor="tuotenimi">tuotenimi </label>
             <input type="text" value={tuotenimi}
@@ -65,15 +65,15 @@ function AddProduct() {
             <input type="text" value={saldo}
               onChange={(e) => setSaldo(e.target.value)}
               placeholder="Lisää tuotteiden määrä" required />
-               <label htmlFor="name">tuotenimi </label>
-            <input type="text" value={tuotenimi}
+               <label htmlFor="name">tuoteryhmänumero </label>
+            <input type="text" value={trnro}
               onChange={(e) => setTrnro(e.target.value)}
               placeholder="Lisää tuoteryhmän numero" required />
-            <label htmlFor="hinta"> hinta</label>
-            <input type="text" value={hinta}
+            <label htmlFor="hinta"> tuotekuvaus</label>
+            <input type="text" value={tuotekuvaus}
               onChange={(e) => setTuotekuvaus(e.target.value)}
               placeholder="Lisää tuotteen hinta" required />
-            <label htmlFor="saldo"> Saldo </label>
+            <label htmlFor="saldo"> Kuva </label>
             <input type="text" value={img}
               onChange={(e) => setImg(e.target.value)}
               placeholder="Lataa tuotteen kuva" required />
