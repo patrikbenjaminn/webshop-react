@@ -65,7 +65,7 @@ function App() {
   return (
     
     <>
-      <NavBar url={URL} />
+      <NavBar url={URL} cart={cart} />
         <div className='container'>
       
       
