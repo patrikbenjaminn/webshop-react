@@ -13,7 +13,7 @@ $img = filter_var($input->img,FILTER_SANITIZE_SPECIAL_CHARS);
 
 try {
   $db=openDb();
-  $query = $db->prepare('insert into tuote(tuotenimi,hinta,saldo,trnro,tuotekuvaus,img)
+  $query = $db->prepare('insert into tuote(tuoteid,tuotenimi,hinta,saldo,trnro,tuotekuvaus,img)
   values (:tuotenimi,:hinta,:saldo,:saldo,:trnro,:tuotekuvaus,:img)');
   $query->bindValue(':tuotenimi', $tuotenimi,PDO::PARAM_STR);
   $query->bindValue(':hinta', $hinta,PDO::PARAM_INT);
