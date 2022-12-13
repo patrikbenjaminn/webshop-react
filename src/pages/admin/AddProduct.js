@@ -50,6 +50,8 @@ function AddProduct() {
     <div>
     <AdminHeader url={URL} />
      <h1>Add Products</h1>
+
+     <div className="contact-form">
      <form onSubmit={save}>
             <label htmlFor="tuotenimi">tuotenimi </label>
             <input type="text" value={tuotenimi}
@@ -75,10 +77,9 @@ function AddProduct() {
             <input type="text" value={img}
               onChange={(e) => setImg(e.target.value)}
               placeholder="Lataa tuotteen kuva" required />
-            <input type="submit" value="Lähetä" />
-
-           
+            <input type="submit" value="Lähetä" />        
           </form>
+          </div>
     </div>
     </>
   )
