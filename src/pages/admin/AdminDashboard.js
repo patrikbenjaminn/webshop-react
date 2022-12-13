@@ -6,6 +6,7 @@ import AdminLogin from '../admin/AdminLogin';
 import AdminRegister from './AdminRegister';
 import AddProduct from './AddProduct';
 import UpDateProduct from './UpDateProduct';
+import AdminTable from './AdminTable';
 
 const URL = 'http://localhost/webshop/src/pages/admin/'; 
 
@@ -22,6 +23,7 @@ function AdminDashboard() {
               <Route path='/UpDateProduct' element={ <UpDateProduct />} />
             </Routes>  
         </div>
+        <AdminTable />
     </>
   )
 }
