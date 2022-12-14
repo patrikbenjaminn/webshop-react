@@ -5,7 +5,7 @@ import '../../styles/AdminDashboard.css';
 import AdminLogin from '../admin/AdminLogin';
 import AdminRegister from './AdminRegister';
 import AddProduct from './AddProduct';
-import UpDateProduct from './UpDateProduct';
+import Addryhma from './AddProduct';
 import AdminTable from './AdminTable';
 
 const URL = 'http://localhost/webshop/src/pages/admin/'; 
@@ -20,10 +20,10 @@ function AdminDashboard() {
               <Route path='/AdminLogin' element={ <AdminLogin />} />
               <Route path='/AdminRegister' element={ <AdminRegister />} />
               <Route path='/AddProduct' element={ <AddProduct />} />
-              <Route path='/UpDateProduct' element={ <UpDateProduct />} />
+              <Route path='/Addryhma' element={ <Addryhma />} />
             </Routes>  
         </div>
-        <AdminTable />
+      
     </>
   )
 }
