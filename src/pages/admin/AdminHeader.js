@@ -17,11 +17,11 @@ class AdminHeader extends Component {
         </a>
         <div>
           <ul id='adminnavbar' className= {this.state.clicked ? "#adminnavbar active" : "#adminnavbar" } >
-            <li><a className="active" href='admin/AdminDashboard'>Admin dashboard</a></li>
+            <li><a className="active" href='./AdminDashboard'>Admin dashboard</a></li>
             <li><a href='./AddProduct'>Add products</a></li>
             <li><a href='./Addryhma'>Add tuoteryhmä</a></li>
-            <li><a href='AdminLogin'>Login</a></li>
-            <li><a href='AdminRegister'>Register</a></li>
+            <li><a href='./AdminLogin'>Login</a></li>
+            <li><a href='./AdminRegister'>Register</a></li>
           </ul>
         </div>
 
