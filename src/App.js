@@ -82,7 +82,7 @@ function App() {
               <Route path='admin/AdminLogin' element={ <AdminLogin />} />
               <Route path='admin/AdminRegister' element={ <AdminRegister />} />
               <Route path='/admin/AddProduct' element={ <AddProduct />} />
-              <Route path='/admin/Addryhma' element={ <Addryhma />} />
+              <Route path='/admin/Addryhma' element={ <Addryhma />} /> 
               <Route path='admin/UpDateProduct' element={ <UpDateProduct />} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>

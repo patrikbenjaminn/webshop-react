@@ -16,12 +16,12 @@ function AdminDashboard() {
 
       <AdminHeader url={URL} />
         <div className='page-id'>
-            <Routes>        
+{            <Routes>        
               <Route path='AdminLogin' element={ <AdminLogin />} />
               <Route path='AdminRegister' element={ <AdminRegister />} />
               <Route path='AddProduct' element={ <AddProduct />} />
               <Route path='Addryhma' element={ <Addryhma />} />
-            </Routes>  
+            </Routes>  }
         </div>
       
     </>
