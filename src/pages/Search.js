@@ -35,27 +35,36 @@ export default function Searchproducts() {
     }, [params])
 
     return (
-        <>
-            <div>
-                <section className="tarjoukset" style={{ textalign: "center" }}>
-                    <div className="container py-5">
-                        <h1 className="text-center"> Hakutulos</h1>
-                        <div className="row gy-5">
-                            {products.map(tuote => (
-                                <div className="col-lg-3">
-                                    <div className="card h-100">
-                                        <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
-                                        <input type="button" onClick={() => window.location.href = './Products/xbox'} value="OSTA TÄSTÄ" />
-                                        <h3 className="text-center">{tuote.tuotenimi}  </h3>
-                                        <p><span className='tuote'> {tuote.hinta}</span></p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+      <>
+        <div>
+          <section className="tarjoukset" style={{ textalign: "center" }}>
+            <div className="container py-5">
+              <h1 className="text-center">Hakutulos</h1>
+    
+              <div className="row gy-5 d-flex justify-content-center">
+                {products.length === 0 && (
+                  <p className="text-center">Ei hakutuloksia nimellä "{name}"</p>
+                )}
+                
+                {products.map(tuote => (
+                  <div className="col-lg-3">
+                    <div className="card h-100">
+                      <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
+                      <input type="button" onClick={() => window.location.href = './Products/xbox'} value="OSTA TÄSTÄ" />
+                      <h3 className="text-center">{tuote.tuotenimi}</h3>
+                      <p><span className='tuote'>{tuote.hinta}</span></p>
                     </div>
-                </section>
+                  </div>
+                ))}
+              </div>
             </div>
-        </>
+          </section>
+        </div>
+      </>
     );
+    
+
+    
+    
 }
 
