@@ -36,14 +36,14 @@ INSERT INTO tuoteryhma VALUES (5,'Uutuudet');
 /* TUOTE */
 
 CREATE TABLE tuote (
-tuoteid SMALLINT AUTO_INCREMENT,
+tuoteid INT(255) AUTO_INCREMENT,
 tuotenimi VARCHAR(40) NOT NULL,
 hinta DECIMAL(5,2),
 saldo SMALLINT(5),
-trnro SMALLINT NOT NULL,
+trnro SMALLINT,
 tuotekuvaus TEXT,
 img VARCHAR(50),
-INDEX tuoteid(trnro),
+
 CONSTRAINT tuote_pk PRIMARY KEY (tuoteid),
 CONSTRAINT tuote_ryhma_fk FOREIGN KEY (trnro) 
            REFERENCES tuoteryhma (trnro)
@@ -91,7 +91,7 @@ CONSTRAINT tilaus_asiakas_fk FOREIGN KEY (Id)
 CREATE TABLE tilausrivi (
 tilausnro INTEGER NOT NULL,
 rivinro SMALLINT NOT NULL,
-tuoteid SMALLINT, 
+tuoteid INT(255), 
 kpl INTEGER,
 CONSTRAINT tilausrivi_pk PRIMARY KEY (tilausnro, rivinro),
 CONSTRAINT tilausrivi_tuote_fk FOREIGN KEY (tuoteid) 
