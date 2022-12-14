@@ -110,3 +110,5 @@ timestamp TIMESTAMP,
 message VARCHAR (255) NOT NULL,
 CONSTRAINT tilausrivi_pk PRIMARY KEY (palauteid)
 );
+
+insert into palaute values ( 1,'Minni Hiiri', 'minni@hiiri.com', CURRENT_TIMESTAMP, 'Hei! Teillä on kiva kauppa, olisiko mahdollista ottaa myyntiin pieniä eriä second-handtuotteita?');
