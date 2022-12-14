@@ -72,7 +72,7 @@ function AddProduct() {
             <label htmlFor="tuotekuvaus"> tuotekuvaus</label>
             <input type="text" value={tuotekuvaus}
               onChange={(e) => setTuotekuvaus(e.target.value)}
-              placeholder="Lisää tuotteen hinta" required />
+              placeholder="Lisää tuotekuvaus" required />
             <label htmlFor="kuva"> Kuva </label>
             <input type="text" value={img}
               onChange={(e) => setImg(e.target.value)}

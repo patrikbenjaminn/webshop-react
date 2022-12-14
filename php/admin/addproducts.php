@@ -24,7 +24,7 @@ try {
   $query->execute();
   header('HTTP/1.1 200 OK');
   $data = array('id' => $db->lastInsertId(),'tuotenimi' => $tuotenimi,'hinta' => $hinta,
-  'saldo' => $saldo, 'trnro' => $trnro,'tuotekuvaus'=> $tuotekuvaus,'img' =>$img);
+  'saldo' => $saldo, 'trnro' => $trnro,'tuotekuvaus'=> $tuotekuvaus,'img' => $img);
   print json_encode($data);
 } catch (PDOException $pdoex) {
   returnError($pdoex);
