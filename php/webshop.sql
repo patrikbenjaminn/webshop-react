@@ -23,7 +23,7 @@ CONSTRAINT asiakas_pk PRIMARY KEY (Id)
 
 /* TUOTERYHMÄ */
 CREATE TABLE tuoteryhma (
-trnro SMALLINT AUTO_INCREMENT,
+trnro SMALLINT ,
 trnimi VARCHAR(40),
 CONSTRAINT tuoteryhma_pk PRIMARY KEY (trnro)
 ) ;
