@@ -38,7 +38,7 @@ INSERT INTO tuoteryhma VALUES (5,'Uutuudet');
 CREATE TABLE tuote (
 tuoteid INT(255) AUTO_INCREMENT NOT NULL,
 tuotenimi VARCHAR(40) NOT NULL,
-hinta DECIMAL(5,2),
+hinta DECIMAL(9,2),
 saldo SMALLINT(5),
 trnro SMALLINT,
 tuotekuvaus TEXT,
