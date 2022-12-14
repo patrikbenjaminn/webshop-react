@@ -20,7 +20,7 @@ try {
   $query->bindValue(':saldo', $saldo,PDO::PARAM_INT);
   $query->bindValue(':trnro', $trnro,PDO::PARAM_INT);
   $query->bindValue(':tuotekuvaus', $tuotekuvaus,PDO::PARAM_STR);
-  $query->bindValue(':img ', $img,PDO::PARAM_STR);
+  $query->bindValue(':img', $img,PDO::PARAM_STR);
   $query->execute();
   header('HTTP/1.1 200 OK');
   $data = array('id' => $db->lastInsertId(),'tuotenimi' => $tuotenimi,'hinta' => $hinta,
