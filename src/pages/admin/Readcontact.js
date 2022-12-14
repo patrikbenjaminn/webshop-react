@@ -1,14 +1,22 @@
 import '../styles/Contact.css';
-
-const URL = 'http://localhost/webshop/php/admin/readContact.php';
+import axios from "axios";
 
 function Readcontact() {
+
+    const fetchData = () => {
+        return axios.get("http://localhost/webshop/php/admin/readContact.php")
+            .then((response) => setPalautteet(response.data));
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, [])
 
     return (
 
         <div>
             <ol>
-                {palaute?.map(palaute => (
+                {palautteet?.map(palaute => (
                     <li key={palaute.palauteid}>{palaute.name}{palaute.email}{palaute.timestamp}{palaute.message}</li>
                 ))
                 }
