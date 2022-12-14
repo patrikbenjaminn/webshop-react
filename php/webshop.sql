@@ -23,7 +23,7 @@ CONSTRAINT asiakas_pk PRIMARY KEY (Id)
 
 /* TUOTERYHMÄ */
 CREATE TABLE tuoteryhma (
-trnro SMALLINT,
+trnro SMALLINT AUTO_INCREMENT,
 trnimi VARCHAR(40),
 CONSTRAINT tuoteryhma_pk PRIMARY KEY (trnro)
 ) ;
@@ -91,7 +91,7 @@ CONSTRAINT tilaus_asiakas_fk FOREIGN KEY (Id)
 CREATE TABLE tilausrivi (
 tilausnro INTEGER NOT NULL,
 rivinro SMALLINT NOT NULL,
-tuoteid SMALLINT, 
+tuoteid integer, 
 kpl INTEGER,
 CONSTRAINT tilausrivi_pk PRIMARY KEY (tilausnro, rivinro),
 CONSTRAINT tilausrivi_tuote_fk FOREIGN KEY (tuoteid) 
