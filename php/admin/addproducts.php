@@ -13,8 +13,8 @@ $img = filter_var($input->img,FILTER_SANITIZE_SPECIAL_CHARS);
 
 try {
   $db=openDb();
-  $query = $db->prepare('insert into tuote(tuoteid,tuotenimi,hinta,saldo,trnro,tuotekuvaus,img)
-  values (:tuotenimi,:hinta,:saldo,:saldo,:trnro,:tuotekuvaus,:img)');
+  $query = $db->prepare('insert into tuote(tuotenimi,hinta,saldo,trnro,tuotekuvaus,img)
+  values (:tuotenimi,:hinta,:saldo,:trnro,:tuotekuvaus,:img)');
   $query->bindValue(':tuotenimi', $tuotenimi,PDO::PARAM_STR);
   $query->bindValue(':hinta', $hinta,PDO::PARAM_INT);
   $query->bindValue(':saldo', $saldo,PDO::PARAM_INT);
@@ -23,9 +23,11 @@ try {
   $query->bindValue(':img ', $img,PDO::PARAM_STR);
   $query->execute();
   header('HTTP/1.1 200 OK');
-  $data = array('tuoteid' => $db->lastInsertId(),'tuotenimi' => $tuotenimi,'hinta' => $hinta,
-  'saldo' => $saldo, 'trnro' => $trnro,'tuotekuvaus'=> $tuotekuvaus,'img' =>$img);
+  $data = array('id' => $db->lastInsertId(),'tuotenimi' => $tuotenimi,'hinta' => $hinta,
+  'saldo' => $saldo, 'trnro' => $trnro,'tuotekuvaus'=> $tuotekuvaus,'img' => p$img);
   print json_encode($data);
 } catch (PDOException $pdoex) {
   returnError($pdoex);
   }
+
+  ?>
