@@ -65,15 +65,15 @@ function AddProduct() {
             <input type="text" value={saldo}
               onChange={(e) => setSaldo(e.target.value)}
               placeholder="Lisää tuotteiden määrä" required />
-               <label htmlFor="name">tuoteryhmänumero </label>
+               <label htmlFor="trnro">tuoteryhmänumero </label>
             <input type="text" value={trnro}
               onChange={(e) => setTrnro(e.target.value)}
               placeholder="Lisää tuoteryhmän numero" required />
-            <label htmlFor="hinta"> tuotekuvaus</label>
+            <label htmlFor="tuotekuvaus"> tuotekuvaus</label>
             <input type="text" value={tuotekuvaus}
               onChange={(e) => setTuotekuvaus(e.target.value)}
               placeholder="Lisää tuotteen hinta" required />
-            <label htmlFor="saldo"> Kuva </label>
+            <label htmlFor="kuva"> Kuva </label>
             <input type="text" value={img}
               onChange={(e) => setImg(e.target.value)}
               placeholder="Lataa tuotteen kuva" required />
