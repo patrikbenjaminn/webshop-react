@@ -23,7 +23,7 @@ try {
   $query->bindValue(':img', $img,PDO::PARAM_STR);
   $query->execute();
   header('HTTP/1.1 200 OK');
-  $data = array('tuoteid' => $db->lastInsertId(),'tuotenimi' => $tuotenimi,'hinta' => $hinta,
+  $data = array('id' => $db->lastInsertId(),'tuotenimi' => $tuotenimi,'hinta' => $hinta,
   'saldo' => $saldo, 'trnro' => $trnro,'tuotekuvaus'=> $tuotekuvaus,'img' => $img);
   print json_encode($data);
 } catch (PDOException $pdoex) {
