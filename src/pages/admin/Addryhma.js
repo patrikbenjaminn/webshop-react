@@ -13,7 +13,7 @@ function Addryhma() {
   function save(e) {
     e.preventDefault()
     const json = JSON.stringify({ trnimi: trnimi});
-    axios.post(URL + 'admin/addtuoteryhma.php', json, {
+    axios.post(URL + 'admin/addryhma.php', json, {
       headers: {
         'Content-Type': 'Application/json'
       }
@@ -42,7 +42,7 @@ function Addryhma() {
             <label htmlFor="trnimi">tuoteryhmän nimi </label>
             <input type="text" value={trnimi}
               onChange={(e) => setTrnimi(e.target.value)}
-              placeholder="Lisää trnimi" required />
+              placeholder="Lisää tuoteryhmän nimi" required />
             <input type="submit" value="Lähetä" />        
           </form>
           </div>
