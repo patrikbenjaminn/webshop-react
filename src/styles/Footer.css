@@ -4,7 +4,7 @@ footer .container {
 
 footer {
     background-color: #00203FFF;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding-top: 10px;
     width: 100%;
