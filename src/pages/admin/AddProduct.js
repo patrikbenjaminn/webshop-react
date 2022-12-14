@@ -50,7 +50,7 @@ function AddProduct() {
     <>
     <div>
     <AdminHeader url={URL} />
-    {/*  <h1>Add Products</h1> */}
+     <h1>Lisää tuote</h1>
 
      <div /* className="contact-form" */>
      <form onSubmit={save}>

@@ -39,7 +39,7 @@ function Addryhma() {
 
      <div /* className="contact-form" */>
      <form onSubmit={save}>
-            <label htmlFor="trnimi">trnimi </label>
+            <label htmlFor="trnimi">tuoteryhmän nimi </label>
             <input type="text" value={trnimi}
               onChange={(e) => setTrnimi(e.target.value)}
               placeholder="Lisää trnimi" required />
