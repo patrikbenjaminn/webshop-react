@@ -1,13 +1,11 @@
 import '../../styles/Contact.css';
 import React, { useEffect, useState } from "react"
-
-
-    
+   
 const ReadContact = () => {
     const [palautteet, setPalautteet] = useState([])
 
     const fetchData = () => {
-      fetch("http://localhost/webshop/php/admin/readContact.php'")
+      fetch("http://localhost/webshop/php/admin/readContact.php")
         .then(response => {
           return response.json()
         })
@@ -22,7 +20,7 @@ const ReadContact = () => {
 
     return (
 
-        <div>
+        <div className='contact-form'>
 {palautteet.length > 0 && (
         <ul>
           {palautteet.map(palaute => (
