@@ -12,7 +12,7 @@ const Sidebar=()=>{
               </CDBSidebarHeader>
               <CDBSidebarContent className="sidebar-content">
                   <CDBSidebarMenu>
-                      <NavLink exact to="/dashboard" activeClassName="activeClicked">
+                      <NavLink exact to="/ReadContact" activeClassName="activeClicked">
                           <CDBSidebarMenuItem icon="columns">
                               Minnalle
                           </CDBSidebarMenuItem>
