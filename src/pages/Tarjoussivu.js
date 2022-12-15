@@ -11,7 +11,7 @@ function Tarjoussivu() {
           <div className="col-lg-3">
             <div className="card h-100">
               <img src="../images/Video Game Console.H03.2k.png" className="img-fluid mb-3" alt=""/>
-              <input type="button" onClick={()=>window.location.href='./Products/xbox'}  value="OSTA TÄSTÄ"/>   
+              <input type="button" value="OSTA TÄSTÄ"/>   
               <h5>Tuotenimi</h5>
               <p className=''><small><del>80€</del><span>60€</span></small></p>
             </div>
