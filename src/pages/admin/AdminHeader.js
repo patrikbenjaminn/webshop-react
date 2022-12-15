@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import '../../styles/AdminHeader.css';
 
-
+const URL = 'http://localhost:3000/admin/'
 class AdminHeader extends Component {
   state= { clicked: false};
   handleclick =() => {
@@ -17,11 +17,11 @@ class AdminHeader extends Component {
         </a>
         <div>
           <ul id='adminnavbar' className= {this.state.clicked ? "#adminnavbar " : "#adminnavbar" } >
-            <li><a href='./AdminDashboard'>Ylläpitäjän sivut</a></li>
-            <li><a href='./AddProduct'>Lisää tuote</a></li>
-            <li><a href='./Addryhma'>Lisää tuoteryhmä</a></li>
-            <li><a href='./AdminLogin'>Login</a></li>
-            <li><a href='./AdminRegister'>Register</a></li>
+            <li><a href={URL + 'AdminDashboard'}>Ylläpitäjän sivut</a></li>
+            <li><a href={URL + 'AddProduct'}>Lisää tuote</a></li>
+            <li><a href={URL + 'Addryhma'}>Lisää tuoteryhmä</a></li>
+            <li><a href={URL + 'AdminLogin'}>Login</a></li>
+            <li><a href={URL + 'AdminRegister'}>Register</a></li>
           </ul>
         </div>
 

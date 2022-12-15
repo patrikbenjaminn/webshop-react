@@ -1,11 +1,47 @@
-import React from 'react'
+import React from 'react' 
+import {CDBSidebar, CDBSidebarContent, CDBSidebarHeader, CDBSidebarFooter, CDBSidebarMenu, CDBSidebarMenuItem} from 'cdbreact'; 
+import {NavLink, Link} from 'react-router-dom'; 
+import {} from 'react-router-dom';
 
-function AdminSideBar() {
+const Sidebar=()=>{
   return (
-    <div>
-      
-    </div>
+      <div style={{display:'flex', height:'100%', overflow:'scroll initial'}}>
+          <CDBSidebar textColer="#fff" backgroundColor="#00203FFF">
+              <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
+                  <Link to="/dashboard">Dashboard</Link>
+              </CDBSidebarHeader>
+              <CDBSidebarContent className="sidebar-content">
+                  <CDBSidebarMenu>
+                      <NavLink exact to="/dashboard" activeClassName="activeClicked">
+                          <CDBSidebarMenuItem icon="columns">
+                              Minnalle
+                          </CDBSidebarMenuItem>
+                      </NavLink>
+                      <NavLink exact to="/dashboard" activeClassName="activeClicked">
+                          <CDBSidebarMenuItem icon="columns">
+                              Transfer
+                          </CDBSidebarMenuItem>
+                      </NavLink>
+                      <NavLink exact to="/dashboard" activeClassName="activeClicked">
+                          <CDBSidebarMenuItem icon="columns">
+                              Transfer
+                          </CDBSidebarMenuItem>
+                      </NavLink>
+                      <NavLink exact to="/dashboard" activeClassName="activeClicked">
+                           <CDBSidebarMenuItem icon="columns">
+                              Transfer
+                          </CDBSidebarMenuItem>
+                      </NavLink>
+                  </CDBSidebarMenu>
+              </CDBSidebarContent>
+              <CDBSidebarFooter style={{textAlign:'center'}}>
+                  <div className="sidebar-btn-wrapper" style={{ padding :'20px 5px' }}>
+                      sidebar footer
+                  </div>
+              </CDBSidebarFooter>
+          </CDBSidebar>
+      </div>
   )
 }
 
-export default AdminSideBar
+export default Sidebar;
