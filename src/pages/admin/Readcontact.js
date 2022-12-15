@@ -1,30 +1,39 @@
 import '../../styles/Contact.css';
-/* import axios from "axios"; */
+import React, { useEffect, useState } from "react"
 
 
+    
+const ReadContact = () => {
+    const [palautteet, setPalautteet] = useState([])
 
-function Readcontact() {
-
-    /* const fetchData = () => {
-        return axios.get("http://localhost/webshop/php/admin/readContact.php")
-            .then((response) => setPalautteet(response.data));
+    const fetchData = () => {
+      fetch("http://localhost/webshop/php/admin/readContact.php'")
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          setPalautteet(data)
+        })
     }
-
+  
     useEffect(() => {
-        fetchData();
+      fetchData()
     }, [])
- */
+
     return (
 
         <div>
-          {/*   <ol>
-                {palautteet?.map(palaute => (
-                    <li key={palaute.palauteid}>{palaute.name}{palaute.email}{palaute.timestamp}{palaute.message}</li>
-                ))
-                }
-            </ol> */}
-        </div>
+{palautteet.length > 0 && (
+        <ul>
+          {palautteet.map(palaute => (
+            <li key={palaute.palauteid}>{palaute.name}{palaute.email}{palaute.timestamp}{palaute.message}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+       
     )
 
 }
-export default Readcontact; 
+export default ReadContact; 
+
