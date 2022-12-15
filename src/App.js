@@ -78,12 +78,12 @@ function App() {
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
-              <Route path='admin/AdminDashboard' element={<AdminDashboard />} />
-              <Route path='admin/AdminLogin' element={ <AdminLogin />} />
-              <Route path='admin/AdminRegister' element={ <AdminRegister />} />
+              <Route path='/admin/AdminDashboard' element={<AdminDashboard />} />
+              <Route path='/admin/AdminLogin' element={ <AdminLogin />} />
+              <Route path='/admin/AdminRegister' element={ <AdminRegister />} />
               <Route path='/admin/AddProduct' element={ <AddProduct />} />
               <Route path='/admin/Addryhma' element={ <Addryhma />} /> 
-              <Route path='admin/UpDateProduct' element={ <UpDateProduct />} />
+              <Route path='/admin/UpDateProduct' element={ <UpDateProduct />} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/products/categoryId' element={ <Cart url={URL} addToCart={addToCart} />} /> 
