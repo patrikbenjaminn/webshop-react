@@ -40,7 +40,6 @@ function Addryhma() {
     <div className="contact-form">
      <h1>Lisää tuoteryhmä </h1> 
 
-     <div /* className="contact-form" */>
      <form onSubmit={save}>
             <label htmlFor="trnimi">tuoteryhmän nimi </label>
             <input type="text" value={trnimi}
@@ -50,7 +49,7 @@ function Addryhma() {
           </form>
           </div>
     </div>
-    </div>
+
    
   )
 }
