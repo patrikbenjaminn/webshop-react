@@ -10,26 +10,26 @@ const Sidebar=()=>{
       <div style={{display:'flex', height:'100%', overflow:'scroll initial'}}>
           <CDBSidebar textColer="#fff" backgroundColor="#00203FFF">
               <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-                  <Link to={URL + "dashboard"}>Ylläpitäjät</Link>
+                  <Link to="/admin/AdminDashboard">Ylläpitäjät</Link>
               </CDBSidebarHeader>
               <CDBSidebarContent className="sidebar-content">
                   <CDBSidebarMenu>
-                      <NavLink exact to={URL + "Readcontact"} activeClassName="activeClicked">
+                      <NavLink exact to="/admin/Readcontact" activeClassName="activeClicked">
                           <CDBSidebarMenuItem icon="columns">
                               Näytä postit
                           </CDBSidebarMenuItem>
                       </NavLink>
-                      <NavLink exact to="/dashboard" activeClassName="activeClicked">
+                      <NavLink exact to="/AdminDashboard" activeClassName="activeClicked">
                           <CDBSidebarMenuItem icon="columns">
                               Näytä tilaukset
                           </CDBSidebarMenuItem>
                       </NavLink>
-                      <NavLink exact to="/dashboard" activeClassName="activeClicked">
+                      <NavLink exact to="/AdminDashboard" activeClassName="activeClicked">
                           <CDBSidebarMenuItem icon="columns">
                              Tarjous sivun tuotteet
                           </CDBSidebarMenuItem>
                       </NavLink>
-                      <NavLink exact to="/dashboard" activeClassName="activeClicked">
+                      <NavLink exact to="/AdminDashboard" activeClassName="activeClicked">
                            <CDBSidebarMenuItem icon="columns">
                               Käyttäjät ja adminit
                           </CDBSidebarMenuItem>
@@ -38,7 +38,7 @@ const Sidebar=()=>{
               </CDBSidebarContent>
               <CDBSidebarFooter style={{textAlign:'center'}}>
                   <div className="sidebar-btn-wrapper" style={{ padding :'20px 5px' }}>
-                      sidebar footer
+                      RGH
                   </div>
               </CDBSidebarFooter>
           </CDBSidebar>
