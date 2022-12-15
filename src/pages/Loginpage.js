@@ -8,6 +8,16 @@ const URL = 'http://localhost/webshop/php/';
 function Loginpage() {
   const [astunnus, setAstunnus] = useState('');
   const [salasana, setSalasana] = useState('');
+  const [sukunimi, setSukunimi] = useState('');
+  const [postitmp, setPostitmp] = useState('');
+  const [postinro, setPostinro] = useState('');
+  const [osoite, setOsoite] = useState('');
+  const [email, setEmail] = useState('');
+  const [etunimi, setEtunimi] = useState('');
+
+
+
+
   
  
 
@@ -19,13 +29,13 @@ function Loginpage() {
         'Content-Type': 'Application/json',
 
       }})
-      .then((response) => {
+      /* .then((response) => {
         console.log(response);
-      })
-  }
+      }) */
+  
     
 
-      /*.then((response) => {
+      .then((response) => {
         setAstunnus(astunnus => [...astunnus, response.data])
         setEtunimi(etunimi => [...etunimi, response.data])
         setSukunimi(sukunimi => [...sukunimi, response.data])
@@ -49,7 +59,7 @@ function Loginpage() {
         console.log(error.response ? error.response.data.error : error)
         alert("Häiriö järjestelmässä, yritä pian uudelleen!")
       })
-  }*/
+  }
 
 
   return (
