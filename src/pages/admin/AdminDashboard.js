@@ -22,10 +22,13 @@ function AdminDashboard() {
               <Route path='AdminRegister' element={ <AdminRegister />} />
               <Route path='AddProduct' element={ <AddProduct />} />
               <Route path='Addryhma' element={ <Addryhma />} />
-              <Route path='Readcontact' element={ <Readcontact/>} />
+              
             </Routes>  }
         </div>
       <Sidebar />
+              <Routes>
+                 <Route path='Readcontact' element={ <Readcontact/>} />
+              </Routes>
     </>
   )
 }
