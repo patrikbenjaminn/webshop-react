@@ -8,7 +8,7 @@ const Sidebar=()=>{
       <div style={{display:'flex', height:'100%', overflow:'scroll initial'}}>
           <CDBSidebar textColer="#fff" backgroundColor="#00203FFF">
               <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-                  <Link to="/dashboard">Dashboard</Link>
+                  <Link to="/dashboard">Ylläpitäjät</Link>
               </CDBSidebarHeader>
               <CDBSidebarContent className="sidebar-content">
                   <CDBSidebarMenu>
