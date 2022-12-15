@@ -2,6 +2,7 @@ import React from 'react';
 import AdminHeader from './AdminHeader';
 import axios from 'axios';
 import { useState } from 'react';
+import '../../styles/Contact.css';
 
 const URL = 'http://localhost/webshop/php/'; 
 
@@ -13,7 +14,7 @@ function Addryhma() {
   function save(e) {
     e.preventDefault()
     const json = JSON.stringify({ trnimi: trnimi});
-    axios.post(URL + 'admin/addtuoteryhma.php', json, {
+    axios.post(URL + 'admin/addryhma.php', json, {
       headers: {
         'Content-Type': 'Application/json'
       }
@@ -32,9 +33,11 @@ function Addryhma() {
   }
 
   return (
-    <>
+ 
     <div>
     <AdminHeader url={URL} />
+
+    <div className="contact-form">
      <h1>Lisää tuoteryhmä </h1> 
 
      <div /* className="contact-form" */>
@@ -42,12 +45,13 @@ function Addryhma() {
             <label htmlFor="trnimi">tuoteryhmän nimi </label>
             <input type="text" value={trnimi}
               onChange={(e) => setTrnimi(e.target.value)}
-              placeholder="Lisää trnimi" required />
+              placeholder="Lisää tuoteryhmän nimi" required />
             <input type="submit" value="Lähetä" />        
           </form>
           </div>
     </div>
-    </>
+    </div>
+   
   )
 }
 
