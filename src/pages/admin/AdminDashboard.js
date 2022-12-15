@@ -7,8 +7,9 @@ import AdminRegister from './AdminRegister';
 import AddProduct from './AddProduct';
 import Addryhma from './AddProduct';
 import Sidebar from './AdminSideBar';
+import Readcontact from './Readcontact';
 
-const URL = 'http://localhost/webshop/src/pages/admin/'; 
+const URL = 'http://localhost:3000/admin/'
 
 function AdminDashboard() {
   return (
@@ -21,9 +22,13 @@ function AdminDashboard() {
               <Route path='AdminRegister' element={ <AdminRegister />} />
               <Route path='AddProduct' element={ <AddProduct />} />
               <Route path='Addryhma' element={ <Addryhma />} />
+              
             </Routes>  }
         </div>
       <Sidebar />
+              <Routes>
+                 <Route path='Readcontact' element={ <Readcontact/>} />
+              </Routes>
     </>
   )
 }

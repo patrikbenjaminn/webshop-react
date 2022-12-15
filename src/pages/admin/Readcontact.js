@@ -7,7 +7,7 @@ const ReadContact = () => {
     const [palautteet, setPalautteet] = useState([])
 
     const fetchData = () => {
-      fetch("https://jsonplaceholder.typicode.com/users")
+      fetch("http://localhost/webshop/php/admin/readContact.php'")
         .then(response => {
           return response.json()
         })
