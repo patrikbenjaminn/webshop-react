@@ -18,6 +18,8 @@ class AdminHeader extends Component {
         <div>
           <ul id='adminnavbar' className= {this.state.clicked ? "#adminnavbar " : "#adminnavbar" } >
             <li><a href={URL + 'AdminDashboard'}>Ylläpitäjän sivut</a></li>
+            <li><a href={URL + 'ListProduct'}>Näytä tuotteet</a></li>
+            <li><a href={URL + 'ShowProducts'}>Näytä tuoteryhmät</a></li>
             <li><a href={URL + 'AddProduct'}>Lisää tuote</a></li>
             <li><a href={URL + 'Addryhma'}>Lisää tuoteryhmä</a></li>
             <li><a href={URL + 'AdminLogin'}>Login</a></li>
