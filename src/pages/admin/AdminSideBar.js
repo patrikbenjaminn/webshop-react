@@ -1,5 +1,5 @@
 import React from 'react' 
-import {CDBSidebar, CDBSidebarContent, CDBSidebarHeader, CDBSidebarFooter, CDBSidebarMenu, CDBSidebarMenuItem} from 'react'; 
+import {CDBSidebar, CDBSidebarContent, CDBSidebarHeader, CDBSidebarFooter, CDBSidebarMenu, CDBSidebarMenuItem} from 'cdbreact'; 
 import {NavLink, Link} from 'react-router-dom'; 
 import {} from 'react-router-dom';
 
