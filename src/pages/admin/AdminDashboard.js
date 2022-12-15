@@ -6,8 +6,7 @@ import AdminLogin from '../admin/AdminLogin';
 import AdminRegister from './AdminRegister';
 import AddProduct from './AddProduct';
 import Addryhma from './AddProduct';
-import AdminTable from './AdminTable';
-import Application from './AdminSideBar';
+import Sidebar from './AdminSideBar';
 
 const URL = 'http://localhost/webshop/src/pages/admin/'; 
 
@@ -24,7 +23,7 @@ function AdminDashboard() {
               <Route path='Addryhma' element={ <Addryhma />} />
             </Routes>  }
         </div>
-      <Application />
+      <Sidebar />
     </>
   )
 }
