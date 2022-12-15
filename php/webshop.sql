@@ -111,4 +111,5 @@ message VARCHAR (255) NOT NULL,
 CONSTRAINT tilausrivi_pk PRIMARY KEY (palauteid)
 );
 
-insert into palaute values ( 1,'Minni Hiiri', 'minni@hiiri.com', CURRENT_TIMESTAMP, 'Hei! Teillä on kiva kauppa, olisiko mahdollista ottaa myyntiin pieniä eriä second-handtuotteita?');
+insert into palaute values ( 1,' Minni Hiiri', ' minni@hiiricom ', CURRENT_TIMESTAMP , ' Hei! Teillä on kiva kauppa, olisiko mahdollista ottaa myyntiin pieniä eriä second-handtuotteita? '),
+ ( 2,' Aku Ankka', ' aku.ankka@ankkalinna.com ', CURRENT_TIMESTAMP , ' Hei! Ankkalinnan väki haluaa toivottaa hyvää ja rentouttavaa joululomaa kaikille opiskelijoille, erityisesti TIK22KM-ryhmälle! ');
