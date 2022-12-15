@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import '../../styles/ReadContact.css'
+import '../../styles/AddProduct.css'
 
 
 
@@ -59,7 +59,7 @@ function AddProduct() {
       <div>
         <AdminHeader url={URL} />
 
-        <div className="contact-form">
+        <div className="contact-form3">
           <Container>
             <h1>Lisää tuote</h1>
             <form onSubmit={save}>
