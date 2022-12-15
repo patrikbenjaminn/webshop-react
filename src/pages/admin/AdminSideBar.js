@@ -14,22 +14,22 @@ const Sidebar=()=>{
                   <CDBSidebarMenu>
                       <NavLink exact to="/dashboard" activeClassName="activeClicked">
                           <CDBSidebarMenuItem icon="columns">
-                              Minnalle
+                              Näytä postit
                           </CDBSidebarMenuItem>
                       </NavLink>
                       <NavLink exact to="/dashboard" activeClassName="activeClicked">
                           <CDBSidebarMenuItem icon="columns">
-                              Transfer
+                              Näytä tilaukset
                           </CDBSidebarMenuItem>
                       </NavLink>
                       <NavLink exact to="/dashboard" activeClassName="activeClicked">
                           <CDBSidebarMenuItem icon="columns">
-                              Transfer
+                             Tarjous sivun tuotteet
                           </CDBSidebarMenuItem>
                       </NavLink>
                       <NavLink exact to="/dashboard" activeClassName="activeClicked">
                            <CDBSidebarMenuItem icon="columns">
-                              Transfer
+                              Käyttäjät ja adminit
                           </CDBSidebarMenuItem>
                       </NavLink>
                   </CDBSidebarMenu>
