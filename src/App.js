@@ -9,17 +9,12 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Return from './pages/Returning';
 import Tuotteet from './pages/Tuotteet';
-/* 
-import Header from './components/Header'; */
-/*import Products from './components/Products';
-import Tuoteryhmät from './pages/Tuoteryhmät';*/
 import AdminHeader from './pages/admin/AdminHeader';
 /*import Header from './components/Header';
 import Products from './products/Products';*/
 import {useEffect, useState} from "react";
 import Cart from './pages/Cart';
 import AdminDashboard from './pages/admin/AdminDashboard';
-import { Search } from 'react-bootstrap-icons';
 import Order from './pages/Order';
 import uuid from 'react-uuid';
 
@@ -29,6 +24,7 @@ import AdminRegister from './pages/admin/AdminRegister';
 import AddProduct from './pages/admin/AddProduct';
 import UpDateProduct from './pages/admin/UpDateProduct';
 import Addryhma from './pages/admin/Addryhma';
+import Sidebar from './pages/admin/AdminSideBar';
 // import ReactDOM from 'react-dom/client'
  
 
@@ -84,6 +80,7 @@ function App() {
               <Route path='/admin/AddProduct' element={ <AddProduct />} />
               <Route path='/admin/Addryhma' element={ <Addryhma />} /> 
               <Route path='/admin/UpDateProduct' element={ <UpDateProduct />} />
+              <Route path='/admin/AdminSideBar' element={ <Sidebar/>} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/products/categoryId' element={ <Cart url={URL} addToCart={addToCart} />} /> 

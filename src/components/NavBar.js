@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 //import Tuotteet from '../pages/Tuotteet';
 import '../styles/Navbar.css';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Cart from '../pages/Cart';
 
 const URL = 'http://localhost/webshop/php/';

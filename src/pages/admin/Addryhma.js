@@ -2,7 +2,7 @@ import React from 'react';
 import AdminHeader from './AdminHeader';
 import axios from 'axios';
 import { useState } from 'react';
-import '../../styles/Contact.css';
+import '../../styles/AddRyhma.css';
 
 const URL = 'http://localhost/webshop/php/'; 
 
@@ -37,7 +37,7 @@ function Addryhma() {
     <div>
     <AdminHeader url={URL} />
 
-    <div className="contact-form">
+    <div className="contact-form2">
      <h1>Lisää tuoteryhmä </h1> 
 
      <form onSubmit={save}>
