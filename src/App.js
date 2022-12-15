@@ -24,7 +24,7 @@ import AddProduct from './pages/admin/AddProduct';
 import UpDateProduct from './pages/admin/UpDateProduct';
 import Addryhma from './pages/admin/Addryhma';
 import Sidebar from './pages/admin/AdminSideBar';
-import ReadContact from './pages/admin/ReadContact';
+import Readcontact from './pages/admin/Readcontact';
 // import ReactDOM from 'react-dom/client'
  
 
@@ -81,7 +81,7 @@ function App() {
               <Route path='/admin/Addryhma' element={ <Addryhma />} /> 
               <Route path='/admin/UpDateProduct' element={ <UpDateProduct />} />
               <Route path='/admin/AdminSideBar' element={ <Sidebar/>} />
-              <Route path='/admin/ReadContact' element={ <ReadContact/>} />
+              <Route path='/admin/Readcontact' element={ <Readcontact/>} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL}/>}/>

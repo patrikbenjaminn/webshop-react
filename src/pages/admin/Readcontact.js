@@ -3,7 +3,7 @@ import '../../styles/Contact.css';
 
 
 
-function ReadContact() {
+function Readcontact() {
 
     /* const fetchData = () => {
         return axios.get("http://localhost/webshop/php/admin/readContact.php")
@@ -27,4 +27,4 @@ function ReadContact() {
     )
 
 }
-export default ReadContact; 
+export default Readcontact; 
