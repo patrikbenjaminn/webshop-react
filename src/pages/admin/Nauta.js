@@ -9,12 +9,7 @@ const Nauta = () => {
     const [tuotteet, setTuotteet] = useState([])
     const [editTuote, setEditTuote] = useState(null);
     const [editTuotenimi, setEditTuotenimi] = useState('');
-  /* const [tuotenimi, setTuotenimi] = useState('');
-  const [hinta, setHinta] = useState('');
-  const [saldo, setSaldo] = useState('');
-  const [trnro, setTrnro] = useState('');
-  const [tuotekuvaus, setTuotekuvaus] = useState('');
-  const [img, setImg] = useState(''); */
+
 
   const fetchData = () => {
     fetch("http://localhost/webshop/php/admin/tuotteet.php")
