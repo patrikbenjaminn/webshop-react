@@ -3,39 +3,40 @@ import '../styles/Karuselli.css';
 
 function CarouselFadeExample() {
   return (
-    <Carousel uncontrolled className='karuselli'>
+    <Carousel uncontrolled className='carousel'>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/Konsolipelit/zelda.png"
+          src="./images/karuselli/kortti.png"
           alt="First slide"
+          
         />
         <Carousel.Caption>
-           <h2>First slide label</h2> 
+           <h2></h2> 
           
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/lautapelit/trivial pursuit.png"
+          src="./images/karuselli/paidat.png" 
           alt="Second slide"
         />
 
         <Carousel.Caption>
-        <h3>Second slide label</h3>
+        <h2>Pukeudu tyylikkäästi RGH tuotteilla</h2>
           
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="./images/lautapelit/monopoly.png"
+          src="./images/karuselli/magic cards.png"
           alt="Third slide"
         />
 
         <Carousel.Caption>
-        <h4>Third slide label</h4>
+        <h3>MtG Kortit saatavilla NYT!</h3>
 
         </Carousel.Caption>
       </Carousel.Item>
