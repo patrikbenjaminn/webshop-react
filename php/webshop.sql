@@ -16,6 +16,7 @@ postinro CHAR(5),
 postitmp VARCHAR(10), 
 Id int AUTO_INCREMENT,
 salasana VARCHAR(255),
+user_type VARCHAR(20),
 created_at TIMESTAMP,
 CONSTRAINT asiakas_pk PRIMARY KEY (Id)
 ) ;
@@ -36,9 +37,9 @@ INSERT INTO tuoteryhma VALUES (5,'Uutuudet');
 /* TUOTE */
 
 CREATE TABLE tuote (
-tuoteid INT(255) AUTO_INCREMENT NOT NULL,
+tuoteid INT(255) AUTO_INCREMENT,
 tuotenimi VARCHAR(40) NOT NULL,
-hinta DECIMAL(9,2),
+hinta DECIMAL(6,2),
 saldo SMALLINT(5),
 trnro SMALLINT,
 tuotekuvaus TEXT,

@@ -14,7 +14,7 @@ $img = filter_var($input->img,FILTER_SANITIZE_SPECIAL_CHARS);
 try {
     $db = openDb();
 
-    $query = $db->prepare('update tuote set description=:description where id=:id');
+    $query = $db->prepare('update tuote set tuotenimi=:tuotenimi where tuoteid=:tuoteid');
     $query->bindValue(':tuotenimi',$tuotenimi,PDO::PARAM_STR);
     $query->bindValue(':hinta',$hinta,PDO::PARAM_INT);
     $query->bindValue(':saldo',$saldo,PDO::PARAM_INT);
