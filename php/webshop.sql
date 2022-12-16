@@ -124,4 +124,4 @@ img VARCHAR(50),
 CONSTRAINT tuote_pk PRIMARY KEY (tuoteid));
 
 INSERT INTO tarjous values (15, 'Hugo-peikkopeli',10.90,6.90,'Tietokonepelit/Hugo.png'),
-(9, 'Super Mario 3',19.90,12.90,'Konsolipelit/Super Mario 3.jpg'),(23,'X-Box Series s pelikonsoli', 249.00,199.00,'uutuudet/X-box S.jpeg');
+(9, 'Super Mario 3',19.90,12.90,'Konsolipelit/Super Mario 3.jpg'),(23,'X-Box Series s', 249.00,199.00,'uutuudet/X-box S.jpeg');
