@@ -14,7 +14,7 @@ try {
   $query = $db->prepare('insert into tarjous(tuotenimi,normihinta,tarjoushinta,img)
   values (:tuotenimi,:normihinta,:tarjoushinta,:img)');
   $query->bindValue(':tuotenimi', $tuotenimi,PDO::PARAM_STR);
-  $query->bindValue(':hinta', $normihinta,PDO::PARAM_INT);
+  $query->bindValue(':normihinta', $normihinta,PDO::PARAM_INT);
   $query->bindValue(':tarjoushinta', $tarjoushinta,PDO::PARAM_INT);
   $query->bindValue(':img', $img,PDO::PARAM_STR);
   $query->execute();
