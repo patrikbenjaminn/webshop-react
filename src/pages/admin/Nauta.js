@@ -85,7 +85,7 @@ const Nauta = () => {
                 <button type="button" onClick={() => setEditedTuote(null)}>Cancel</button>
               </form> 
           }  
-          <a className='delete' onClick={() => remove(tuote.tuoteid)} href="#">    
+          <a className='delete' onClick={() => remove(tuote.tuoteid)(tuote.tuotenimi)(tuote.hinta) (tuote.saldo) (tuote.trnro) (tuote.tuotekuvaus) (tuote.img)} href="#">    
               Delete
             </a>&nbsp;
             {editTuote === null &&
