@@ -47,6 +47,10 @@
     height:100%;
     }
 
+.navbar-brand.retro {
+    font-size:xx-large;
+}    
+
 
 .navbar-brand {
     color:#ADEFD1FF !important;

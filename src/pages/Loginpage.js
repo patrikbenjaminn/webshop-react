@@ -24,34 +24,6 @@ function Loginpage() {
       })
   }
     
-
-      /*.then((response) => {
-        setAstunnus(astunnus => [...astunnus, response.data])
-        setEtunimi(etunimi => [...etunimi, response.data])
-        setSukunimi(sukunimi => [...sukunimi, response.data])
-        setEmail(email => [...email, response.data])
-        setOsoite(osoite => [...osoite, response.data])
-        setPostinro(postinro => [...postinro, response.data])
-        setPostitmp(postitmp => [...postitmp, response.data])
-        setSalasana(salasana => [...salasana, response.data])
-
-        setAstunnus('')
-        setEtunimi('')
-        setSukunimi('')
-        setEmail('')
-        setOsoite('')
-        setPostinro('')
-        setPostitmp('')
-        setSalasana('')
-        alert('Hienoa! Asiakkuus on luotu')
-      })
-      .catch(error => {
-        console.log(error.response ? error.response.data.error : error)
-        alert("Häiriö järjestelmässä, yritä pian uudelleen!")
-      })
-  }*/
-
-
   return (
     <>
       <div className="logform">
