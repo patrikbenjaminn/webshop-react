@@ -19,6 +19,8 @@ import Order from './pages/Order';
 import uuid from 'react-uuid';
 import Searchproducts from './pages/Search';
 import AdminLogin from './pages/admin/AdminLogin';
+import Nauta from './pages/admin/Nauta';
+import Nautaryhmat from './pages/admin/Nautaryhmat';
 import AdminRegister from './pages/admin/AdminRegister';
 import AddProduct from './pages/admin/AddProduct';
 import UpDateProduct from './pages/admin/UpDateProduct';
@@ -74,12 +76,14 @@ function App() {
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
-              <Route path='/admin/AdminDashboard' element={<AdminDashboard />} />
+              <Route path='/admin/AdminDashboard/*' element={<AdminDashboard />} />
               <Route path='/admin/AdminLogin' element={ <AdminLogin />} />
               <Route path='/admin/AdminRegister' element={ <AdminRegister />} />
               <Route path='/admin/AddProduct' element={ <AddProduct />} />
               <Route path='/admin/Addryhma' element={ <Addryhma />} /> 
               <Route path='/admin/UpDateProduct' element={ <UpDateProduct />} />
+              <Route path='/admin/Nauta' element={ <Nauta />} />
+              <Route path='/admin/Nautaryhmat' element={ <Nautaryhmat />} />
               <Route path='/admin/AdminSideBar' element={ <Sidebar/>} />
               <Route path='/admin/Readcontact' element={ <Readcontact/>} />
               <Route path='*' element={ <NotFound />} />

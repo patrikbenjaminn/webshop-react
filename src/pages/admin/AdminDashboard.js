@@ -8,6 +8,8 @@ import AddProduct from './AddProduct';
 import Addryhma from './AddProduct';
 import Sidebar from './AdminSideBar';
 import Readcontact from './Readcontact';
+import Nautaryhmat from './Nautaryhmat';
+import Nauta from './Nauta';
 
 const URL = 'http://localhost:3000/admin/'
 
@@ -22,6 +24,8 @@ function AdminDashboard() {
               <Route path='AdminRegister' element={ <AdminRegister />} />
               <Route path='AddProduct' element={ <AddProduct />} />
               <Route path='Addryhma' element={ <Addryhma />} />
+              <Route path='Nauta' element={ <Nauta />} />
+              <Route path='Nautaryhmat' element={ <Nautaryhmat />} />
               
             </Routes>  }
         </div>
@@ -29,6 +33,8 @@ function AdminDashboard() {
               <Routes>
                  <Route path='Readcontact' element={ <Readcontact/>} />
               </Routes>
+
+
     </>
   )
 }
