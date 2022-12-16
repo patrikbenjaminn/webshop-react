@@ -28,6 +28,7 @@ import Addryhma from './pages/admin/Addryhma';
 import Sidebar from './pages/admin/AdminSideBar';
 import Readcontact from './pages/admin/Readcontact';
 import AddOffers from './pages/admin/AddOffers';
+import Tarjoussivu from './pages/Tarjoussivu';
 // import ReactDOM from 'react-dom/client'
  
 
@@ -94,8 +95,7 @@ function App() {
               <Route path='/products/categoryId' element={ <Cart url={URL} addToCart={addToCart} />} /> 
               <Route path='/order' element={<Order cart={cart}/>}/>
               <Route path='/Tuotteet/tuoteid' element={ <Tuotteet url={URL} addToCart={addToCart} />}/>
-
-
+             { <Route path='/Tarjoussivu/tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />}/>}
           </Routes>
           
         

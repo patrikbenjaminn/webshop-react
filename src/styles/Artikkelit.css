@@ -4,13 +4,15 @@
   /*  background:url(../../public/images/rgh3.jpg); */
     background-size: cover;
     align-items: top;
+    text-align: center;
+    padding: 20px;
 }
 
 .artikkelit a{
     list-style: none;
-    color: #160647;
+    color: black;
     outline: none;
-    -webkit-text-stroke: 0.8px #E28E0F;
+    /* -webkit-text-stroke: 0.8px #E28E0F */;
 }
 
 .artikkelit a:hover{
@@ -25,10 +27,10 @@
 
 }
 
-.artikkelit span{
+/* .artikkelit span{
     color: chartreuse;
 
-}
+} */
 
 .artikkelit small{
     font-size: 15px;

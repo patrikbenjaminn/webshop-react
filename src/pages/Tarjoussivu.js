@@ -1,8 +1,8 @@
 import React from 'react'
-import '../styles/Tarjoussivu.css'
+import '../styles/Tarjous.css'
 import '../products/Products'
 import { useState, useEffect } from 'react'
-import '../styles/Tuotteet.css'
+import '../styles/Tarjoussivu.css'
 
 function handleClick(addToCart){
   return
@@ -35,41 +35,13 @@ const Tarjoussivu = () => {
               <div className="card h-100">
                 <img src={"../../images/" + tarjous.img} className="img-fluid mb-3" alt="" />
                 <input type="button" onClick={handleClick} value="OSTA TÄSTÄ" />
-                <h3 className="tuotenimi">{tarjous.tuotenimi}  </h3>
-                <p><span className='tuote'> {tarjous.tarjoushinta}</span></p>
+                <h3 className="tuotenimi2">{tarjous.tuotenimi}  </h3>
+               
+                <p><div className='hinta2'>{tarjous.tarjoushinta}</div></p>
+                <p><div className='hinta'>(norm. {tarjous.normihinta})</div></p>
               </div>
             </div>
           ))}
-        {/*   {tarjoukset.map(tuote => (
-            <div className="col-lg-3">
-              <div className="card h-100">
-                <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
-                <input type="button" onClick={handleClick} value="OSTA TÄSTÄ" />
-                <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
-                <p><span className='tuote'> {tuote.hinta}</span></p>
-              </div>
-            </div>
-          ))} */}
-     {/*      {tarjoukset.map(tuote => (
-            <div className="col-lg-3">
-              <div className="card h-100">
-                <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
-                <input type="button" onClick={handleClick} value="OSTA TÄSTÄ" />
-                <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
-                <p><span className='tuote'> {tuote.hinta}</span></p>
-              </div>
-            </div>
-          ))}
-          {tarjoukset.map(tuote => (
-            <div className="col-lg-3">
-              <div className="card h-100">
-                <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
-                <input type="button" onClick={handleClick} value="OSTA TÄSTÄ" />
-                <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
-                <p><span className='tuote'> {tuote.hinta}</span></p>
-              </div>
-            </div>
-          ))} */}
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ function Addryhma() {
   function save(e) {
     e.preventDefault()
     const json = JSON.stringify({ trnimi: trnimi});
-    axios.post(URL + 'admin/addryhma.php', json, {
+    axios.post(URL + 'admin/addRyhma.php', json, {
       headers: {
         'Content-Type': 'Application/json'
       }

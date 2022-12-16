@@ -14,7 +14,7 @@ function Artikkelit() {
               <img src="../../images/girl.jpg" className="img-fluid" alt=""/>
               <p className=""pt-3><a href=
               "https://www.afterdawn.com/news/article.cfm/2022/12/08/guide-wifi-speeds-are-slow-here-are-some-tips">
-                Wi-Fi-nopeudet ovat hitaita?</a></p>
+                Hidas wifi?</a></p>
               <small> Tässä muutama vinkki!<span></span></small>
             </div>
           </div>

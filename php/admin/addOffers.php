@@ -12,7 +12,7 @@ $img = filter_var($input->img,FILTER_SANITIZE_SPECIAL_CHARS);
 try {
   $db=openDb();
   $query = $db->prepare('insert into tarjous(tuotenimi,normihinta,tarjoushinta,img)
-  values (:tuotenimi,:hinta,:tarjoushinta,:img)');
+  values (:tuotenimi,:normihinta,:tarjoushinta,:img)');
   $query->bindValue(':tuotenimi', $tuotenimi,PDO::PARAM_STR);
   $query->bindValue(':hinta', $normihinta,PDO::PARAM_INT);
   $query->bindValue(':tarjoushinta', $tarjoushinta,PDO::PARAM_INT);
