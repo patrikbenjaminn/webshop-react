@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 const AdminLogin = () => {
   return (
@@ -17,4 +17,4 @@ const AdminLogin = () => {
   );
 };
 
-export default AdminLogin;
+export default AdminLogin; */

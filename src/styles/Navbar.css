@@ -85,7 +85,13 @@
     background-color: rgb(21, 222, 68);
 }
 
+.etu {
+    font-size: xx-large;
+}
 
+.nav-link.etu {
+    font-size: xx-large;
+}
 
 .nav-item {
     list-style: none;
@@ -101,6 +107,7 @@
     margin-top: 18px;
     
 }
+
 .nav-link:hover{
     background-color:#00203FFF;
     color:#ADEFD1FF;
