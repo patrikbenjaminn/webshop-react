@@ -27,6 +27,7 @@ import UpDateProduct from './pages/admin/UpDateProduct';
 import Addryhma from './pages/admin/Addryhma';
 import Sidebar from './pages/admin/AdminSideBar';
 import Readcontact from './pages/admin/Readcontact';
+import AddOffers from './pages/admin/AddOffers';
 // import ReactDOM from 'react-dom/client'
  
 
@@ -80,7 +81,8 @@ function App() {
               <Route path='/admin/AdminLogin' element={ <AdminLogin />} />
               <Route path='/admin/AdminRegister' element={ <AdminRegister />} />
               <Route path='/admin/AddProduct' element={ <AddProduct />} />
-              <Route path='/admin/Addryhma' element={ <Addryhma />} /> 
+              <Route path='/admin/Addryhma' element={ <Addryhma />} />
+              <Route path='/admin/AddOffers' element={ <AddOffers />} />  
               <Route path='/admin/UpDateProduct' element={ <UpDateProduct />} />
               <Route path='/admin/Nauta' element={ <Nauta />} />
               <Route path='/admin/Nautaryhmat' element={ <Nautaryhmat />} />

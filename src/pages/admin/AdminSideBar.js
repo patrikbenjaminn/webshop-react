@@ -24,9 +24,9 @@ const Sidebar=()=>{
                               Näytä tilaukset
                           </CDBSidebarMenuItem>
                       </NavLink>
-                      <NavLink exact to="/AdminDashboard" activeClassName="activeClicked">
+                      <NavLink exact to="/admin/AddOffers" activeClassName="activeClicked">
                           <CDBSidebarMenuItem icon="columns">
-                             Tarjous sivun tuotteet
+                             Lisää tarjoukset
                           </CDBSidebarMenuItem>
                       </NavLink>
                       <NavLink exact to="/AdminDashboard" activeClassName="activeClicked">

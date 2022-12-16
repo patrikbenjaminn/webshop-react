@@ -114,3 +114,14 @@ CONSTRAINT tilausrivi_pk PRIMARY KEY (palauteid)
 
 insert into palaute values ( 1,' Minni Hiiri', ' minni@hiiricom ', CURRENT_TIMESTAMP , ' Hei! Teillä on kiva kauppa, olisiko mahdollista ottaa myyntiin pieniä eriä second-handtuotteita? '),
  ( 2,' Aku Ankka', ' aku.ankka@ankkalinna.com ', CURRENT_TIMESTAMP , ' Hei! Ankkalinnan väki haluaa toivottaa hyvää ja rentouttavaa joululomaa kaikille opiskelijoille, erityisesti TIK22KM-ryhmälle! ');
+
+ CREATE TABLE tarjous(
+tuoteid INT(255) AUTO_INCREMENT NOT NULL,
+tuotenimi VARCHAR(40) NOT NULL,
+normihinta DECIMAL(9,2),
+tarjoushinta DECIMAL(9,2),
+img VARCHAR(50),
+CONSTRAINT tuote_pk PRIMARY KEY (tuoteid));
+
+INSERT INTO tarjous values (15, 'Hugo-peikkopeli',10.90,6.90,'Tietokonepelit/Hugo.png'),
+(9, 'Super Mario 3',19.90,12.90,'Konsolipelit/Super Mario 3.jpg'),(23,'X-Box Series s pelikonsoli', 249.00,199.00,'uutuudet/X-box S.jpeg');
