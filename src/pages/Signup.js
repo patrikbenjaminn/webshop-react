@@ -42,7 +42,7 @@ function Signup() {
         setPostinro('')
         setPostitmp('')
         setSalasana('')
-        alert('Hienoa! Asiakkuus on luotu')
+        alert('Hienoa! Asiakkuus on luotu.')
       })
       .catch(error => {
         console.log(error.response ? error.response.data.error : error)
