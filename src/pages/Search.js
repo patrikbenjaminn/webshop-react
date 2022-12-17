@@ -2,11 +2,13 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../App.css';
-import '../styles/Tuotteet.css'
+import '../styles/Tarjous.css'
 import '../styles/Tarjoussivu.css'
 
 
-
+function handleClick(addToCart){
+  return
+}
 const url = 'http://localhost/webshop/php/';
 
 
@@ -51,10 +53,11 @@ export default function Searchproducts() {
                 {products.map(tuote => (
                   <div className="col-lg-3">
                     <div className="card h-100">
-                      <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
-                      <input type="button" onClick={() => window.location.href = './Products/xbox'} value="OSTA TÄSTÄ" />
-                      <h3 className="tuotenimi2">{tuote.tuotenimi}</h3>
-                      <p><span className='tuote'>{tuote.hinta}</span></p>
+                    <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
+                <input type="button" onClick={handleClick} value="OSTA TÄSTÄ" />
+                <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>              
+                <p><div className='hinta2'>{tuote.tarjoushinta}</div></p>
+                <p><div className='hinta'>(norm. {tuote.hinta})</div></p>
                     </div>
                   </div>
                 ))}
