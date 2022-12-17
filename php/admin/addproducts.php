@@ -6,7 +6,7 @@ require_once '../inc/headers.php';
 $input = json_decode(file_get_contents('php://input'));
 $tuotenimi = filter_var($input->tuotenimi,FILTER_SANITIZE_SPECIAL_CHARS);
 $hinta = filter_var($input->hinta,FILTER_SANITIZE_NUMBER_FLOAT);
-$tarjoushinta = filter_var($input->tarjoushinta,FILTER_SANITIZE_NUMBER_FLOAT);
+$tarjoushinta = filter_var($input->tarjoushinta,FILTER_SANITIZE_NUMBER_INT);
 $saldo = filter_var($input->saldo,FILTER_SANITIZE_NUMBER_INT);;
 $trnro = filter_var($input->trnro,FILTER_SANITIZE_NUMBER_INT);
 $tuotekuvaus = filter_var($input->tuotekuvaus,FILTER_SANITIZE_SPECIAL_CHARS);
