@@ -1,8 +1,8 @@
 import React from 'react'
-import '../styles/Tarjous.css'
+import '../styles/tuote.css'
 import './Tuotteet'
 import { useState, useEffect } from 'react'
-import '../styles/Tarjoussivu.css'
+import '../styles/tuotesivu.css'
 
 
 function Tarjoussivu(addToCart) {
@@ -13,7 +13,7 @@ function Tarjoussivu () {
   const [tarjoukset, setTarjoukset] = useState([])
 
   const fetchData = () => {
-    fetch("http://localhost/webshop/php/admin/tarjoussivu.php")
+    fetch("http://localhost/webshop/php/admin/tuotesivu.php")
       .then(response => {
         return response.json()
       })
@@ -35,13 +35,11 @@ function Tarjoussivu () {
           {tarjoukset.map(tuote => (
             <div className="col">
               <div className="card h-100">
-                <img src={"../../images/" + tarjous.img} className="img-fluid mb-3" alt="" />
-                <input type="button" onClick={handleClick} value="OSTA TÄSTÄ" />
-                <h3 className="tuotenimi2">{tarjous.tuotenimi}  </h3>
-               
-                <p><div className='hinta2'>{tarjous.tarjoushinta}</div></p>
-                <p><div className='hinta'>(norm. {tarjous.normihinta})</div></p>
-              </div>
+            <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt=""/>
+            <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
+            <p><span className='tuote'> {tuote.hinta}</span></p>
+            <button className='btn btn-primary' type="button" onClick={e=> addToCart(tuote)}>Lisää koriin</button>
+          </div>
             </div>
           ))}
         </div>
@@ -50,5 +48,5 @@ function Tarjoussivu () {
 
   )
 }
-
+}
 export default Tarjoussivu;
