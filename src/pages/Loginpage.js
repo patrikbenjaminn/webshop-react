@@ -8,60 +8,22 @@ const URL = 'http://localhost/webshop/php/';
 function Loginpage() {
   const [astunnus, setAstunnus] = useState('');
   const [salasana, setSalasana] = useState('');
-  const [sukunimi, setSukunimi] = useState('');
-  const [postitmp, setPostitmp] = useState('');
-  const [postinro, setPostinro] = useState('');
-  const [osoite, setOsoite] = useState('');
-  const [email, setEmail] = useState('');
-  const [etunimi, setEtunimi] = useState('');
-
-
-
-
   
  
 
   function save(e) {
     e.preventDefault()
     const json = JSON.stringify({astunnus: astunnus, salasana: salasana });
-    axios.post(URL + 'logincheck.php', json, {
+    axios.post(URL + 'login_form.php', json, {
       headers: {
         'Content-Type': 'Application/json',
 
       }})
-      /* .then((response) => {
-        console.log(response);
-      }) */
-  
-    
-
       .then((response) => {
-        setAstunnus(astunnus => [...astunnus, response.data])
-        setEtunimi(etunimi => [...etunimi, response.data])
-        setSukunimi(sukunimi => [...sukunimi, response.data])
-        setEmail(email => [...email, response.data])
-        setOsoite(osoite => [...osoite, response.data])
-        setPostinro(postinro => [...postinro, response.data])
-        setPostitmp(postitmp => [...postitmp, response.data])
-        setSalasana(salasana => [...salasana, response.data])
-
-        setAstunnus('')
-        setEtunimi('')
-        setSukunimi('')
-        setEmail('')
-        setOsoite('')
-        setPostinro('')
-        setPostitmp('')
-        setSalasana('')
-        alert('Hienoa! Asiakkuus on luotu')
-      })
-      .catch(error => {
-        console.log(error.response ? error.response.data.error : error)
-        alert("Häiriö järjestelmässä, yritä pian uudelleen!")
+        console.log(response);
       })
   }
-
-
+    
   return (
     <>
       <div className="logform">

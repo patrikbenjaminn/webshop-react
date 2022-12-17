@@ -50,7 +50,7 @@ const [search, setSearch] = useState([]);
   return (
     <Navbar className='navbar-custom' expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">Retrogamershaven</Navbar.Brand>
+        <Navbar.Brand className='retro' href="/">Retrogamershaven</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -81,7 +81,7 @@ const [search, setSearch] = useState([]);
               <NavDropdown.Divider />
             </NavDropdown>
 
-            <Nav.Link href="../admin/AdminDashboard/" >
+            <Nav.Link className='etu' href="../admin/AdminDashboard/" >
               Admin
             </Nav.Link>
           </Nav>
@@ -97,11 +97,7 @@ const [search, setSearch] = useState([]);
           <Nav.Link href="./Cart">
             <Cart cart={cart}/>
           </Nav.Link>
-          <Nav>
-           
-          </Nav>
-
-          {' '}
+   
         </Navbar.Collapse>
       </Container>
     </Navbar>

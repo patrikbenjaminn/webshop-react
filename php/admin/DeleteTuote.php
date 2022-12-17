@@ -10,7 +10,7 @@ $tuotenimi = filter_var($input->tuotenimi,FILTER_SANITIZE_NUMBER_INT);
 try {
     $db = openDb();    
     $query = $db->prepare('delete from tuote where tuotenimi =(:tuotenimi)');
-    $query->bindValue(':tuotenimi',$id,PDO::PARAM_INT);
+    $query->bindValue(':tuotenimi',$tuotenimi,PDO::PARAM_INT);
     $query->execute();    
     header('HTTP/1.1 200 OK');
     $data = array('tuotenimi' => $tuotenimi);
