@@ -58,11 +58,9 @@ function App() {
   // ostoskori
   const [cart, setCart] = useState([]);
 
-  
-
   useEffect(() => {
     if ('cart' in localStorage) {
-      setCart(JSON.parse(localStorage.getItem('cart')))
+      setCart(JSON.parse(localStorage.getItem('cart')));
     }
   }, [])
 
