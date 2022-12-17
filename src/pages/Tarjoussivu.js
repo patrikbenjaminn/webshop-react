@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Tarjoussivu.css'
-import '../products/Products'
+import '../pages/Tuotteet'
 function Tarjoussivu() {
   return (
     

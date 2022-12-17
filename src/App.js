@@ -12,7 +12,7 @@ import Tuotteet from './pages/Tuotteet';
 import AdminHeader from './pages/admin/AdminHeader';
 /*import Header from './components/Header';
 import Products from './products/Products';*/
-import {useEffect, useState} from "react";
+import React,{useEffect, useState} from "react";
 import Cart from './pages/Cart';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import Order from './pages/Order';
@@ -85,7 +85,6 @@ function App() {
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL}/>}/>
-              <Route path='/products/categoryId' element={ <Cart url={URL} addToCart={addToCart} />} /> 
               <Route path='/order' element={<Order cart={cart}/>}/>
               <Route path='/Tuotteet/tuoteid' element={ <Tuotteet url={URL} addToCart={addToCart} />}/>
 
