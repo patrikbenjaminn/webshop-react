@@ -7,14 +7,14 @@ import '../styles/Tarjoussivu.css'
 const URL = 'http://localhost/webshop/php/';
 
 
-function Tuotteet({url, addToCart}) {
+function Tuotteet({url,addToCart}) {
   const [category, setCategory] = useState('');
   const [products, setProducts] = useState([]);
 
   let params = useParams();
 
   useEffect(() => {
-    axios.get(URL + 'products/gettuotteet.php/' + params.trnro)
+    axios.get(url + 'products/gettuotteet.php/' + params.trnro)
       .then((response) => {
         const json = response.data;
         setCategory(json.tuoteryhma)
@@ -24,7 +24,7 @@ function Tuotteet({url, addToCart}) {
         alert(error.response === undefined ? error : error.response.data.error)
       })
   }, [params])
-
+  console.log(addToCart)
 
   return (
 
@@ -39,13 +39,14 @@ function Tuotteet({url, addToCart}) {
             <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt=""/>
             <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
             <p><span className='tuote'> {tuote.hinta}</span></p>
-            <button className='btn btn-primary' type="button" onClick={()=> addToCart(tuote)}>Lisää koriin</button>
+            <button className='btn btn-primary' type="button" onClick={e=> addToCart(tuote)}>Lisää koriin</button>
           </div>
         </div>
           ))}
         </div>
       </div>
     </section>
+    
   )
 }
 

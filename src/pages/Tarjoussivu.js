@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import '../styles/Tarjoussivu.css'
 
 
-const Tarjoussivu = () => {
+function Tarjoussivu(addToCart) {
   const [tarjoukset, setTarjoukset] = useState([])
 
   const fetchData = () => {
@@ -33,9 +33,10 @@ const Tarjoussivu = () => {
               <div className="card h-100">
                 <img src={"../../images/" + tarjous.img} className="img-fluid mb-3" alt="" />
                 <h3 className="tuotenimi2">{tarjous.tuotenimi}  </h3>
-                <button className='btn btn-primary' type="button"/*  onclick={()=> addToCart(tuote)} */>Lisää koriin</button>
                 <p><div className='hinta2'>{tarjous.tarjoushinta}</div></p>
                 <p><div className='hinta'>(norm. {tarjous.normihinta})</div></p>
+                <button className='btn btn-primary' type="button" onClick={e=> addToCart(tarjous)}>Lisää koriin</button>
+
               </div>
             </div>
           ))}

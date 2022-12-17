@@ -82,14 +82,14 @@ function App() {
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
-              <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL}  />}/>
+              <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL} addToCart={addToCart}  />}/>
               <Route path='/Contact' element={ <Contact />} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL}/>}/>
               <Route path='/Order' element={<Order cart={cart}/>}/>
-              <Route path='/Tuotteet/:tuoteid' element={ <Tuotteet url={URL} addToCart={addToCart} />}/>
-              <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
+{/*               <Route path='/Tuotteet/:tuotenimi' element={ <Tuotteet url={URL} addToCart={addToCart} />}/>
+ */}              <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
