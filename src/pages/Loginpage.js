@@ -3,24 +3,31 @@ import '../styles/Loginpage.css';
 import { useState } from 'react';
 import axios from 'axios';
 
+
 const URL = 'http://localhost/webshop/php/';
+
 
 function Loginpage() {
   const [astunnus, setAstunnus] = useState('');
   const [salasana, setSalasana] = useState('');
   
- 
-
+  
   function save(e) {
     e.preventDefault()
     const json = JSON.stringify({astunnus: astunnus, salasana: salasana });
-    axios.post(URL + 'login_form.php', json, {
+    axios.post(URL + 'logincheck.php', json, {
       headers: {
         'Content-Type': 'Application/json',
 
       }})
+
+
       .then((response) => {
-        console.log(response);
+        setAstunnus(astunnus => [...astunnus, response.data])
+        setSalasana(salasana => [...salasana, response.data])
+        setAstunnus('')
+        setSalasana('')
+        alert('Tervetuloa Retrogamershaveniin!')
       })
   }
     
@@ -41,7 +48,7 @@ function Loginpage() {
             <input type="texti" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
               placeholder="salasana" required />
-              <input type="submit" value="Lähetä" />
+              <input type="submit" value="Kirjaudu" />
            
           </form>
 

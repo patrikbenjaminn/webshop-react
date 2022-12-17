@@ -2,21 +2,22 @@ import React, {useState, useEffect} from "react";
 import uuid from 'react-uuid';
 import axios from "axios";
 
-export default function Order({url, cart}){
+
+export default function Order({cart,removeFromCart}){
     let sum = 0;
 
     return(
-        <div className="ostoskori">
-            <h3 className="header">Ostoskori</h3>
+        <div id="ostoskori">
+            <h3 className="ostoskori">Ostoskori</h3>
             <table className="table">
                 <tbody>
-                    {cart.map(product=>{
-                        sum+=parseFloat(product.price);
+                    {cart.map(tuote=>{
+                        sum+=parseFloat(tuote.hinta);
                         return(
                             <tr key={uuid()}>
-                            <td>{product.name}</td>
-                            <td>{product.price} €</td>
-                            <td></td>
+                            <td>{tuote.tuotenimi}</td>
+                            <td>{tuote.hinta} €</td>
+                            <td><a href="#" onClick={() => removeFromCart(tuote)}>Poista</a></td>
                             </tr>
                             
                         )

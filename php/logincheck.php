@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $astunnus = $_POST["astunnus"];
     $salasana = $_POST["salasana"];
     // hashing the password
-    $salasana = md5($salasana );
+    $salasana = SHA1($salasana );
     //checking username already exists
     if($astunnus!=NULL){
        $checking =   mysqli_query($link,"SELECT * FROM asiakas WHERE `astunnus`='$astunnus' AND `salasana`='$salasana'");
@@ -21,10 +21,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         else
         {
-           /* header("location:login.php?error=1");
+            header("location:login.php?error=1");
             print_r($userdata);
             print"<br>";
-            print $userid;*/
+            print $userid;
             echo "Tunnus väärin, kokeile uudestaan";
             
         }

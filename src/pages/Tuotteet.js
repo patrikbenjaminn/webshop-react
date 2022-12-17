@@ -6,28 +6,28 @@ import '../styles/Tarjoussivu.css'
 
 const URL = 'http://localhost/webshop/php/';
 
-function handleClick(addToCart){
-  return
-}
-function Tuotteet(url) {
+
+function Tuotteet({url,addToCart}) {
   const [category, setCategory] = useState('');
   const [products, setProducts] = useState([]);
 
   let params = useParams();
 
   useEffect(() => {
-    axios.get(URL + 'products/gettuotteet.php/' + params.trnro)
+    axios.get(url + 'products/gettuotteet.php/' + params.trnro)
       .then((response) => {
         const json = response.data;
         setCategory(json.tuoteryhma)
         setProducts(json.tuote);
+        console.log(json);
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error)
       })
   }, [params])
-
+  console.log(addToCart)
 
   return (
+
 
     <section className="tarjoukset" style={{ textalign: "center" }}>
       <div className="container py-5">
@@ -37,15 +37,16 @@ function Tuotteet(url) {
         <div className="col-lg-3">
           <div className="card h-100">
             <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt=""/>
-             <input type="button" onClick={handleClick}  value="OSTA TÄSTÄ"/>   
             <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
             <p><span className='tuote'> {tuote.hinta}</span></p>
+            <button className='btn btn-primary' type="button" onClick={e=> addToCart(tuote)}>Lisää koriin</button>
           </div>
         </div>
           ))}
         </div>
       </div>
     </section>
+    
   )
 }
 

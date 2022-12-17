@@ -1,7 +1,7 @@
             /*  css ja react */
 import './App.css';
 import { Routes, Route, BrowserRouter, json } from 'react-router-dom';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import uuid from 'react-uuid';
 
           /* componentit */
@@ -60,16 +60,21 @@ function App() {
 
   useEffect(() => {
     if ('cart' in localStorage) {
-      setCart(JSON.parse(localStorage.getItem('cart')))
+      setCart(JSON.parse(localStorage.getItem('cart')));
     }
   }, [])
 
-  function addToCart(product) {
-    const newCart = [...cart,product];
+  function addToCart(tuote) {
+    const newCart = [...cart,tuote];
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
   
+  function removeFromCart(tuote){
+    const itemsWithoutRemoved = cart.filter(item => item.id !== tuote.id);
+    setCart(itemsWithoutRemoved);
+    localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
+  }
   return (
     
     <>
@@ -80,15 +85,13 @@ function App() {
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
-              <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL}  />}/>
+              <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL} addToCart={addToCart}  />}/>
               <Route path='/Contact' element={ <Contact />} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL}/>}/>
-              <Route path='/products/categoryId' element={ <Cart url={URL} addToCart={addToCart} />} /> 
-              <Route path='/order' element={<Order cart={cart}/>}/>
-              <Route path='/Tuotteet/tuoteid' element={ <Tuotteet url={URL} addToCart={addToCart} />}/>
-              <Route path='/Tarjoussivu/tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
+              <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart}/>}/>
+             <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
