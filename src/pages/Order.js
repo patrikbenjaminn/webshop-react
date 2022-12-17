@@ -3,7 +3,7 @@ import uuid from 'react-uuid';
 import axios from "axios";
 
 
-export default function Order({cart}){
+export default function Order({cart,removeFromCart}){
     let sum = 0;
 
     return(
@@ -17,7 +17,7 @@ export default function Order({cart}){
                             <tr key={uuid()}>
                             <td>{tuote.tuotenimi}</td>
                             <td>{tuote.hinta} €</td>
-                            <td></td>
+                            <td><a href="#" onClick={() => removeFromCart(tuote)}>Poista</a></td>
                             </tr>
                             
                         )
