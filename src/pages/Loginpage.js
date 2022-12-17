@@ -15,7 +15,7 @@ function Loginpage() {
   function save(e) {
     e.preventDefault()
     const json = JSON.stringify({astunnus: astunnus, salasana: salasana });
-    axios.post(URL + 'login_form.php', json, {
+    axios.post(URL + 'logincheck.php', json, {
       headers: {
         'Content-Type': 'Application/json',
 
