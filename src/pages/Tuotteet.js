@@ -38,7 +38,7 @@ function Tuotteet({url, addToCart}) {
             <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt=""/>
             <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
             <p><span className='tuote'> {tuote.hinta}</span></p>
-            <button className='btn btn-primary' type="button" onclick={addToCart(tuote)}>Lisää koriin</button>
+            <button className='btn btn-primary' type="button" onclick={()=> addToCart(tuote)}>Lisää koriin</button>
           </div>
         </div>
           ))}

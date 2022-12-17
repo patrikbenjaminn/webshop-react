@@ -1,12 +1,10 @@
 import React from 'react'
 import '../styles/Tarjous.css'
-import '../products/Products'
+import './Tuotteet'
 import { useState, useEffect } from 'react'
 import '../styles/Tarjoussivu.css'
 
-function handleClick(addToCart){
-  return
-}
+
 const Tarjoussivu = () => {
   const [tarjoukset, setTarjoukset] = useState([])
 
@@ -34,9 +32,8 @@ const Tarjoussivu = () => {
             <div className="col">
               <div className="card h-100">
                 <img src={"../../images/" + tarjous.img} className="img-fluid mb-3" alt="" />
-                <input type="button" onClick={handleClick} value="OSTA TÄSTÄ" />
                 <h3 className="tuotenimi2">{tarjous.tuotenimi}  </h3>
-               
+                <button className='btn btn-primary' type="button"/*  onclick={()=> addToCart(tuote)} */>Lisää koriin</button>
                 <p><div className='hinta2'>{tarjous.tarjoushinta}</div></p>
                 <p><div className='hinta'>(norm. {tarjous.normihinta})</div></p>
               </div>
