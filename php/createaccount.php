@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $data = array('astunnus' => $astunnus, 'etunimi' => $etunimi, 'sukunimi' => $sukunimi, 'email' => $email, 'osoite' => $osoite, 'postinro' => $postinro, 'postitmp' => $postitmp, 'salasana' => $salasana,);
     */
     // hashing the password
-    $salasana = md5($salasana );
+    $salasana = SHA1($salasana );
     //checking username already exists
     
     $checking = mysqli_query($link,"SELECT * FROM asiakas WHERE astunnus='$astunnus'");

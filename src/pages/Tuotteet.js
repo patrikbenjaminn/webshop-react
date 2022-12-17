@@ -7,7 +7,7 @@ import '../styles/Tarjoussivu.css'
 const URL = 'http://localhost/webshop/php/';
 
 
-function Tuotteet({url,addToCart}) {
+function Tuotteet({url, addToCart}) {
   const [category, setCategory] = useState('');
   const [products, setProducts] = useState([]);
 

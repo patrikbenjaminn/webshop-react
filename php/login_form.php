@@ -8,8 +8,8 @@ if(isset($_POST['submit'])){
 
    $name = mysqli_real_escape_string($link, $_POST['astunnus']);
    $email = mysqli_real_escape_string($link, $_POST['email']);
-   $pass = md5($_POST['password']);
-   $cpass = md5($_POST['cpassword']);
+   $pass = SHA1($_POST['password']);
+   $cpass = SHA1($_POST['cpassword']);
    $user_type = $_POST['user_type'];
 
    $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
