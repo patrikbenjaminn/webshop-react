@@ -1,7 +1,7 @@
             /*  css ja react */
 import './App.css';
 import { Routes, Route, BrowserRouter, json } from 'react-router-dom';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import uuid from 'react-uuid';
 
           /* componentit */
@@ -58,17 +58,19 @@ function App() {
   // ostoskori
   const [cart, setCart] = useState([]);
 
+  function addToCart(tuote) {
+    const newCart = [...cart,tuote];
+    setCart(newCart);
+    localStorage.setItem('cart',JSON.stringify(newCart));
+  }
+
   useEffect(() => {
     if ('cart' in localStorage) {
       setCart(JSON.parse(localStorage.getItem('cart')))
     }
   }, [])
 
-  function addToCart(product) {
-    const newCart = [...cart,product];
-    setCart(newCart);
-    localStorage.setItem('cart',JSON.stringify(newCart));
-  }
+  
   
   return (
     
@@ -86,7 +88,7 @@ function App() {
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL}/>}/>
               <Route path='/order' element={<Order cart={cart}/>}/>
-              <Route path='/Tuotteet/tuoteid' element={ <Tuotteet url={URL} addToCart={addToCart} />}/>
+              <Route path='/Tuotteet/:tuoteid' element={ <Tuotteet url={URL} addToCart={addToCart} />}/>
               <Route path='/Tarjoussivu/tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
