@@ -4,8 +4,9 @@ import './Tuotteet'
 import { useState, useEffect } from 'react'
 import '../styles/Tarjoussivu.css'
 
-
 function Tarjoussivu(addToCart) {
+
+  
   const [tarjoukset, setTarjoukset] = useState([])
 
   const fetchData = () => {
@@ -28,16 +29,14 @@ function Tarjoussivu(addToCart) {
       <div className="container py-5">
         <h1 className="text-center">Päivän tarjoukset</h1>
         <div className="row py-5">
-          {tarjoukset.map(tarjous => (
+          {tarjoukset.map(tuote => (
             <div className="col">
               <div className="card h-100">
-                <img src={"../../images/" + tarjous.img} className="img-fluid mb-3" alt="" />
-                <h3 className="tuotenimi2">{tarjous.tuotenimi}  </h3>
-                <p><div className='hinta2'>{tarjous.tarjoushinta}</div></p>
-                <p><div className='hinta'>(norm. {tarjous.normihinta})</div></p>
-                <button className='btn btn-primary' type="button" onClick={e=> addToCart(tarjous)}>Lisää koriin</button>
-
-              </div>
+            <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt=""/>
+            <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
+            <p><span className='tuote'> {tuote.hinta}</span></p>
+            <button className='btn btn-primary' type="button" onClick={e=> addToCart(tuote)}>Lisää koriin</button>
+          </div>
             </div>
           ))}
         </div>
@@ -47,4 +46,4 @@ function Tarjoussivu(addToCart) {
   )
 }
 
-export default Tarjoussivu
+export default Tarjoussivu;
