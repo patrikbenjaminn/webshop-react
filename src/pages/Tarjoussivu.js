@@ -1,19 +1,16 @@
 import React from 'react'
-import '../styles/tuote.css'
+import '../styles/Tarjous.css'
 import './Tuotteet'
 import { useState, useEffect } from 'react'
-import '../styles/tuotesivu.css'
-
+import '../styles/Tarjoussivu.css'
 
 function Tarjoussivu(addToCart) {
 
-
-function Tarjoussivu () {
   
   const [tarjoukset, setTarjoukset] = useState([])
 
   const fetchData = () => {
-    fetch("http://localhost/webshop/php/admin/tuotesivu.php")
+    fetch("http://localhost/webshop/php/admin/tarjoussivu.php")
       .then(response => {
         return response.json()
       })
@@ -48,5 +45,5 @@ function Tarjoussivu () {
 
   )
 }
-}
+
 export default Tarjoussivu;
