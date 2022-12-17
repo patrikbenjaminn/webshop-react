@@ -58,11 +58,7 @@ function App() {
   // ostoskori
   const [cart, setCart] = useState([]);
 
-  function addToCart(tuote) {
-    const newCart = [...cart,tuote];
-    setCart(newCart);
-    localStorage.setItem('cart',JSON.stringify(newCart));
-  }
+  
 
   useEffect(() => {
     if ('cart' in localStorage) {
@@ -70,7 +66,11 @@ function App() {
     }
   }, [])
 
-  
+  function addToCart(tuote) {
+    const newCart = [...cart,tuote];
+    setCart(newCart);
+    localStorage.setItem('cart',JSON.stringify(newCart));
+  }
   
   return (
     
@@ -87,7 +87,7 @@ function App() {
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL}/>}/>
-              <Route path='/order' element={<Order cart={cart}/>}/>
+              <Route path='/Order' element={<Order cart={cart}/>}/>
               <Route path='/Tuotteet/:tuoteid' element={ <Tuotteet url={URL} addToCart={addToCart} />}/>
               <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
               <Route path='/Returning' element={ <Return />} />
