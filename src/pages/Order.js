@@ -2,12 +2,13 @@ import React, {useState, useEffect} from "react";
 import uuid from 'react-uuid';
 import axios from "axios";
 
+
 export default function Order({cart}){
     let sum = 0;
 
     return(
-        <div className="ostoskori">
-            <h3 className="header">Ostoskori</h3>
+        <div id="ostoskori">
+            <h3 className="ostoskori">Ostoskori</h3>
             <table className="table">
                 <tbody>
                     {cart.map(tuote=>{

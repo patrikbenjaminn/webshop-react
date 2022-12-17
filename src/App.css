@@ -30,14 +30,27 @@
     src: url(../public/fonts/HoboStd.otf);
   }
 
-  .ostoskori{
+  #ostoskori{
   padding-top: 5%;
   text-align: center;
+  font-size: 100%;
+  
+  
 } 
+td{
+  color: white ;
+  font-family: Hobo;
+    src: url(../public/fonts/HoboStd.otf);
+}
 
-h3{
-  color: #fff;
+.ostoskori {
+  color: rgb(255, 255, 255);
     font-family: Knife princess;
     src: url(../public/fonts/HoboStd.otf);
+    padding-bottom: 3%;
+    font-size: 250%;
     
+
 }
+
+
