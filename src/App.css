@@ -35,3 +35,9 @@
   text-align: center;
 } 
 
+h3{
+  color: #fff;
+    font-family: Knife princess;
+    src: url(../public/fonts/HoboStd.otf);
+    
+}

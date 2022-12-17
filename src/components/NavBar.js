@@ -94,10 +94,10 @@ const [search, setSearch] = useState([]);
                     placeholder="Etsi tuotteita"
                     aria-label='Search'
                 /> 
-          <Nav.Link href="./Cart">
-            
-          </Nav.Link>
-          <Cart cart={cart}/>
+          
+            <Cart cart={cart}/>
+          
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
