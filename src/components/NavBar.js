@@ -95,9 +95,9 @@ const [search, setSearch] = useState([]);
                     aria-label='Search'
                 /> 
           <Nav.Link href="./Cart">
-            <Cart cart={cart}/>
+          <Cart cart={cart}/>
           </Nav.Link>
-   
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
