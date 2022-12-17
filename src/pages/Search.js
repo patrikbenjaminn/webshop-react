@@ -6,70 +6,67 @@ import '../styles/Tarjous.css'
 import '../styles/Tarjoussivu.css'
 
 
-function handleClick(addToCart){
-  return
-}
 const url = 'http://localhost/webshop/php/';
 
 
 export default function Searchproducts() {
 
-    const [name, setName] = useState('');
-    const [products, setProducts] = useState([]);
+  const [name, setName] = useState('');
+  const [products, setProducts] = useState([]);
 
-    let params = useParams();
+  let params = useParams();
 
-    useEffect(() => {
+  useEffect(() => {
 
-        let address = '';
+    let address = '';
 
-        address = url + 'products/search.php/' + params.searchPhrase;
-        console.log(address);
+    address = url + 'products/search.php/' + params.searchPhrase;
+    console.log(address);
 
-        axios.get(address)
-            .then((response) => {
-                const json = response.data;
+    axios.get(address)
+      .then((response) => {
+        const json = response.data;
 
-                setName(params.searchPhrase);
-                setProducts(json);
-            }).catch(error => {
-                alert(error.response === undefined ? error : error.response.data.error)
-    
-            })
-    }, [params])
+        setName(params.searchPhrase);
+        setProducts(json);
+      }).catch(error => {
+        alert(error.response === undefined ? error : error.response.data.error)
 
-    return (
-      <>
-        <div>
-          <section className="tarjoukset" style={{ textalign: "center" }}>
-            <div className="container py-5">
-              <h1 className="text-center">Hakutulos</h1>
-    
-              <div className="row gy-5 d-flex justify-content-center">
-                {products.length === 0 && (
-                  <p className="text-center">Ei hakutuloksia nimellä "{name}"</p>
-                )}
-                
-                {products.map(tuote => (
-                  <div className="col-lg-3">
-                    <div className="card h-100">
+      })
+  }, [params])
+
+  return (
+    <>
+      <div>
+        <section className="tarjoukset" style={{ textalign: "center" }}>
+          <div className="container py-5">
+            <h1 className="text-center">Hakutulos</h1>
+
+            <div className="row gy-5 d-flex justify-content-center">
+              {products.length === 0 && (
+                <p className="text-center">Ei hakutuloksia nimellä "{name}"</p>
+              )}
+
+              {products.map(tuote => (
+                <div className="col-lg-3">
+                  <div className="card h-100">
                     <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
-                <input type="button" onClick={handleClick} value="OSTA TÄSTÄ" />
-                <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>              
-                <p><div className='hinta2'>{tuote.tarjoushinta}</div></p>
-                <p><div className='hinta'>(norm. {tuote.hinta})</div></p>
-                    </div>
+                    <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>
+                    <button className='btn btn-primary' type="button"  onclick={()=> addToCart(tuote)} >Lisää koriin</button>
+                    <p><div className='hinta2'>{tuote.tarjoushinta}</div></p>
+                    <p><div className='hinta'>(norm. {tuote.hinta})</div></p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          </section>
-        </div>
-      </>
-    );
-    
+          </div>
+        </section>
+      </div>
+    </>
+  );
 
-    
-    
+
+
+
 }
 

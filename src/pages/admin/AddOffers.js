@@ -13,16 +13,16 @@ const URL = 'http://localhost/webshop/php/';
 
 function AddOffers() {
 
-    const [tuotenimi, setTuotenimi] = useState('');
-    const [normihinta, setNormihinta] = useState('');
+    const [tuoteid, setTuoteid] = useState('');
+
     const [tarjoushinta, setTarjoushinta] = useState('');;
-    const [img, setImg] = useState('');
+  
 
     function save(e) {
         e.preventDefault()
         const json = JSON.stringify({
-            tuotenimi: tuotenimi, normihinta: normihinta,
-            tarjoushinta: tarjoushinta, img: img
+            tuoteid: tuoteid, 
+            tarjoushinta: tarjoushinta,
         });
         axios.post(URL + 'admin/addOffers.php', json, {
             headers: {
@@ -31,14 +31,12 @@ function AddOffers() {
         })
 
             .then((response) => {
-                setTuotenimi(tuotenimi => [...tuotenimi, response.data])
-                setNormihinta(normihinta => [...normihinta, response.data])
+                setTuoteid(tuoteid => [...tuoteid, response.data])
                 setTarjoushinta(tarjoushinta => [...tarjoushinta, response.data])
-                setImg(img => [...img, response.data])
-                setTuotenimi('')
-                setNormihinta('')
+               
+             
                 setTarjoushinta('')
-                setImg('')
+            
                 alert('Tarjous lisätty onnistuneesti!')
             })
 
@@ -59,22 +57,16 @@ function AddOffers() {
                         <form onSubmit={save}>
                             <Row>
                                 <Col>
-                                    <label htmlFor="tuotenimi">tuotenimi </label>
-                                    <input type="text" value={tuotenimi}
-                                        onChange={(e) => setTuotenimi(e.target.value)}
-                                        placeholder="tuotteen nimi" required />
-                                    <label htmlFor="normihinta"> normihinta</label>
-                                    <input type="text" value={normihinta}
-                                        onChange={(e) => setNormihinta(e.target.value)}
-                                        placeholder="esim. 29.90" required />
+                                    <label htmlFor="tuoteid">tuoteid </label>
+                                    <input type="text" value={tuoteid}
+                                        onChange={(e) => setTuoteid(e.target.value)}
+                                        placeholder="tuotteen id" required />
+                                  
                                     <label htmlFor="tarjoushinta"> tarjoushinta </label>
                                     <input type="text" value={tarjoushinta}
                                         onChange={(e) => setTarjoushinta(e.target.value)}
                                         placeholder="esim. 19.90" required />
-                                    <label htmlFor="kuva"> kuvan osoite </label>
-                                    <input type="text" value={img}
-                                        onChange={(e) => setImg(e.target.value)}
-                                        placeholder=" esim.lautapelit/monopoly.png" required />
+                                   
                                 </Col>
                                 <input type="submit" value="Lähetä" />
                             </Row>
