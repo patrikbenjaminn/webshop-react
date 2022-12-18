@@ -4,7 +4,7 @@ require_once '../inc/headers.php';
 
 try {
     $db = openDb();
-    $sql = "select * from tarjous";
+    $sql = "select * from tuote where tarjoushinta is not null";
     $query = $db->query($sql);
     $results = $query->fetchAll(PDO::FETCH_ASSOC);
     $json = json_encode($results, JSON_PRETTY_PRINT);
