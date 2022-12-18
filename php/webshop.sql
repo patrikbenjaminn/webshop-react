@@ -40,7 +40,7 @@ CREATE TABLE tuote (
 tuoteid INT(255) AUTO_INCREMENT,
 tuotenimi VARCHAR(40) NOT NULL,
 hinta DECIMAL(5,2),
-tarjoushinta DECIMAL(5,2),
+tarjoushinta DECIMAL (5,2),
 saldo SMALLINT(5),
 trnro SMALLINT,
 tuotekuvaus TEXT,
@@ -48,7 +48,7 @@ img VARCHAR(50),
 
 CONSTRAINT tuote_pk PRIMARY KEY (tuoteid),
 CONSTRAINT tuote_ryhma_fk FOREIGN KEY (trnro) 
-           REFERENCES tuoteryhma (trnro)
+           REFERENCES tuoteryhma (trnro) 
 ) ;
 INSERT INTO tuote VALUES (1,'Afrikan tähti',13.99,NULL,250,1,'Pelaajien lukumäärä:2 - 6 pelaajaa, Ikäsuositus: 5+, Pelin kesto n. 15-60 min, Kielet: Suomi, ruotsi, viro, englanti','lautapelit/Afrikan tähti.png');
 INSERT INTO tuote VALUES (2,'Kimble',14.95,NULL,250,1,'Pelaajien lukumäärä: 2 - 4 pelaajaa, Pelityyppi: Lasten peli, Tyyppi: Klassisia pelejä','lautapelit/kimble.png');
@@ -75,6 +75,7 @@ INSERT INTO tuote VALUES (22,'X-Box Series X pelikonsoli', 509.00,NULL,10,5,'Pel
 INSERT INTO tuote VALUES (23,'X-Box Series s pelikonsoli', 249.00,199.00,10,5,'Pelikonsoli.','uutuudet/X-box S.jpeg');
 INSERT INTO tuote VALUES (24,'Nintendo Switch Oled pelikonsoli', 369.00,NULL,10,5,'Pelikonsoli.','uutuudet/Nintendo Switch.png');
 INSERT INTO tuote VALUES (25,'Nintendo Swtich lataustelakka', 47.95,NULL,10,5,'Lataustelakka Nintendo Switch Oled-pelikonsolille.','uutuudet/Nintendo Switch lataustelakka.png');
+
 
 /* TILAUS */
 
@@ -116,4 +117,13 @@ CONSTRAINT tilausrivi_pk PRIMARY KEY (palauteid)
 insert into palaute values ( 1,' Minni Hiiri', ' minni@hiiricom ', CURRENT_TIMESTAMP , ' Hei! Teillä on kiva kauppa, olisiko mahdollista ottaa myyntiin pieniä eriä second-handtuotteita? '),
  ( 2,' Aku Ankka', ' aku.ankka@ankkalinna.com ', CURRENT_TIMESTAMP , ' Hei! Ankkalinnan väki haluaa toivottaa hyvää ja rentouttavaa joululomaa kaikille opiskelijoille, erityisesti TIK22KM-ryhmälle! ');
 
+ CREATE TABLE tarjous(
+tuoteid INT(255) AUTO_INCREMENT NOT NULL,
+tuotenimi VARCHAR(40) NOT NULL,
+normihinta DECIMAL(9,2),
+tarjoushinta DECIMAL(9,2),
+img VARCHAR(50),
+CONSTRAINT tuote_pk PRIMARY KEY (tuoteid));
 
+INSERT INTO tarjous values (1, 'Hugo-peikkopeli',10.90,6.90,'Tietokonepelit/Hugo.png'),
+(2, 'Super Mario 3',19.90,12.90,'Konsolipelit/Super Mario 3.jpg'),(3,'X-Box Series s', 249.00,199.00,'uutuudet/X-box S.jpeg');
