@@ -17,7 +17,7 @@ try{
     $db = openDb();
     $db->beginTransaction();
 
-    $sql = "insert into customer (etunimi,sukunimi,osoite,postinro,postitmp) values
+    $sql = "insert into asiakas (etunimi,sukunimi,osoite,postinro,postitmp) values
     ('".
     filter_var($etunimi, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
     filter_var($sukunimi, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
@@ -33,12 +33,12 @@ $customer_id = executeInsert($db, $sql);
 $sql = "insert into `tilaus` (astunnus) values ($astunnus)";
 $tilausnro = executeInsert($db, $sql);
 
-foreach ($cart as $product){
+foreach ($cart as $tuote){
 
     $sql = "insert into tilaus (tilausid, tilausnro) values ("
     .
         $tilausnro . ",".
-        $product->id
+        $tuote->id
         . ")";
         executeInsert($db,$sql);;
 }
