@@ -17,15 +17,14 @@ export default function Order({cart,removeFromCart}){
                             <tr key={uuid()}>
                             <td>{tuote.tuotenimi}</td>
                             <td>{tuote.hinta} €</td>
-                            <td><a href="#" onClick={() => removeFromCart(tuote)}>Poista</a></td>
+                            <td><a href="#" onClick={() => removeFromCart(tuote)}>Poista tuote</a></td>
                             </tr>
-                            
                         )
                     })}
                     <tr key={uuid()}>
                         <td></td>
                         <td>{sum.toFixed(2)}€</td>
-                        <td></td>
+                        <td>Summa yhteensä</td>
                     </tr>
 
                 </tbody>
