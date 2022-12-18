@@ -79,7 +79,7 @@ function App() {
 }
   
   function removeFromCart(tuote){
-    const itemsWithoutRemoved = cart.filter(item => item.id !== tuote.nimi);
+    const itemsWithoutRemoved = cart.filter(item => item.id !== tuote.tuotenimi);
     setCart(itemsWithoutRemoved);
     localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
   }
@@ -105,7 +105,7 @@ function App() {
               <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL} addToCart={addToCart}  />}/>
               <Route path='/Contact' element={ <Contact />} />
               <Route path='*' element={ <NotFound />} />
-              <Route path="/Search" element={<Searchproducts url={URL}/>}/>
+             {/*  <Route path="/Search" element={<Searchproducts url={URL}/>}/> */}
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL} addToCart={addToCart} />}/>
               <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart}/>}/>
               <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
