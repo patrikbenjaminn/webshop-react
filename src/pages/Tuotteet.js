@@ -24,7 +24,6 @@ function Tuotteet({url,addToCart}) {
         alert(error.response === undefined ? error : error.response.data.error)
       })
   }, [params])
-  console.log(addToCart)
 
   return (
 

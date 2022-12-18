@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import uuid from 'react-uuid';
 import axios from "axios";
 import { createRef } from "react";
-
+import '../styles/order.css'
 
 export default function Order({cart,removeFromCart,muutaMaara}){
 
@@ -20,7 +20,7 @@ export default function Order({cart,removeFromCart,muutaMaara}){
 
     useEffect(()=> {
         for (let i = 0; i<cart.length;i++) {
-            inputs[i] = React.createRef();
+            inputs[i] = createRef();
         }
         },[cart.length])
 
@@ -89,7 +89,7 @@ export default function Order({cart,removeFromCart,muutaMaara}){
             </table>
             {cart.length > 0 &&
             <>
-            <h3 className="header">Asiakastiedot</h3> 
+            <h3 className="ostoskori">Asiakastiedot</h3> 
             <form onSubmit={order}>
             <div className="form-group">
                 <label>Etunimi:</label>
@@ -111,9 +111,11 @@ export default function Order({cart,removeFromCart,muutaMaara}){
                     <label>Kaupunki</label>
                     <input className="form-control" onChange={e=> setPostitmp(e.target.value)}></input>
                 </div>
+                <br></br>
                 <div className="buttons">
-                    <button className="btn btn-primary">Tilaa nyt!</button>
+                    <button id="nappula" className="btn btn-primary btn-lg">Tilaa nyt!</button>
                 </div>
+                <br></br>
                 </form>
                 </>
                 }
