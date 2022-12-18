@@ -36,3 +36,21 @@ function returnError(PDOException $pdoex): void {
   echo json_encode($error);
   //exit;
 }
+
+function createDbConnection(){
+  $ini = parse_ini_file('config.ini');
+  $host = $ini["host"];
+  $dbname = $ini["db"];
+  $username = $ini["username"];
+  $pw = $ini["pw"];
+
+  try{
+      $dbcon = new PDO("mysql:host=$host;dbname=$dbname", $username, $pw);
+      return $dbcon;
+  }catch(PDOException $e){
+      http_response_code(505);
+      echo "Service is currently unavailable.";
+  }
+
+  return null;
+}
