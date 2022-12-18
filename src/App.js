@@ -65,15 +65,32 @@ function App() {
   }, [])
 
   function addToCart(tuote) {
+    if(cart.some(item => item.id === tuote.tuotenimi)){
+      const tuoteOlemassa = cart.filter(item => item.tuoteid === tuote.tuotenimi);
+      muutaMaara(parseInt(tuoteOlemassa[0].maara) +1, tuote);
+
+    }
+    else{
+    tuote['maara'] = 1;
     const newCart = [...cart,tuote];
     setCart(newCart);
     localStorage.setItem('cart',JSON.stringify(newCart));
   }
+}
   
   function removeFromCart(tuote){
-    const itemsWithoutRemoved = cart.filter(item => item.id !== tuote.id);
+    const itemsWithoutRemoved = cart.filter(item => item.id !== tuote.nimi);
     setCart(itemsWithoutRemoved);
     localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
+  }
+
+  function muutaMaara(maara,tuote){
+    tuote.maara = maara;
+    const index = cart.findIndex((item => item.id === tuote.tuotenimi));
+    const modifiedCart = Object.assign([...cart],{[index]: tuote});
+    setCart(modifiedCart);
+    localStorage.setItem('cart',JSON.stringify(modifiedCart));
+
   }
   return (
     
@@ -90,8 +107,8 @@ function App() {
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL}/>}/>
-              <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart}/>}/>
-              <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
+              <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart} muutaMaara={muutaMaara}/>}/>
+              <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} /* addToCart={addToCart} */ />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />

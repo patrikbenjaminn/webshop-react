@@ -33,7 +33,7 @@
   #ostoskori{
   padding-top: 5%;
   text-align: center;
-  font-size: 100%;
+  font-size: 120%;
   
   
 } 
@@ -56,5 +56,5 @@ td{
   text-decoration: none;
   color: white;
   display: inline-block;
-  font-size: 120%;
+  font-size: 130%;
 }
