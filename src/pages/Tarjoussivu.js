@@ -1,10 +1,8 @@
 import React from 'react'
-import '../styles/Tarjous.css'
-import './Tuotteet'
 import { useState, useEffect } from 'react'
 import '../styles/Tarjoussivu.css'
 
-function Tarjoussivu(addToCart) {
+function Tarjoussivu(url,addToCart) {
 
   
   const [tarjoukset, setTarjoukset] = useState([])
@@ -29,16 +27,16 @@ function Tarjoussivu(addToCart) {
       <div className="container py-5">
         <h1 className="text-center">Päivän tarjoukset</h1>
         <div className="row py-5">
-          {tarjoukset.map(tuote => (
-            <div className="col">
-              <div className="card h-100">
-            <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt=""/>
-            <h3 className="tuotenimi">{tuote.tuotenimi}  </h3>
-            <p><span className='tuote'> {tuote.hinta}</span></p>
-            <button className='btn btn-primary' type="button" onClick={e=> addToCart(tuote)}>Lisää koriin</button>
-          </div>
-            </div>
-          ))}
+        {tarjoukset.map(tuote => (
+                <div className="col-lg-3">
+                  <div className="card h-100">
+                    <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
+                    <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>                         
+                    <button className='btn btn-primary' type="button" onclick={()=> addToCart(tuote)} >Lisää koriin</button>
+                    <p><span className='hinta2'> {tuote.tarjoushinta}</span><span className='hinta'> (norm. {tuote.hinta})</span></p>
+                  </div>
+                </div>
+              ))}
         </div>
       </div>
     </section>
