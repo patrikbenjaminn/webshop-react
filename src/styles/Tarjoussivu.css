@@ -23,8 +23,8 @@
     font-size: 30px;
     font-weight: 800;
     padding-left: 5px;
-    -webkit-text-stroke: 0.5px rgb(228, 15, 129);
-    
+    /* -webkit-text-stroke: 0.5px rgb(228, 15, 129);
+     */
 
 }
 
@@ -40,8 +40,8 @@ p.tar{
 .card{
     background:url(../../public/images/Kuva1.png) ;
     min-height: 200px;
-    border-color: rgb(214, 21, 102);
-    border-width: 4px;
+   /*  border-color: rgb(214, 21, 102); */
+  /*   border-width: 4px; */
     background-color: #00203FFF;
     background-size: cover;
     position: relative;
@@ -124,5 +124,41 @@ h5{ /*tuotenimi*/
     border-radius: 0.35em;
 }
 
+span.hinta2{  /*tarjoushinta*/
+    position: relative;
+   /*  bottom: 1;
+    left: 3; */
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    text-align:left;
+   /*  -webkit-text-stroke: 0.5px rgb(228, 15, 129) */;
+    
+
+}
+
+span.hinta{/*normihinta*/
+    position: relative;
+    font-size: 15px;
+    text-align: right;
+    padding-right:10px;
+    color: rgb(217, 17, 80);
+   
+}
+.tuotenimi2{/*tarjouskortit tuotenimi*/
+    color: black;
+    text-align: center;
+    text-decoration-color: black !important;
+    -webkit-text-stroke: 0% ;
+    bottom: 4;
+    left: 4;
+    font-family:Hobo;
+    color: #00203FFF;
+    font-size: 30px;
+    font-weight: 400;
+    -webkit-text-stroke: 0.5px black;
+    text-align: center;
+  
+}
 
     

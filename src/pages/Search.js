@@ -2,14 +2,13 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../App.css';
-import '../styles/Tarjous.css'
 import '../styles/Tarjoussivu.css'
 
 
-const url = 'http://localhost/webshop/php/';
+const URL = 'http://localhost/webshop/php/';
 
 
-export default function Searchproducts() {
+export default function Searchproducts({url,addToCart}) {
 
   const [name, setName] = useState('');
   const [products, setProducts] = useState([]);
@@ -20,7 +19,7 @@ export default function Searchproducts() {
 
     let address = '';
 
-    address = url + 'products/search.php/' + params.searchPhrase;
+    address = URL + 'products/search.php/' + params.searchPhrase;
     console.log(address);
 
     axios.get(address)
@@ -51,10 +50,9 @@ export default function Searchproducts() {
                 <div className="col-lg-3">
                   <div className="card h-100">
                     <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
-                    <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>
-                    <button className='btn btn-primary' type="button"/*   onclick={()=> addToCart(tuote)} */ >Lisää koriin</button>
-                    <p><div className='hinta2'>{tuote.tarjoushinta}</div></p>
-                    <p><div className='hinta'>(norm. {tuote.hinta})</div></p>
+                    <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>                         
+                    <button className='btn btn-primary' type="button" onclick={()=> addToCart(tuote)} >Lisää koriin</button>
+                    <p><span className='hinta2'> {tuote.tarjoushinta}</span><span className='hinta'> (norm. {tuote.hinta})</span></p>
                   </div>
                 </div>
               ))}

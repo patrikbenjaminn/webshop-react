@@ -89,7 +89,7 @@ function App() {
               <Route path='/Contact' element={ <Contact />} />
               <Route path='*' element={ <NotFound />} />
               <Route path="/Search" element={<Searchproducts url={URL}/>}/>
-              <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL}/>}/>
+              <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL} addToCart={addToCart} />}/>
               <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart}/>}/>
               <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
               <Route path='/Returning' element={ <Return />} />
