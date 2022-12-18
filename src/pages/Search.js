@@ -52,7 +52,11 @@ export default function Searchproducts({url,addToCart}) {
                     <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
                     <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>                         
                     <button className='btn btn-primary' type="button" onclick={()=> addToCart(tuote)} >Lisää koriin</button>
-                    <p><span className='hinta2'> {tuote.tarjoushinta}</span><span className='hinta'> (norm. {tuote.hinta})</span></p>
+                    {tuote.tarjoushinta === null && (
+                    <p><span className='hinta2'>  {tuote.hinta}</span></p>
+                    )}
+                    {tuote.tarjoushinta != null && (<p><span className='hinta2'> {tuote.tarjoushinta}</span><span className='hinta'> (norm. {tuote.hinta})</span></p>
+                    )}
                   </div>
                 </div>
               ))}
