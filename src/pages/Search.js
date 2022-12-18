@@ -19,8 +19,8 @@ export default function Searchproducts({url,addToCart}) {
 
     let address = '';
 
-    address = URL + 'products/search.php/' + params.searchPhrase;
-    console.log(address);
+    address = url + 'products/search.php/' + params.searchPhrase;
+    /* console.log(address); */
 
     axios.get(address)
       .then((response) => {
@@ -51,7 +51,7 @@ export default function Searchproducts({url,addToCart}) {
                   <div className="card h-100">
                     <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
                     <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>                         
-                    <button className='btn btn-primary' type="button" onclick={()=> addToCart(tuote)} >Lisää koriin</button>
+                    <button className='btn btn-primary' type="button" onclick={e=> addToCart(tuote)} >Lisää koriin</button>
                     {tuote.tarjoushinta === null && (
                     <p><span className='hinta2'>  {tuote.hinta}</span></p>
                     )}
