@@ -200,7 +200,7 @@ function AddProduct() {
                   <label htmlFor="saldo"> tarjoushinta </label>
                   <input type="text" value={tarjoushinta}
                     onChange={(e) => setTarjoushinta(e.target.value)}
-                    placeholder="esim. 24.90" required />
+                    placeholder="esim. 24.90" />
                   <label htmlFor="saldo"> määrä </label>
                   <input type="text" value={saldo}
                     onChange={(e) => setSaldo(e.target.value)}
