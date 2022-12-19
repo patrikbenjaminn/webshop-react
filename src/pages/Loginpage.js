@@ -39,12 +39,12 @@ function Loginpage() {
         </div>
         <div className="logform__container">
           <form onSubmit={save}>
-            <label htmlFor="astunnus">Astunnus </label>
+            <label1 htmlFor="astunnus">Astunnus </label1>
             <input type="texti" value={astunnus}
               onChange={(e) => setAstunnus(e.target.value)}
               placeholder="astunnus" required />
           
-            <label htmlFor="salasana">Salasana </label>
+            <label1 htmlFor="salasana">Salasana </label1>
             <input type="texti" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
               placeholder="salasana" required />
