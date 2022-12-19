@@ -30,7 +30,7 @@ try{
 
 $customer_id = executeInsert($db, $sql);
 
-$sql = "insert into `tilaus` (astunnus) values ($astunnus)";
+$sql = "insert into tilaus (astunnus) values ($astunnus)";
 $tilausnro = executeInsert($db, $sql);
 
 foreach ($cart as $tuote){

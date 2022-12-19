@@ -8,6 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../styles/Navbar.css';
 import { useNavigate } from 'react-router-dom';
 import Cart from '../pages/Cart';
+import AdminRegister from '../pages/admin/AdminRegister';
 
 const URL = 'http://localhost/webshop/php/';
 
@@ -83,6 +84,9 @@ const [search, setSearch] = useState([]);
 
             <Nav.Link className='etu' href="../admin/AdminDashboard/" >
               Admin
+            </Nav.Link>
+            <Nav.Link className='etu' href="/admin/AdminRegister" >
+              AdReq
             </Nav.Link>
           </Nav>
           <input

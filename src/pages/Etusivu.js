@@ -5,12 +5,12 @@ import Tarjoussivu from './Tarjoussivu';
 import '../styles/Etusivu.css'
 
 
-function Etusivu() {
+function Etusivu() {  
   return (
     <>
       <Karuselli />
       <Tarjoussivu />
-      <Artikkelit />
+      <Artikkelit />     
     </>
   )
 }

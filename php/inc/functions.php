@@ -38,14 +38,14 @@ function returnError(PDOException $pdoex): void {
 }
 
 function createDbConnection(){
-  $ini = parse_ini_file('config.ini');
+  $ini = parse_ini_file('config.ini', true);
   $host = $ini["host"];
-  $dbname = $ini["db"];
-  $username = $ini["username"];
-  $pw = $ini["pw"];
+  $database = $ini["database"];
+  $user = $ini["user"];
+  $password = $ini["password"];
 
   try{
-      $dbcon = new PDO("mysql:host=$host;dbname=$dbname", $username, $pw);
+      $dbcon = new PDO("mysql:host=$host;database=$database", $user, $password);
       return $dbcon;
   }catch(PDOException $e){
       http_response_code(505);
