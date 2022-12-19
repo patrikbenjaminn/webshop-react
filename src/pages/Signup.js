@@ -59,42 +59,42 @@ function Signup() {
         </div>
         <div className="regform__container">
           <form onSubmit={save}>
-            <label htmlFor="astunnus">Astunnus </label>
+            <label2 htmlFor="astunnus">Astunnus </label2>
             <input type="texti" value={astunnus}
               onChange={(e) => setAstunnus(e.target.value)}
               placeholder="astunnus" required />
 
-            <label htmlFor="etunimi">Etunimi </label>
+            <label2 htmlFor="etunimi">Etunimi </label2>
             <input type="texti" value={etunimi}
               onChange={(e) => setEtunimi(e.target.value)}
               placeholder="etunimi" required />
 
-            <label htmlFor="sukunimi">Sukunimi </label>
+            <label2 htmlFor="sukunimi">Sukunimi </label2>
             <input type="texti" value={sukunimi}
               onChange={(e) => setSukunimi(e.target.value)}
               placeholder="sukunimi" required />
 
-            <label htmlFor="email"> Sähköpostiosoite </label>
+            <label2 htmlFor="email"> Sähköpostiosoite </label2>
             <input type="emaili" value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="email@example.com" required />
 
-            <label htmlFor="osoite">Osoite </label>
+            <label2 htmlFor="osoite">Osoite </label2>
             <input type="texti" value={osoite}
               onChange={(e) => setOsoite(e.target.value)}
               placeholder="osoite" required />
 
-            <label htmlFor="postinro">Postinro </label>
+            <label2 htmlFor="postinro">Postinro </label2>
             <input type="texti" value={postinro}
               onChange={(e) => setPostinro(e.target.value)}
               placeholder="postinro" required />
 
-            <label htmlFor="postitmp">Postitmp </label>
+            <label2 htmlFor="postitmp">Postitmp </label2>
             <input type="texti" value={postitmp}
               onChange={(e) => setPostitmp(e.target.value)}
               placeholder="postitmp" required />
 
-            <label htmlFor="salasana">Salasana </label>
+            <label2 htmlFor="salasana">Salasana </label2>
             <input type="texti" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
               placeholder="salasana" required />
