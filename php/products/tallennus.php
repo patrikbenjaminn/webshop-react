@@ -42,7 +42,7 @@ $tilausnro = executeInsert($db, $sql);
 
 foreach ($cart as $tuote){
 
-    $sql = "insert into tilaus (tilausnro) values ("
+    $sql = "insert into `tilaus` (tilausnro) values ("
     .
         $tilausnro . ",".
         $tuote->id
