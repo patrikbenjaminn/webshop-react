@@ -5,7 +5,7 @@ require('../inc/functions.php');
  * Inserts a new user in the database
  */
 function registerUser($astunnus,$etunimi,$sukunimi,$email,$osoite,$postinro,$postitmp,$salasana,$user_type){
-    $db = openDb();
+    $db = createDbConnection();
 
     $salasana = password_hash($salasana, PASSWORD_DEFAULT);
 
@@ -19,7 +19,7 @@ function registerUser($astunnus,$etunimi,$sukunimi,$email,$osoite,$postinro,$pos
  * if authenticated, otherwise null.
  */
 function checkUser($astunnus, $salasana){
-    $db = openDb();
+    $db = createDbConnection();
 
     $sql = "SELECT salasana FROM asiakas WHERE astunnus=?";
     $statement = $db->prepare($sql);
