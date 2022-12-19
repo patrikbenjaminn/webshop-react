@@ -7,18 +7,18 @@ USE webshop;
 /* ASIAKAS */
 
 CREATE TABLE asiakas (
-astunnus VARCHAR(18),
+id int auto_increment,
+astunnus VARCHAR(20) NOT NULL,
 etunimi VARCHAR(20) NOT NULL,
 sukunimi VARCHAR(20) NOT NULL,
 email VARCHAR(50) NOT NULL,
 osoite VARCHAR(30),
 postinro CHAR(5), 
 postitmp VARCHAR(10), 
-Id int AUTO_INCREMENT,
 salasana VARCHAR(255),
 user_type VARCHAR(20),
 created_at TIMESTAMP,
-CONSTRAINT asiakas_pk PRIMARY KEY (Id)
+CONSTRAINT asiakas_pk PRIMARY KEY (id)
 ) ;
 
 
@@ -48,7 +48,8 @@ img VARCHAR(50),
 
 CONSTRAINT tuote_pk PRIMARY KEY (tuoteid),
 CONSTRAINT tuote_ryhma_fk FOREIGN KEY (trnro) 
-           REFERENCES tuoteryhma (trnro) 
+           REFERENCES tuoteryhma (trnro)  
+
 ) ;
 INSERT INTO tuote VALUES (1,'Afrikan tähti',13.99,NULL,250,1,'Pelaajien lukumäärä:2 - 6 pelaajaa, Ikäsuositus: 5+, Pelin kesto n. 15-60 min, Kielet: Suomi, ruotsi, viro, englanti','lautapelit/Afrikan tähti.png');
 INSERT INTO tuote VALUES (2,'Kimble',14.95,NULL,250,1,'Pelaajien lukumäärä: 2 - 4 pelaajaa, Pelityyppi: Lasten peli, Tyyppi: Klassisia pelejä','lautapelit/kimble.png');
@@ -80,11 +81,12 @@ INSERT INTO tuote VALUES (25,'Nintendo Swtich lataustelakka', 47.95,NULL,10,5,'L
 /* TILAUS */
 
 CREATE TABLE tilaus (
-tilausnro INTEGER NOT NULL,
-Id int not null, 
-CONSTRAINT tilaus_pk PRIMARY KEY (tilausnro),
-CONSTRAINT tilaus_asiakas_fk FOREIGN KEY (Id) 
-           REFERENCES asiakas (Id)
+id int primary key auto_increment, 
+tilauspvm timestamp default CURRENT_TIMESTAMP,
+astunnus int not null,
+index id(id),
+foreign key (id) REFERENCES asiakas(id)
+on delete RESTRICT
 ) ; 
 
 
@@ -93,15 +95,14 @@ CONSTRAINT tilaus_asiakas_fk FOREIGN KEY (Id)
 
 CREATE TABLE tilausrivi (
 tilausnro INTEGER NOT NULL,
-rivinro SMALLINT NOT NULL,
-tuoteid INT(255), 
-kpl INTEGER,
-CONSTRAINT tilausrivi_pk PRIMARY KEY (tilausnro, rivinro),
+index tilausnro (tilausnro),
+foreign key (tilausnro)REFERENCES tilaus (id),
+tuoteid INT not null,
+CONSTRAINT tilausrivi_pk PRIMARY KEY (tilausnro),
 CONSTRAINT tilausrivi_tuote_fk FOREIGN KEY (tuoteid) 
            REFERENCES tuote (tuoteid)
 );
 
-INSERT INTO tilausrivi VALUES (1,1,1,3);
 
 
 /* Palaute */

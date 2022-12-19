@@ -5,10 +5,8 @@ import '../App.css';
 import '../styles/Tarjoussivu.css'
 
 
-const URL = 'http://localhost/webshop/php/';
 
-
-export default function Searchproducts({url,addToCart}) {
+export default function Searchproducts({ url, addToCart }) {
 
   const [name, setName] = useState('');
   const [products, setProducts] = useState([]);
@@ -18,9 +16,12 @@ export default function Searchproducts({url,addToCart}) {
   useEffect(() => {
 
     let address = '';
-
-    address = URL + 'products/search.php/' + params.searchPhrase;
-    console.log(address);
+    if (params.searchPhrase === undefined) {
+      address = url + 'products/gettuotteet.php/' + params.trnro;
+    }
+    else {
+      address = url + 'products/search.php/' + params.searchPhrase;
+    }
 
     axios.get(address)
       .then((response) => {
@@ -50,10 +51,10 @@ export default function Searchproducts({url,addToCart}) {
                 <div className="col-lg-3">
                   <div className="card h-100">
                     <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
-                    <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>                         
-                    <button className='btn btn-primary' type="button" onclick={()=> addToCart(tuote)} >Lisää koriin</button>
+                    <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>
+                    <button className='btn btn-primary' type="button" onclick={() => addToCart(tuote)} >Lisää koriin</button>
                     {tuote.tarjoushinta === null && (
-                    <p><span className='hinta2'>  {tuote.hinta}</span></p>
+                      <p><span className='hinta2'>  {tuote.hinta}</span></p>
                     )}
                     {tuote.tarjoushinta != null && (<p><span className='hinta2'> {tuote.tarjoushinta}</span><span className='hinta'> (norm. {tuote.hinta})</span></p>
                     )}
