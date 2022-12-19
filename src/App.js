@@ -21,6 +21,7 @@ import Cart from './pages/Cart';
 import Tarjoussivu from './pages/Tarjoussivu';
 import Searchproducts from './pages/Search';
 import Order from './pages/Order';
+/* import UserPage from './pages/UserPage'; */
 
 
           /* admin */
@@ -36,7 +37,8 @@ import Sidebar from './pages/admin/AdminSideBar';
 import Readcontact from './pages/admin/Readcontact';
 import AddOffers from './pages/admin/AddOffers';    
 import AdminDashboard from './pages/admin/AdminDashboard';
-import AdminHeader from './pages/admin/AdminHeader';
+import Admin from './pages/admin/Admin';
+
 
 // import ReactDOM from 'react-dom/client'
 /*import Header from './components/Header';
@@ -46,16 +48,8 @@ const URL = 'http://localhost/webshop/php/';
 
 function App() {
 
-  /*
-  Jos herjaa CORS-virheistä, niin avaa XAMPPin Apache config ja sieltä httpd.conf
-  Lisää sinne seuraavat kolme riviä heti "Listen 80" rivin alle
+// ostoskori
 
-  Header set Access-Control-Allow-Origin "*"
-  Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
-  Header set Access-Control-Allow-Headers "X-Requested-With, Content-Type, X-Token-Auth, Authorization"
-  */
-
-  // ostoskori
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
@@ -79,7 +73,7 @@ function App() {
 }
   
   function removeFromCart(tuote){
-    const itemsWithoutRemoved = cart.filter(item => item.id !== tuote.id);
+    const itemsWithoutRemoved = cart.filter(item => item.id !== tuote.tuotenimi);
     setCart(itemsWithoutRemoved);
     localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
   }
@@ -94,18 +88,17 @@ function App() {
   }
   return (
     
-    <>
+    <>  
       <NavBar url={URL} cart={cart} />
         <div className='container'>
-      
-      
+            
           <Routes>
 
               <Route path='/' element={ <Etusivu />} />
               <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL} addToCart={addToCart}  />}/>
               <Route path='/Contact' element={ <Contact />} />
               <Route path='*' element={ <NotFound />} />
-              <Route path="/Search" element={<Searchproducts url={URL}/>}/>
+             {/*  <Route path="/Search" element={<Searchproducts url={URL}/>}/> */}
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL} addToCart={addToCart} />}/>
               <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart} muutaMaara={muutaMaara}/>}/>
               <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
@@ -123,11 +116,12 @@ function App() {
               <Route path='/admin/Nautaryhmat' element={ <Nautaryhmat />} />
               <Route path='/admin/AdminSideBar' element={ <Sidebar/>} />
               <Route path='/admin/Readcontact' element={ <Readcontact/>} />
+              <Route path='/admin/admin' element={ <Admin />} />
               
           </Routes>
-          
-        
-          </div>
+                  
+           </div>
+
       <Footer />
     </>
   );

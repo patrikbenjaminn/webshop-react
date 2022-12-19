@@ -27,6 +27,8 @@ try{
    
 $id= executeInsert($db, $sql);
 
+$id = executeInsert($db, $sql);
+
 $sql = "insert into tilaus (id) values ($id)";
 $tilausnro = executeInsert($db, $sql);
 
