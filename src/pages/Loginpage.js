@@ -15,6 +15,7 @@ function Loginpage() {
   function save(e) {
     e.preventDefault()
     const json = JSON.stringify({astunnus: astunnus, salasana: salasana });
+    console.log(json);
     axios.post(URL + 'logincheck.php', json, {
       headers: {
         'Content-Type': 'Application/json',
@@ -28,6 +29,7 @@ function Loginpage() {
         setAstunnus('')
         setSalasana('')
         alert('Tervetuloa Retrogamershaveniin!')
+        console.log(response);
       })
   }
     
@@ -35,16 +37,16 @@ function Loginpage() {
     <>
       <div className="logform">
         <div className="logform__header">
-          <h12>Kirjaudu sisään!</h12>
+          <h2 className="Loginformkirjaudu">Kirjaudu sisään!</h2>
         </div>
         <div className="logform__container">
           <form onSubmit={save}>
-            <label1 htmlFor="astunnus">Astunnus </label1>
+            <label className='Loginlabel' htmlFor="astunnus">Astunnus </label>
             <input type="texti" value={astunnus}
               onChange={(e) => setAstunnus(e.target.value)}
               placeholder="astunnus" required />
           
-            <label1 htmlFor="salasana">Salasana </label1>
+            <label className="Loginlabel" htmlFor="salasana">Salasana </label>
             <input type="texti" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
               placeholder="salasana" required />

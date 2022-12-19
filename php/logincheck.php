@@ -17,11 +17,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
              //creating session 
             $_SESSION["userid"] = $userid;
             
-            header("location:dashboard.php");
+            /*header("location:dashboard.php");*/
         }
         else
         {
-            header("location:login.php?error=1");
+            /*header("location:login.php?error=1");*/
             print_r($userdata);
             print"<br>";
             print $userid;
@@ -32,7 +32,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     else
     {     
-      
-        
+      print "testi";
+      print $astunnus;
+      print_r($_POST); 
     }
 }

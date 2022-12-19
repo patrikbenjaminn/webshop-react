@@ -106,7 +106,7 @@ function App() {
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
               <Route path='/admin/AdminDashboard/*' element={<AdminDashboard />} />
-              <Route path='/admin/AdminLogin' element={ <AdminLogin />} />
+             {/* <Route path='/admin/AdminLogin' element={ <AdminLogin />} />*/}
               <Route path='/admin/AdminRegister' element={ <AdminRegister />} />
               <Route path='/admin/AddProduct' element={ <AddProduct />} />
               <Route path='/admin/Addryhma' element={ <Addryhma />} />
