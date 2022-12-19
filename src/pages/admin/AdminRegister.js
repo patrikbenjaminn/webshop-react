@@ -22,7 +22,7 @@ const URL = 'http://localhost/webshop/php/';
         e.preventDefault()
         const json = {astunnus,etunimi,Sukunimi,email,osoite,postinro,postitmp, salasana, user_type};
     
-        axios.post(URL + "login/register.php",  json,) //{withCredentials: true})
+        axios.post(URL + "login/register.php",  json, {withCredentials: true})
         .then((resp) => {
         setAstunnus(astunnus => [...astunnus, resp.data])
         setEtunimi(etunimi => [...etunimi, resp.data])
