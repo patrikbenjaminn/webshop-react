@@ -11,7 +11,7 @@
     align-items: baseline;
     justify-content: center;
     padding: 15px;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
     box-shadow: rgba(223, 18, 18, 0.35) 0px 5px 15px;
     border-radius: 20px;
@@ -30,7 +30,7 @@
     text-align: center;
 }
 
-.regform__header h8 {
+.Loginformregister {
     font-size: 5px;
     padding: 1px;
     color: #00203FFF;
@@ -59,7 +59,7 @@ input {
 
 
 
-label2 {
+.Loginformkirjaudu {
     padding: 1px;
     color: #00203FFF;
     font-size: 20px;

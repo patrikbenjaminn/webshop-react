@@ -28,11 +28,11 @@ function Tarjoussivu(url,addToCart) {
         <h1 className="text-center">Päivän tarjoukset</h1>
         <div className="row py-5">
         {tarjoukset.map(tuote => (
-                <div className="col-lg-3">
+                <div key={tuote.tuoteid} className="col-lg-3">
                   <div className="card h-100">
                     <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
                     <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>                         
-                    <button className='btn btn-primary' type="button" onclick={e=> addToCart(tuote)} >Lisää koriin</button>
+                    <button className='btn btn-primary' type="button" onClick={e=> addToCart(tuote)} >Lisää koriin</button>
                     <p><span className='hinta2'> {tuote.tarjoushinta}</span><span className='hinta'> (norm. {tuote.hinta})</span></p>
                   </div>
                 </div>

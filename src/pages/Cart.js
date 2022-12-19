@@ -5,7 +5,7 @@ export default function Cart({cart}) {
     return (
       <Link to="./Order">
         <span id='kartti'>{cart.length}</span>
-         <i class="bi bi-cart"></i>
+         <i className="bi bi-cart"></i>
         
       </Link>
     );

@@ -55,46 +55,46 @@ function Signup() {
     <>
       <div className="regform">
         <div className="regform__header">
-          <h8>Rekisteröitymislomake.</h8>
+          <h2 className="Loginformregister">Rekisteröitymislomake.</h2>
         </div>
         <div className="regform__container">
           <form onSubmit={save}>
-            <label2 htmlFor="astunnus">Astunnus </label2>
+            <label className='Loginlabel' htmlFor="astunnus">Astunnus </label>
             <input type="texti" value={astunnus}
               onChange={(e) => setAstunnus(e.target.value)}
               placeholder="astunnus" required />
 
-            <label2 htmlFor="etunimi">Etunimi </label2>
+            <label className='Loginlabel' htmlFor="etunimi">Etunimi </label>
             <input type="texti" value={etunimi}
               onChange={(e) => setEtunimi(e.target.value)}
               placeholder="etunimi" required />
 
-            <label2 htmlFor="sukunimi">Sukunimi </label2>
+            <label className='Loginlabel' htmlFor="sukunimi">Sukunimi </label>
             <input type="texti" value={sukunimi}
               onChange={(e) => setSukunimi(e.target.value)}
               placeholder="sukunimi" required />
 
-            <label2 htmlFor="email"> Sähköpostiosoite </label2>
+            <label className='Loginlabel' htmlFor="email"> Sähköpostiosoite </label>
             <input type="emaili" value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="email@example.com" required />
 
-            <label2 htmlFor="osoite">Osoite </label2>
+            <label className='Loginlabel' htmlFor="osoite">Osoite </label>
             <input type="texti" value={osoite}
               onChange={(e) => setOsoite(e.target.value)}
               placeholder="osoite" required />
 
-            <label2 htmlFor="postinro">Postinro </label2>
+            <label className='Loginlabel' htmlFor="postinro">Postinro </label>
             <input type="texti" value={postinro}
               onChange={(e) => setPostinro(e.target.value)}
               placeholder="postinro" required />
 
-            <label2 htmlFor="postitmp">Postitmp </label2>
+            <label className='Loginlabel' htmlFor="postitmp">Postitmp </label>
             <input type="texti" value={postitmp}
               onChange={(e) => setPostitmp(e.target.value)}
               placeholder="postitmp" required />
 
-            <label2 htmlFor="salasana">Salasana </label2>
+            <label className='Loginlabel' htmlFor="salasana">Salasana </label>
             <input type="texti" value={salasana}
               onChange={(e) => setSalasana(e.target.value)}
               placeholder="salasana" required />
