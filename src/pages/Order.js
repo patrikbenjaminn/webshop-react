@@ -60,7 +60,7 @@ export default function Order({cart,removeFromCart,muutaMaara}){
         setInputIndex(index);
     }  
     if (finished === false){
-    
+        console.log(cart);
     return(
         <div id="ostoskori">
             <h3 className="ostoskori">Ostoskori</h3>
@@ -122,6 +122,6 @@ export default function Order({cart,removeFromCart,muutaMaara}){
                 </div>
                 )
             } else{
-                return (<h3>Kiitos tilauksesta</h3>);
+                return (<h2>Kiitos tilauksesta!</h2>);
             }
 }

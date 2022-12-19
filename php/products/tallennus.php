@@ -33,7 +33,7 @@ try{
     filter_var($postitmp, FILTER_SANITIZE_FULL_SPECIAL_CHARS).  "','" .
     filter_var($salasana, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
     filter_var($user_type, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
-    filter_var($created_at, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
+    filter_var($created_at, FILTER_SANITIZE_FULL_SPECIAL_CHARS) ."')";
    
 $id= executeInsert($db,$sql);
 
@@ -46,7 +46,7 @@ foreach ($cart as $tuote){
     .
         $tilausnro . ",".
         $tuote->id
-        . ")";
+    .     ")";
         executeInsert($db,$sql);
 }
 
