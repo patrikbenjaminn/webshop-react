@@ -80,7 +80,7 @@ INSERT INTO tuote VALUES (25,'Nintendo Swtich lataustelakka', 47.95,NULL,10,5,'L
 
 /* TILAUS */
 
-CREATE TABLE tilaus (
+CREATE TABLE `tilaus` (
 id int primary key auto_increment, 
 tilauspvm timestamp default CURRENT_TIMESTAMP,
 astunnus int not null,
@@ -96,7 +96,7 @@ on delete RESTRICT
 CREATE TABLE tilausrivi (
 tilausnro INTEGER NOT NULL,
 index tilausnro (tilausnro),
-foreign key (tilausnro)REFERENCES tilaus (id),
+foreign key (tilausnro)REFERENCES `tilaus` (id),
 tuoteid INT not null,
 CONSTRAINT tilausrivi_pk PRIMARY KEY (tilausnro),
 CONSTRAINT tilausrivi_tuote_fk FOREIGN KEY (tuoteid) 

@@ -19,7 +19,6 @@ function Tuotteet({url,addToCart}) {
         const json = response.data;
         setCategory(json.tuoteryhma)
         setProducts(json.tuote);
-        console.log(json);
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error)
       })
