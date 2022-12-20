@@ -67,7 +67,7 @@ export default function Order({cart,removeFromCart,muutaMaara}){
             <table className="table">
                 <tbody>
                     {cart.map((tuote, index)=>{
-                        sum+=parseFloat(tuote.hinta);
+                        sum+=parseFloat(tuote.hinta) * parseInt(tuote.maara);
                         return(
                             <tr key={uuid()}>
                             <td>{tuote.tuotenimi}</td>
