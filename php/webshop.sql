@@ -80,7 +80,7 @@ INSERT INTO tuote VALUES (25,'Nintendo Swtich lataustelakka', 47.95,NULL,10,5,'L
 
 /* TILAUS */
 
-CREATE TABLE `tilaus` (
+CREATE TABLE tilaus (
 id int primary key auto_increment, 
 tilauspvm timestamp default CURRENT_TIMESTAMP,
 astunnus int not null,
