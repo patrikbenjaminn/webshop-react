@@ -18,7 +18,7 @@ function Signup() {
    
    e.preventDefault()
     const json = JSON.stringify({astunnus: astunnus, etunimi: etunimi, sukunimi: sukunimi, email: email, osoite: osoite, postinro: postinro, postitmp: postitmp, salasana: salasana });
-    axios.post(URL + 'createaccount.php', json, {
+    axios.post(URL + 'createaccount.php', json, {withCredentials: true}, {
       headers: {
         'Content-Type': 'Application/json'
       }

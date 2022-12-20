@@ -82,7 +82,7 @@ const [search, setSearch] = useState([]);
               <NavDropdown.Divider />
             </NavDropdown>
 
-            <Nav.Link className='etu' href="../admin/AdminDashboard/" >
+            <Nav.Link className='etu' href="../admin/Admin/" >
               Admin
             </Nav.Link>
             <Nav.Link className='etu' href="/admin/AdminRegister" >

@@ -47,7 +47,7 @@ function Login({setLoggedUser, setError}){
     formData.append("astunnus", astunnus);
     formData.append("salasana", salasana);
 
-    axios.post(URL+"login/login.php", formData, {withCredentials:true} )
+    axios.post(URL+"login/login.php", formData,)// {withCredentials:true} )
       .then(resp => {
         setLoggedUser(resp.data);
         setError("");

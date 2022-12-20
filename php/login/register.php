@@ -1,7 +1,7 @@
  <?php
-/*require('../inc/headers.php');
+require('../inc/headers.php');
 session_start();
-require('/user_controller.php');
+require('./user_controller.php');
 
 $body = file_get_contents("php://input");
 $user = json_decode($body);
@@ -18,12 +18,12 @@ registerUser($asiakas->astunnus,$asiakas->etunimi,$asiakas->sukunimi,$asiakas->e
 $_SESSION['astunnus'] = $asiakas->astunnus;
 
 http_response_code(200);
-echo "Asiakas ".$asiakas->astunnus." rekisteröity"; */
+echo "Asiakas ".$asiakas->astunnus." rekisteröity"; 
 
 
-require('../inc/headers.php');
+/* require('../inc/headers.php');
 session_start();
-require('/user_controller.php');
+require('./user_controller.php');
 
 try {
   // Read and decode request body
@@ -31,11 +31,11 @@ try {
   $user = json_decode($body);
 
   // Validate user input
-  if(!isset($asiakas->astunnus) || !isset($asiakas->salasana)){
+  if(!isset($asiakas->id) || !isset($asiakas->salasana)){
       throw new Exception("Käyttäjää ei ole määritetty. Anna kelvollinen käyttäjätunnus ja salasana");
   }
-  $username = strip_tags($user->uname);
-  $password = strip_tags($user->password);
+  $username = strip_tags($user->astunnus);
+  $password = strip_tags($user->salasana);
   if (strlen($username) < 3 || strlen($password) < 6) {
       throw new Exception("Käyttäjätunnus tai salasana ei ole kelvollinen. Käyttäjätunnuksen pituuden tulee olla vähintään 3 merkkiä ja salasanan vähintään 6 merkkiä.");
   }
@@ -53,4 +53,4 @@ try {
 } catch (Exception $e) {
   http_response_code(400);
   echo $e->getMessage();
-} 
+}  */ 

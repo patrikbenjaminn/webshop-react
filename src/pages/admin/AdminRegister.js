@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const URL = 'http://localhost/webshop/php/';
 
-  function AdminRegister({setUser}){
+  function AdminRegister({setUser}) {
       const [astunnus, setAstunnus] = useState("");
       const [etunimi, setEtunimi] = useState("");
       const [Sukunimi, setSukunimi] = useState("");
@@ -19,7 +19,7 @@ const URL = 'http://localhost/webshop/php/';
       /* const [created_at, setCreated_at] = useState(""); */
     
       function register(e){
-        e.preventDefault()
+        /* e.preventDefault() */
         const json = {astunnus,etunimi,Sukunimi,email,osoite,postinro,postitmp, salasana, user_type};
     
         axios.post(URL + "login/register.php", json, {withCredentials: true})

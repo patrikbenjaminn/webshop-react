@@ -15,7 +15,7 @@ $postinro = filter_var($input->postinro, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $postitmp= filter_var($input->postitmp, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $salasana= filter_var($input->salasana, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $user_type= filter_var($input->user_type, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-$created_at= filter_var($input->created_at, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+/* $created_at= filter_var($input->created_at, FILTER_SANITIZE_FULL_SPECIAL_CHARS); */
 $cart = $input->cart;
 
 try{
@@ -33,7 +33,7 @@ try{
     filter_var($postitmp, FILTER_SANITIZE_FULL_SPECIAL_CHARS).  "','" .
     filter_var($salasana, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
     filter_var($user_type, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
-    filter_var($created_at, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" .
+    /* filter_var($created_at, FILTER_SANITIZE_FULL_SPECIAL_CHARS) . "','" . */
    
 $id= executeInsert($db,$sql);
 

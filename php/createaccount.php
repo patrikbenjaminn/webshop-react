@@ -3,7 +3,7 @@ header("Origin: http://localhost:3000");
 header("Content-type: application/json");
 header("Access-Control-Request-Method: POST");
 
-  //session_start();
+  session_start();
 require_once "config.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
