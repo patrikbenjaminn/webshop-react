@@ -59,8 +59,8 @@ function App() {
   }, [])
 
   function addToCart(tuote) {
-    if(cart.some(item => item.id === tuote.tuotenimi)){
-      const tuoteOlemassa = cart.filter(item => item.id === tuote.tuotenimi);
+    if(cart.some(item => item.tuoteid === tuote.tuoteid)){
+      const tuoteOlemassa = cart.filter(item => item.tuoteid === tuote.tuoteid);
       muutaMaara(parseInt(tuoteOlemassa[0].maara) +1, tuote);
 
     }
@@ -73,14 +73,16 @@ function App() {
 }
   
   function removeFromCart(tuote){
-    const itemsWithoutRemoved = cart.filter(item => item.id !== tuote.tuotenimi);
+    const itemsWithoutRemoved = cart.filter(item => item.tuoteid !== tuote.tuoteid);
+    console.log(itemsWithoutRemoved);
+    console.log(cart);
     setCart(itemsWithoutRemoved);
     localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
   }
 
   function muutaMaara(maara,tuote){
     tuote.maara = maara;
-    const index = cart.findIndex((item => item.id === tuote.id));
+    const index = cart.findIndex(item => item.tuoteid === tuote.tuoteid);
     const modifiedCart = Object.assign([...cart],{[index]: tuote});
     setCart(modifiedCart);
     localStorage.setItem('cart',JSON.stringify(modifiedCart));
@@ -106,7 +108,7 @@ function App() {
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
               <Route path='/admin/AdminDashboard/*' element={<AdminDashboard />} />
-              <Route path='/admin/AdminLogin' element={ <AdminLogin />} />
+             {/* <Route path='/admin/AdminLogin' element={ <AdminLogin />} />*/}
               <Route path='/admin/AdminRegister' element={ <AdminRegister />} />
               <Route path='/admin/AddProduct' element={ <AddProduct />} />
               <Route path='/admin/Addryhma' element={ <Addryhma />} />

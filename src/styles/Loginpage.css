@@ -30,7 +30,7 @@
     text-align: center;
 }
 
-.logform__header h12 {
+.Loginformkirjaudu {
     font-size: 5px;
     padding: 1px;
     color: #00203FFF;
@@ -60,7 +60,7 @@ input {
 
 
 
-label1 {
+.Loginlabel {
      padding: 1px;
     color: #00203FFF;
     font-size: 25px;
