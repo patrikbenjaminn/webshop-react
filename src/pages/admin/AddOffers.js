@@ -53,7 +53,7 @@ function AddOffers() {
 
                 <div className="contact-form3">
                     <Container>
-                        <h1>Lisää tarjoustuote</h1>
+                        <h1>Lisää/ muuta tarjoushinta</h1>
                         <form onSubmit={save}>
                             <Row>
                                 <Col>
@@ -65,7 +65,7 @@ function AddOffers() {
                                     <label htmlFor="tarjoushinta"> tarjoushinta </label>
                                     <input type="text" value={tarjoushinta}
                                         onChange={(e) => setTarjoushinta(e.target.value)}
-                                        placeholder="esim. 19.90" required />
+                                        placeholder="esim. 19.90" />
                                    
                                 </Col>
                                 <input type="submit" value="Lähetä" />

@@ -17,6 +17,7 @@ try {
     $query = $db->prepare('update tuote set tuotenimi=:tuotenimi where tuoteid=:tuoteid');
     $query->bindValue(':tuotenimi',$tuotenimi,PDO::PARAM_STR);
     $query->bindValue(':hinta',$hinta,PDO::PARAM_INT);
+    $query->bindValue(':tarjoushinta',$hinta,PDO::PARAM_INT);
     $query->bindValue(':saldo',$saldo,PDO::PARAM_INT);
     $query->bindValue(':trnro',$trnro,PDO::PARAM_INT);
     $query->bindValue(':tuotekuvaus',$tuotekuvaus,PDO::PARAM_INT);
@@ -24,7 +25,7 @@ try {
     $query->execute();
 
     header('HTTP/1.1 200 OK');
-    $data = array('tuotenimi' => $tuotenimi,'hinta' => $hinta,'saldo' => $saldo,'trnro' => $trnro,'tuotekuvaus' => $tuotekuvaus,'img' => $img);
+    $data = array('tuotenimi' => $tuotenimi,'hinta' => $hinta,'tarjoushinta' => $tarjoushinta,'saldo' => $saldo,'trnro' => $trnro,'tuotekuvaus' => $tuotekuvaus,'img' => $img);
     print json_encode($data);
 }   catch (PDOException $pdoex) {
     returnError($pdoex);
