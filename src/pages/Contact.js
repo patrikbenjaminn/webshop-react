@@ -43,7 +43,7 @@ function Contact() {
           Kehitämme toimintaamme jatkuvasti, olemme kiitollisia palautteesta, voit antaa sitä tästä.
           Otamme yhteyttä mahdollisimman pian!
         </div>
-        <div className="contact-form__container">
+        <div className="contact-form__container" >
           <form onSubmit={save}>
             <label htmlFor="name">Nimi </label>
             <input type="text" value={name}
