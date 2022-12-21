@@ -122,6 +122,6 @@ export default function Order({cart,removeFromCart,muutaMaara}){
                 </div>
                 )
             } else{
-                return (<h2>Kiitos tilauksesta!</h2>);
+                return (<h2 className="Kiitos">Kiitos tilauksesta!</h2>);
             }
 }
