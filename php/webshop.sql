@@ -95,14 +95,18 @@ on delete RESTRICT
 
 CREATE TABLE tilausrivi (
 tilausnro INTEGER NOT NULL,
+tuoteid INT not null
+);
+
+/* CREATE TABLE tilausrivi (
+tilausnro INTEGER NOT NULL,
 index tilausnro (tilausnro),
 foreign key (tilausnro)REFERENCES `tilaus` (id),
 tuoteid INT not null,
 CONSTRAINT tilausrivi_pk PRIMARY KEY (tilausnro),
 CONSTRAINT tilausrivi_tuote_fk FOREIGN KEY (tuoteid) 
            REFERENCES tuote (tuoteid)
-);
-
+); */
 
 
 /* Palaute */
