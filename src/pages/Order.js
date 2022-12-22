@@ -4,7 +4,7 @@ import axios from "axios";
 import { createRef } from "react";
 import '../styles/order.css'
 
-export default function Order({cart,removeFromCart,muutaMaara}){
+export default function Order({cart,removeFromCart,muutaMaara,empty}){
 
     const url = 'http://localhost/webshop/php/';
 
@@ -32,7 +32,7 @@ export default function Order({cart,removeFromCart,muutaMaara}){
 
     function order(e){
         e.preventDefault();
-    
+        console.log('tetet');
 
     const json = JSON.stringify({
         etunimi: etunimi,
@@ -41,8 +41,9 @@ export default function Order({cart,removeFromCart,muutaMaara}){
         postinro: postinro,
         postitmp: postitmp,
         cart: cart,
-
+        
     });
+    console.log(json);
     axios.post(url + 'products/tallennus.php',json,{
         headers:{
             'Accept': 'application/json',
@@ -50,9 +51,11 @@ export default function Order({cart,removeFromCart,muutaMaara}){
         }
     })
     .then(() => {
+        empty();
         setFinished(true);
     }).catch(error =>{
         alert(error.response === undefined ? error : error.response.data.error);
+        
     });
     }
     function changeAmount(e,tuote,index){
