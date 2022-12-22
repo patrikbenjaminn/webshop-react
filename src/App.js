@@ -59,6 +59,7 @@ function App() {
   }, [])
 
   function addToCart(tuote) {
+    console.log(tuote)
     if(cart.some(item => item.tuoteid === tuote.tuoteid)){
       const tuoteOlemassa = cart.filter(item => item.tuoteid === tuote.tuoteid);
       muutaMaara(parseInt(tuoteOlemassa[0].maara) +1, tuote);
@@ -96,14 +97,14 @@ function App() {
             
           <Routes>
 
-              <Route path='/' element={ <Etusivu />} />
+              <Route path='/' element={ <Etusivu url={URL} addToCart={addToCart}/>} />
               <Route path="/Tuotteet/:trnro" element={<Tuotteet url={URL} addToCart={addToCart}  />}/>
               <Route path='/Contact' element={ <Contact />} />
               <Route path='*' element={ <NotFound />} />
              {/*  <Route path="/Search" element={<Searchproducts url={URL}/>}/> */}
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL} addToCart={addToCart} />}/>
               <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart} muutaMaara={muutaMaara}/>}/>
-              <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
+              <Route path='/Tarjoussivu/' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
               <Route path='/Loginpage' element={ <Loginpage />} />
