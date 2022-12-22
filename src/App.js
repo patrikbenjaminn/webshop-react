@@ -88,6 +88,11 @@ function App() {
     localStorage.setItem('cart',JSON.stringify(modifiedCart));
 
   }
+
+  function empty(){
+    setCart([]);
+    localStorage.removeItem('cart');
+  }
   return (
     
     <>  
@@ -102,7 +107,7 @@ function App() {
               <Route path='*' element={ <NotFound />} />
              {/*  <Route path="/Search" element={<Searchproducts url={URL}/>}/> */}
               <Route path='/Search/:searchPhrase' element={<Searchproducts url={URL} addToCart={addToCart} />}/>
-              <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart} muutaMaara={muutaMaara}/>}/>
+              <Route path='/Order' element={<Order cart={cart} removeFromCart={removeFromCart} muutaMaara={muutaMaara} empty={empty}/>}/>
               <Route path='/Tarjoussivu/:tuoteid' element={ <Tarjoussivu url={URL} addToCart={addToCart} />} />
               <Route path='/Returning' element={ <Return />} />
               <Route path='/Signup' element={ <Signup />} />
