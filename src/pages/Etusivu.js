@@ -5,11 +5,11 @@ import Tarjoussivu from './Tarjoussivu';
 import '../styles/Etusivu.css';
 
 
-function Etusivu() {  
+function Etusivu({URL, addToCart})  {  
   return (
     <>
       <Karuselli />
-      <Tarjoussivu />
+      <Tarjoussivu url={URL} addToCart={addToCart}/>
       <Artikkelit />     
     </>
   )

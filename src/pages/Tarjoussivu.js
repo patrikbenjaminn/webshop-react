@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import '../styles/Tarjoussivu.css'
 
-function Tarjoussivu(url,addToCart) {
+function Tarjoussivu({ url, addToCart }) {
 
   
   const [tarjoukset, setTarjoukset] = useState([])
@@ -32,7 +32,7 @@ function Tarjoussivu(url,addToCart) {
                   <div className="card h-100">
                     <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
                     <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>                         
-                    <button className='btn btn-primary' type="button" onClick={e=> addToCart(tuote)} >Lisää koriin</button>
+                    <button className='btn btn-primary' type="button" onClick={()=> addToCart(tuote)} >Lisää koriin</button>
                     <p><span className='hinta2'> {tuote.tarjoushinta}</span><span className='hinta'> (norm. {tuote.hinta})</span></p>
                   </div>
                 </div>

@@ -52,7 +52,7 @@ export default function Searchproducts({ url, addToCart }) {
                   <div className="card h-100">
                     <img src={"../../images/" + tuote.img} className="img-fluid mb-3" alt="" />
                     <h3 className="tuotenimi2">{tuote.tuotenimi}  </h3>                         
-                    <button className='btn btn-primary' type="button" onclick={()=> addToCart(tuote)} >Lisää koriin</button>
+                    <button className='btn btn-primary' type="button" onClick={()=> addToCart(tuote)} >Lisää koriin</button>
                     {tuote.tarjoushinta === null && (
                       <p><span className='hinta2'>  {tuote.hinta}</span></p>
                     )}
