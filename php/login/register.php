@@ -17,7 +17,7 @@ registerUser($uname,$pw);
 
 $_SESSION['username'] = $uname;
 
-http_response_code(200);
+http_response_code('200');
 echo "User $uname rekisteröity"; 
 
 
