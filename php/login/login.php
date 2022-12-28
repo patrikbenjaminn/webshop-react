@@ -3,7 +3,7 @@ require('../inc/headers.php');
 session_start();
 require('/user_controller.php');
 
-if(isset($_SESSION['astunnus'])){
+if(isset($_SESSION['uname'])){
     http_response_code(200);
     echo $_SESSION['astunnus'];
     return;

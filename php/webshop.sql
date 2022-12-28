@@ -4,6 +4,11 @@ CREATE DATABASE webshop;
 
 USE webshop;
 
+CREATE TABLE user(
+    username VARCHAR(255) NOT NULL PRIMARY KEY,
+    passwd VARCHAR(255) NOT NULL
+) ;
+
 /* ASIAKAS */
 
 CREATE TABLE asiakas (

@@ -4,14 +4,14 @@ require('../inc/functions.php');
 /**
  * Inserts a new user in the database
  */
-function registerUser($astunnus,$etunimi,$sukunimi,$email,$osoite,$postinro,$postitmp,$salasana,$user_type){
+function registerUser($uname,$pw){
     $db = createDbConnection();
 
-    $salasana = password_hash($salasana, PASSWORD_DEFAULT);
+    $pw = password_hash($pw, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO asiakas (astunnus,etunimi,sukunimi,email,osoite,postinro,postitmp,salasana,user_type) VALUES (?,?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO user (username, passwd) VALUES (?,?)";
     $statement = $db->prepare($sql);
-    $statement->execute(array($astunnus,$etunimi,$sukunimi,$email,$osoite,$postinro,$postitmp,$salasana,$user_type));
+    $statement->execute(array($uname,$pw));
 }
 
 /**
