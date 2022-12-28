@@ -1,5 +1,5 @@
 <?php
-require_once 'inc/functions.php';
+/* require_once 'inc/functions.php';
 require_once 'inc/headers.php';
 
 try {
@@ -12,4 +12,4 @@ try {
     print $json;
 }   catch (PDOException $pdoex) {
     returnError($pdoex);
-}
+} */

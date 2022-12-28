@@ -15,6 +15,7 @@ try {
   header('HTTP/1.1 200 OK');
   $data = array('tuoteid' => $db->lastInsertId(),'trnimi' => $trnimi);
   print json_encode($data);
+  
 } catch (PDOException $pdoex) {
   returnError($pdoex);
   }

@@ -27,6 +27,7 @@ try {
     header('HTTP/1.1 200 OK');
     $data = array('tuotenimi' => $tuotenimi,'hinta' => $hinta,'tarjoushinta' => $tarjoushinta,'saldo' => $saldo,'trnro' => $trnro,'tuotekuvaus' => $tuotekuvaus,'img' => $img);
     print json_encode($data);
+    
 }   catch (PDOException $pdoex) {
     returnError($pdoex);
 }
