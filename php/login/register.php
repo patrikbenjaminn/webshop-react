@@ -6,7 +6,7 @@ require('./user_controller.php');
 $body = file_get_contents("php://input");
 $user = json_decode($body);
 
-if(!isset($user->uname) || !isset($user->passwd)){
+if(!isset($user->uname) || !isset($user->pw)){
     http_response_code(400);
     echo "Käyttäjää ei ole määritetty. Anna kelvollinen käyttäjätunnus ja salasana";
     return;
