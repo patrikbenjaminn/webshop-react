@@ -3,20 +3,20 @@ require('../inc/headers.php');
 session_start();
 require('/user_controller.php');
 
-if(isset($_SESSION['uname'])){
+if(isset($_SESSION['username'])){
     http_response_code(200);
-    echo $_SESSION['astunnus'];
+    echo $_SESSION['username'];
     return;
 }
 
-if(!isset($_POST['astunnus']) || !isset($_POST['salasana'])){
+if(!isset($_POST['uname']) || !isset($_POST['pw'])){
     http_response_code(401);
     echo "Astunnus ei kelpaa. Anna oikea astunnus tai salasana";
     return;
 }
 
-$astunnus = $_POST['astunnus'];
-$salasana = $_POST['salasana'];
+$uname = $_POST['uname'];
+$pw = $_POST['pw'];
 
 $verified_astunnus = checkUser($astunnus, $salasana);
 
