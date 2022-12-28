@@ -24,7 +24,7 @@ function AddOffers() {
             tuoteid: tuoteid, 
             tarjoushinta: tarjoushinta,
         });
-        axios.post(URL + 'admin/addOffers.php', json, {
+        axios.post(URL + 'admin/updateOffers.php', json, {
             headers: {
                 'Content-Type': 'Application/json'
             }
