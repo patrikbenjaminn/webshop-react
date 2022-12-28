@@ -85,7 +85,7 @@ const [search, setSearch] = useState([]);
             <Nav.Link className='etu' href="../admin/Admin/" >
               Admin
             </Nav.Link>
-            <Nav.Link className='etu' href="/admin/AdminRegister"  hidden>
+            <Nav.Link className='etu' href="/admin/AdminRegister" >
               AdReq
             </Nav.Link>
           </Nav>
