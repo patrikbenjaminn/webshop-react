@@ -13,7 +13,7 @@ if(!isset($user->uname) || !isset($user->pw)){
 }
 
 
-registerUser($uname->uname,pw);
+registerUser($user->uname, $user->pw);
 
 $_SESSION['username'] = $uname;
 

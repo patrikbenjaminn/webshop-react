@@ -5,7 +5,7 @@ import '../App.css';
 import '../styles/Tarjoussivu.css'
 
 
-
+/* Luodaan tuotteiden etsimis sivu*/
 export default function Searchproducts({ url, addToCart }) {
 
   const [name, setName] = useState('');

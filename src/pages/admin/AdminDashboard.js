@@ -13,7 +13,7 @@ import Nauta from './Nauta';
 
 const URL = 'http://localhost:3000/admin/'
 
-
+/* Luodaan admin sivu*/
 function AdminDashboard() {
 
 

@@ -6,6 +6,7 @@ import '../../styles/AddRyhma.css';
 
 const URL = 'http://localhost/webshop/php/'; 
 
+/* Luodaan tuoteryhmän lisäys*/
 function Addryhma() {
 
   const [trnimi, setTrnimi] = useState('');
@@ -32,6 +33,7 @@ function Addryhma() {
       })
   }
 
+  /* Luodaan tuoterymä sivun lisäys elementit */
   return (
  
     <div>

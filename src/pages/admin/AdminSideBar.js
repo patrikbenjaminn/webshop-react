@@ -5,6 +5,7 @@ import {} from 'react-router-dom';
 
 const URL = 'http://localhost:3000/admin/'
 
+/* Luodaan erillinen sidebar admin osiolle*/
 const Sidebar=()=>{
   return (
       <div style={{display:'flex', height:'100%', overflow:'scroll initial'}}>

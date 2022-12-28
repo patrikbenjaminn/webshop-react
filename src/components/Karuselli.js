@@ -1,6 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import '../styles/Karuselli.css'; 
 
+
+/* Sivulla pöyrivä karuselli josta voi myös lisätä tuotteen ostoskoriin*/
 function CarouselFadeExample() {
   return (
     <Carousel uncontrolled="true" className='carousel'>

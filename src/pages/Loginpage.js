@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const URL = 'http://localhost/webshop/php/';
 
-
+/* Luodaan Kirjautumis sivu*/
 function Loginpage() {
   const [astunnus, setAstunnus] = useState('');
   const [salasana, setSalasana] = useState('');

@@ -6,7 +6,7 @@ import '../styles/Tarjoussivu.css'
 
 const URL = 'http://localhost/webshop/php/';
 
-
+/* Luodaan sivu joka näyttää kaikki kategorian tuotteet*/
 function Tuotteet({url,addToCart}) {
   const [category, setCategory] = useState('');
   const [products, setProducts] = useState([]);
@@ -23,7 +23,7 @@ function Tuotteet({url,addToCart}) {
         alert(error.response === undefined ? error : error.response.data.error)
       })
   }, [params])
-
+/* Luodaan Sivun elementit*/
   return (
 
 

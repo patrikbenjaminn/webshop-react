@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 const URL = 'http://localhost/webshop/php/';
 
+/* Luodaan Yhteydenotto lomake. Vie tapahtuman tietokantaan.*/
 function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
