@@ -13,11 +13,11 @@ if(!isset($user->uname) || !isset($user->pw)){
 }
 
 
-registerUser($user->username,$user->passwd);
+registerUser($uname,$pw);
 
-$_SESSION['astunnus'] = $asiakas->astunnus;
+$_SESSION['username'] = $uname;
 
 http_response_code(200);
-echo "Asiakas ".$asiakas->astunnus." rekisteröity"; 
+echo "User $uname rekisteröity"; 
 
 
