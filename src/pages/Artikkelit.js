@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Artikkelit.css'
 
+/* Luodaan etusivulle artikkeli valikko. Tällä hetkellä vielä staattisia uutis linkkejä.*/
 function Artikkelit() {
   return (
     

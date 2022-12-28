@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 const URL = 'http://localhost/webshop/php/';
-
+/* Luodaan rekisteröinti sivu*/
 function Signup() {
   const [astunnus, setAstunnus] = useState('');
   const [etunimi, setEtunimi] = useState('');
@@ -50,7 +50,7 @@ function Signup() {
       })
   }
 
-
+/* Luodaan komponentit sivulle*/
   return (
     <>
       <div className="regform">

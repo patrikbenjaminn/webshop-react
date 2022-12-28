@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import '../styles/Tarjoussivu.css'
 
+/* Luodaan tarjoussivu*/
 function Tarjoussivu({ url, addToCart }) {
 
   
@@ -20,7 +21,7 @@ function Tarjoussivu({ url, addToCart }) {
   useEffect(() => {
     fetchData()
   }, [])
-
+/* Luodaan Sivun elementit*/
   return (
 
     <section className="tarjoukset" style={{ textalign: "center" }}>

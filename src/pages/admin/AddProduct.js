@@ -11,6 +11,7 @@ import '../../styles/AddProduct.css'
 
 const URL = 'http://localhost/webshop/php/';
 
+/* Lisätään uusi tuote tietokantaan*/
 function AddProduct() {
 
   const [tuotenimi, setTuotenimi] = useState('');
@@ -56,6 +57,7 @@ function AddProduct() {
       })
   }
 
+  /* Luodaan tuotteen lisäys sivun elementit*/
   return (
     <>
       <div>

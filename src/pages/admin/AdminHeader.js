@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import '../../styles/AdminHeader.css';
 
 const URL = 'http://localhost:3000/admin/'
+
+/* Luodaan komponentit admin valikkoon */
 class AdminHeader extends Component {
   state= { clicked: false};
   handleclick =() => {
