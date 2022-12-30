@@ -15,7 +15,7 @@ if(!isset($user->uname) || !isset($user->pw)){
 
 registerUser($user->$uname, $user->$pw);
 
-$_SESSION['username'] = $uname;
+$_SESSION['username'] = $user->$uname;
 
 http_response_code('200');
 echo "User $uname rekisteröity"; 
