@@ -4,6 +4,7 @@ import axios from "axios";
 import { createRef } from "react";
 import '../styles/order.css'
 
+/* Luodaan tilaus sivu*/
 export default function Order({cart,removeFromCart,muutaMaara,empty}){
 
     const url = 'http://localhost/webshop/php/';

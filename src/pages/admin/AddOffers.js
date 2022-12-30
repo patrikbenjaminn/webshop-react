@@ -8,7 +8,6 @@ import Col from 'react-bootstrap/Col';
 import '../../styles/AddProduct.css'
 
 
-
 const URL = 'http://localhost/webshop/php/';
 
 function AddOffers() {
@@ -45,7 +44,7 @@ function AddOffers() {
                 alert("Häiriö järjestelmässä, yritä pian uudelleen!")
             })
     }
-
+    /* Luodaan admin sivun tarjousten hallinta sivun elementit*/
     return (
         <>
             <div>

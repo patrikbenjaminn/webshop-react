@@ -9,6 +9,8 @@ CREATE TABLE user(
     passwd VARCHAR(255) NOT NULL
 ) ;
 
+INSERT INTO user VALUES ('user', 'user');
+
 /* ASIAKAS */
 
 CREATE TABLE asiakas (
@@ -25,7 +27,6 @@ user_type VARCHAR(20),
 created_at TIMESTAMP,
 CONSTRAINT asiakas_pk PRIMARY KEY (id)
 ) ;
-
 
 /* TUOTERYHMÄ */
 CREATE TABLE tuoteryhma (

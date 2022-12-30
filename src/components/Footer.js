@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Footer.css'
 
-
+/* Luodaan Sivu alalaitaan footer*/
 export default function Footer() {
   return (
     <footer className='footer'>

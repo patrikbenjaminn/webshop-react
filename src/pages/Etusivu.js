@@ -4,7 +4,7 @@ import Artikkelit from './Artikkelit';
 import Tarjoussivu from './Tarjoussivu';
 import '../styles/Etusivu.css';
 
-
+/* Kutsuu etusivun elementtejä*/
 function Etusivu({URL, addToCart})  {  
   return (
     <>

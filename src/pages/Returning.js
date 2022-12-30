@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Contact.css';
 
-
+/* Luodaan palautus info sivu*/
 function Return() {
     return (
         <>

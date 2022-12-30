@@ -18,18 +18,28 @@ function registerUser($uname,$pw){
  * Checks the user credentials and returns the username
  * if authenticated, otherwise null.
  */
-function checkUser($astunnus, $salasana){
+function checkUser($uname, $pw){
     $db = createDbConnection();
 
-    $sql = "SELECT salasana FROM asiakas WHERE astunnus=?";
+    $sql = "SELECT passwd FROM user WHERE username=?";
     $statement = $db->prepare($sql);
-    $statement->execute(array($astunnus));
+    $statement->execute(array($uname));
 
     $hashedpw = $statement->fetchColumn();
 
     if(isset($hashedpw)){
-        return password_verify($salasana, $hashedpw) ? $astunnus : null;
+        return password_verify($pw, $hashedpw) ? $uname : null;
     }
 
     return null;
+}
+
+function getUserMes($uname){
+    $db = createDbConnection();
+
+    $sql = "SELECT msg FROM message WHERE username=?";
+    $statement = $db->prepare($sql);
+    $statement->execute(array($uname));
+
+    return $statement->fetchAll(PDO::FETCH_COLUMN,0);
 }

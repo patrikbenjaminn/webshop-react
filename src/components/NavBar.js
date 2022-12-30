@@ -12,7 +12,7 @@ import AdminRegister from '../pages/admin/AdminRegister';
 
 const URL = 'http://localhost/webshop/php/';
 
-
+/* Luodaan sivulle navigaatio elementti*/
 function NavBar({url, cart}) {
   const Navigate=useNavigate();
   const [tuoteryhma, setTuoteryhma] = useState([]);
@@ -47,7 +47,7 @@ const [search, setSearch] = useState([]);
     }
   } 
 
-
+/* Tässä lisätään navbariin kaikki elementit*/
   return (
     <Navbar className='navbar-custom' expand="lg">
       <Container fluid>
